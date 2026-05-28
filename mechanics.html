@@ -282,7 +282,7 @@
             font-size: 0.85rem; color: #b0b0c0; padding: 0.3rem 0;
             display: flex; align-items: center; gap: 0.5rem;
         }
-        .toc-list a::before { content: '&#9654;'; color: #ffd700; font-size: 0.5rem; }
+        .toc-list a::before { content: '▶'; color: #ffd700; font-size: 0.5rem; }
         .toc-list a:hover { color: #ffd700; }
 
         /* MECHANIC SECTION */
@@ -441,7 +441,7 @@
                 <a href="faq.html">FAQ</a>
                 <a href="glossary.html">Glossary</a>
             </div>
-            <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+            <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">☰</button>
         </div>
         <div class="mobile-menu">
             <a href="index.html">Home</a>
@@ -473,7 +473,7 @@
     <!-- NOTICE -->
     <div class="notice">
         <div class="notice-bar">
-            <span class="notice-icon">&#9888;&#65039;</span>
+            <span class="notice-icon">⚠️</span>
             <span>This game released on May 29, 2026. This guide is being actively updated as mechanics are fully documented.</span>
         </div>
     </div>
@@ -484,11 +484,11 @@
         <div class="summary-box" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(0, 212, 255, 0.08)); border: 1px solid rgba(255, 215, 0, 0.2); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 2rem;">
             <h3 style="font-family: 'Press Start 2P', monospace; font-size: 0.7rem; color: #ffd700; margin-bottom: 1rem; text-transform: uppercase;">Key Points</h3>
             <ul style="list-style: none; display: grid; gap: 0.5rem;">
-                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> Burrow is the core mechanic - dodge, traverse, and attack underground</li>
-                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> Plasma healing rewards aggressive combat - attack to heal</li>
-                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> Bones = currency + XP, lost on death (souls-like progression)</li>
-                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> Underlabs save progress and respawn enemies when used</li>
-                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> Difficulty modifiers and accessibility options available</li>
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">✓</span> Burrow is the core mechanic - dodge, traverse, and attack underground</li>
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">✓</span> Plasma healing rewards aggressive combat - attack to heal</li>
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">✓</span> Bones = currency + XP, lost on death (souls-like progression)</li>
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">✓</span> Underlabs save progress and respawn enemies when used</li>
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">✓</span> Difficulty modifiers and accessibility options available</li>
             </ul>
         </div>
 
@@ -509,7 +509,7 @@
         <!-- HEALTH SYSTEM -->
         <div class="mechanic-section" id="health">
             <div class="mechanic-header">
-                <div class="mechanic-icon-wrapper"><span class="mechanic-icon-pixel">&#128154;</span></div>
+                <div class="mechanic-icon-wrapper"><span class="mechanic-icon-pixel">💚</span></div>
                 <h3>Health System</h3>
             </div>
             <div class="mechanic-body">
@@ -521,19 +521,19 @@
                     <h4>How It Works</h4>
                     <ul class="feature-list">
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Plasma Bar (Yellow):</strong> Mina has a yellow Plasma bar that fills up as she attacks enemies. Every hit contributes to filling this bar.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Health Conversion:</strong> Once the Plasma bar is full, it converts into <span class="highlight">red health</span> (actual HP recovery). This means sustained attacking directly heals Mina.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Aggression Rewarded:</strong> The system fundamentally rewards offensive play. Hesitating or playing passively means missing out on healing opportunities. The more you attack, the more you heal.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Plasma Vials:</strong> The yellow bar is visually represented as Plasma Vials. Think of them as a healing resource that refills through combat rather than through items.</p>
                         </li>
                     </ul>
@@ -562,7 +562,7 @@
         <!-- BURROW MECHANIC -->
         <div class="mechanic-section" id="burrow">
             <div class="mechanic-header">
-                <div class="mechanic-icon-wrapper"><span class="mechanic-icon-pixel">&#128290;</span></div>
+                <div class="mechanic-icon-wrapper"><span class="mechanic-icon-pixel">🔒</span></div>
                 <h3>Burrow Mechanic</h3>
             </div>
             <div class="mechanic-body">
@@ -574,23 +574,23 @@
                     <h4>Burrow Functions</h4>
                     <ul class="feature-list">
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Underground Movement:</strong> While burrowed, Mina travels beneath the surface. This allows her to pass under enemies, obstacles, and certain hazards that block above-ground movement.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Pop-Up Aerial:</strong> Emerging from a burrow launches Mina into the air with an aerial attack. This pop-up attack deals bonus damage and can be used to reach elevated platforms.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Dodge / Invincibility:</strong> The burrow provides invincibility frames while underground. Most enemy attacks cannot hit Mina while she is burrowed, making it the primary dodge mechanic.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Finding Secrets:</strong> Many secrets are hidden underground. Burrowing near suspicious walls or floors can reveal hidden passages, items, and rooms that are invisible from the surface.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>No Roll:</strong> Unlike many action games, Mina does not have a traditional roll or dash. The burrow replaces this function entirely, serving as both dodge and repositioning tool.</p>
                         </li>
                     </ul>
@@ -605,7 +605,7 @@
         <!-- SOULS-LIKE PROGRESSION -->
         <div class="mechanic-section" id="progression">
             <div class="mechanic-header">
-                <div class="mechanic-icon-wrapper"><span class="mechanic-icon-pixel">&#128200;</span></div>
+                <div class="mechanic-icon-wrapper"><span class="mechanic-icon-pixel">📈</span></div>
                 <h3>Souls-Like Progression</h3>
             </div>
             <div class="mechanic-body">
@@ -617,19 +617,19 @@
                     <h4>Core Systems</h4>
                     <ul class="feature-list">
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Bones (Currency/XP):</strong> Bones serve as both money and experience points. Every enemy defeated drops Bones, which accumulate as you explore and fight.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Bone Up (Level Up):</strong> At the Underlabs, Mina can spend Bones to permanently upgrade her stats. This is the primary progression system -- more Bones means more power.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Death Penalty:</strong> When Mina dies, she <span class="highlight">loses all accumulated Bones</span>. This creates tension during exploration -- do you push forward with a large Bone count, or retreat to the Underlabs to spend them safely?</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Sparks (Extra Lives):</strong> Sparks prevent Bone loss on death. When a Spark is active and Mina dies, she revives without losing her Bones. Sparks are the safety net that makes the Souls-like system more forgiving.</p>
                         </li>
                     </ul>
@@ -639,15 +639,15 @@
                     <h4>How to Obtain Bones</h4>
                     <ul class="feature-list">
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Defeating Enemies:</strong> The primary source of Bones. Every enemy defeated drops Bones that can be collected.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Digging:</strong> Bones can be dug up from the ground throughout Tenebrous Isle. Keep an eye out for diggable spots.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Bone Sinterer:</strong> Using a Bone Sinterer is another method to gain Bones. These devices help process and generate additional Bones.</p>
                         </li>
                     </ul>
@@ -662,7 +662,7 @@
         <!-- UNDERLABS -->
         <div class="mechanic-section" id="underlabs">
             <div class="mechanic-header">
-                <div class="mechanic-icon-wrapper"><span class="mechanic-icon-pixel">&#128366;</span></div>
+                <div class="mechanic-icon-wrapper"><span class="mechanic-icon-pixel">💲</span></div>
                 <h3>Underlabs</h3>
             </div>
             <div class="mechanic-body">
@@ -674,19 +674,19 @@
                     <h4>Underlab Functions</h4>
                     <ul class="feature-list">
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Save Point:</strong> Resting at an Underlab saves your progress. This is the primary save mechanism -- always rest at an Underlab before attempting dangerous areas or boss fights.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Bone Up (Upgrades):</strong> Spend accumulated Bones to permanently upgrade Mina's stats. Upgrades include attack power, health, and other attributes that persist across the entire game.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Enemy Respawn:</strong> Resting at an Underlab causes all enemies in the world to respawn. This is a trade-off -- you get to save and upgrade, but the world resets to its hostile state.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Facilities:</strong> Underlabs may contain additional facilities and services that aid Mina's adventure. The specific facilities available may vary between Underlab locations.</p>
                         </li>
                     </ul>
@@ -701,7 +701,7 @@
         <!-- COMBAT SYSTEM -->
         <div class="mechanic-section" id="combat">
             <div class="mechanic-header">
-                <div class="mechanic-icon-wrapper"><span class="mechanic-icon-pixel">&#9876;&#65039;</span></div>
+                <div class="mechanic-icon-wrapper"><span class="mechanic-icon-pixel">⚔️</span></div>
                 <h3>Combat System</h3>
             </div>
             <div class="mechanic-body">
@@ -713,27 +713,27 @@
                     <h4>Combat Features</h4>
                     <ul class="feature-list">
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>4-Directional Attacks:</strong> Mina can attack in four directions (up, down, left, right). Positioning relative to enemies is crucial -- face the right direction before attacking to ensure your strikes connect.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>No Roll/Dash:</strong> Unlike most action games, there is no traditional roll or dash dodge. The <span class="accent">burrow</span> is your only dodge mechanic. This makes mastering the burrow essential for survival.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Aggressive Play Rewarded:</strong> The Plasma health system means every attack contributes to your survival. Playing aggressively is not just viable -- it's the optimal strategy. The more you hit, the more you heal.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Weapon Variety:</strong> Five distinct weapons offer different playstyles, from the long-range Nightstar to the fast Whisper and Vesper daggers. Each weapon has a unique moveset and upgrade path.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Sidearms:</strong> Sub-weapons that consume Joules and provide additional tactical options. Sidearms are found by breaking objects and are lost on death, adding a layer of resource management to combat.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Parry (Hollower's Shield):</strong> When equipped with the Hollower's Shield, Mina can parry incoming attacks. A successful parry stuns the enemy and creates an opening for a devastating counter-attack.</p>
                         </li>
                     </ul>
@@ -744,7 +744,7 @@
         <!-- DIFFICULTY MODIFIERS -->
         <div class="mechanic-section" id="difficulty">
             <div class="mechanic-header">
-                <div class="mechanic-icon-wrapper"><span class="mechanic-icon-pixel">&#9881;&#65039;</span></div>
+                <div class="mechanic-icon-wrapper"><span class="mechanic-icon-pixel">⚙️</span></div>
                 <h3>Difficulty Modifiers</h3>
             </div>
             <div class="mechanic-body">
@@ -783,7 +783,7 @@
         <!-- EXPLORATION -->
         <div class="mechanic-section" id="exploration">
             <div class="mechanic-header">
-                <div class="mechanic-icon-wrapper"><span class="mechanic-icon-pixel">&#128269;</span></div>
+                <div class="mechanic-icon-wrapper"><span class="mechanic-icon-pixel">🔍</span></div>
                 <h3>Exploration</h3>
             </div>
             <div class="mechanic-body">
@@ -795,27 +795,27 @@
                     <h4>Exploration Features</h4>
                     <ul class="feature-list">
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Fully Open World:</strong> All 7 areas of Tenebrous Isle are accessible from the beginning. There are no ability locks, required items, or sequence breaks. Go wherever you want, in whatever order you choose.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>No Item Gates:</strong> Unlike traditional Metroidvanias, you will never find a door that requires a specific item to open. Every area is reachable with your base abilities.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Secrets Everywhere:</strong> The world is packed with hidden rooms, breakable walls, underground passages, and concealed items. Use the burrow to discover secrets that are invisible from the surface.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Shortcuts System:</strong> Activate shortcuts throughout the world to reduce backtracking and create faster routes between areas. Shortcuts are essential for efficient exploration and repeated visits to areas.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Breakable Objects:</strong> Smash pots, crates, and other objects to find Sidearms, Joule Jars, Keygears, and other items. Everything breakable might contain something valuable.</p>
                         </li>
                         <li>
-                            <span class="feature-bullet">&#9654;</span>
+                            <span class="feature-bullet">▶</span>
                             <p><strong>Newspaper Hints:</strong> The in-game newspaper in Ossex provides hints about the world, including clues about secret locations, shop updates, and area directions. Read it regularly.</p>
                         </li>
                     </ul>
@@ -834,7 +834,7 @@
         <div class="footer-inner">
             <!-- Authority Box -->
             <div class="authority-box" style="background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 12px; padding: 1rem 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; justify-content: center;">
-                <span class="verified-badge" style="background: linear-gradient(135deg, rgba(0, 200, 100, 0.15), rgba(0, 212, 255, 0.15)); border: 1px solid rgba(0, 200, 100, 0.3); border-radius: 6px; padding: 0.4rem 0.8rem; font-size: 0.75rem; color: #00c864;">&#10003; Verified Information</span>
+                <span class="verified-badge" style="background: linear-gradient(135deg, rgba(0, 200, 100, 0.15), rgba(0, 212, 255, 0.15)); border: 1px solid rgba(0, 200, 100, 0.3); border-radius: 6px; padding: 0.4rem 0.8rem; font-size: 0.75rem; color: #00c864;">✓ Verified Information</span>
                 <span class="update-date" style="font-size: 0.75rem; color: #8888aa;">Last Updated: May 28, 2026</span>
                 <span class="source-citation" style="font-size: 0.7rem; color: #666;">Sources: <a href="https://minathehollower.wiki.gg" target="_blank" rel="noopener" style="color: #00d4ff;">Official Wiki</a>, <a href="https://yachtclubgames.com" target="_blank" rel="noopener" style="color: #00d4ff;">Yacht Club Games</a></span>
             </div>
@@ -845,7 +845,7 @@
     </footer>
 
     <!-- BACK TO TOP BUTTON -->
-    <button id="backToTop" class="back-to-top" aria-label="Back to top">&#8679;</button>
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↩</button>
 
     <!-- OPTIMIZATION SCRIPTS -->
     <script>
