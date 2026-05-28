@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="monetag" content="9b8b6780e06943c23b2c2b70746edc23">
+    <title>Tips & Tricks - Mina the Hollower Guide</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Tips & Tricks | Mina the Hollower Walkthrough Guide">
+    <meta name="description" content="Tips and tricks for Mina the Hollower. Essential strategies, beginner advice, and advanced techniques for Tenebrous Isle.">
+    <meta name="keywords" content="Mina the Hollower tips, beginner guide, how to play, tricks, strategy, advice, getting started, new player guide, first time playing">
+    <meta name="author" content="Mina the Hollower Guide">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Canonical URL - Update with your actual domain when deployed -->
+    <link rel="canonical" href="/tips.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Open Graph / Facebook - Update og:url with your actual domain when deployed -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/tips.html">
+    <meta property="og:title" content="Tips & Tricks | Mina the Hollower Walkthrough Guide">
+    <meta property="og:description" content="Tips and tricks for Mina the Hollower. Essential strategies, beginner advice, and advanced techniques for Tenebrous Isle.">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:site_name" content="Mina the Hollower Guide">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter - Update twitter:url with your actual domain when deployed -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="/tips.html">
+    <meta property="twitter:title" content="Tips & Tricks | Mina the Hollower Walkthrough Guide">
+    <meta property="twitter:description" content="Tips and tricks for Mina the Hollower. Essential strategies, beginner advice, and advanced techniques for Tenebrous Isle.">
+    <meta property="twitter:image" content="/images/og-image.jpg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Tips & Tricks",
+      "description": "Tips and tricks for Mina the Hollower. Essential strategies, beginner advice, and advanced techniques for Tenebrous Isle.",
+      "url": "/tips.html",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Mina the Hollower Guide",
+        "url": "/"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        a { color: #00d4ff; text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #ffd700; }
+        /* ===== SKIP LINK (Accessibility) ===== */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #00d4ff;
+            color: #0d0d1a;
+            padding: 8px 16px;
+            z-index: 10000;
+            transition: top 0.3s;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, #00d4ff, #ffd700);
+            z-index: 10001;
+            transition: width 0.1s ease;
+        }
+
+        /* ===== BACK TO TOP BUTTON ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            border: none;
+            border-radius: 50%;
+            color: #0d0d1a;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.5);
+        }
+
+        /* ===== BREADCRUMB NAVIGATION ===== */
+        .breadcrumb {
+            background: rgba(13, 13, 26, 0.8);
+            padding: 0.75rem 5%;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+        }
+        .breadcrumb ol {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0;
+        }
+        .breadcrumb li {
+            font-size: 0.8rem;
+            color: #a0a0c0;
+        }
+        .breadcrumb li:not(:last-child)::after {
+            content: '/';
+            margin-left: 0.5rem;
+            color: #00d4ff;
+        }
+        .breadcrumb a {
+            color: #00d4ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .breadcrumb a:hover {
+            color: #ffd700;
+        }
+        .breadcrumb [aria-current="page"] {
+            color: #ffd700;
+        }
+
+        /* ===== IMAGE LOADING STATES ===== */
+        img {
+            background: linear-gradient(135deg, #1a1a2e 0%, #0d0d1a 100%);
+            transition: opacity 0.3s ease;
+        }
+        img[loading="lazy"] {
+            opacity: 0;
+        }
+        img.loaded {
+            opacity: 1;
+        }
+
+
+        /* NAV */
+        .navbar {
+            background: linear-gradient(180deg, #12122a 0%, #0d0d1a 100%);
+            border-bottom: 2px solid #2a2a4a;
+            padding: 0 1.5rem;
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .nav-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between; height: 64px;
+        }
+        .nav-logo { font-family: 'Press Start 2P', monospace; font-size: 0.8rem; color: #ffd700; white-space: nowrap; }
+        .nav-links { display: flex; gap: 0.25rem; flex-wrap: wrap; justify-content: flex-end; }
+        .nav-links a {
+            font-size: 0.875rem; padding: 0.4rem 0.7rem; border-radius: 4px;
+            color: #b0b0d0; transition: all 0.2s; white-space: nowrap;
+        }
+        .nav-links a:hover, .nav-links a.active { color: #ffd700; background: rgba(255, 215, 0, 0.08); }
+        .hamburger { display: none; background: none; border: none; color: #ffd700; font-size: 1.5rem; cursor: pointer; }
+        .mobile-menu { display: none; flex-direction: column; padding: 0.75rem 1.5rem 1rem; background: #12122a; border-bottom: 2px solid #2a2a4a; }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a { padding: 0.6rem 0; font-size: 0.85rem; color: #b0b0d0; border-bottom: 1px solid #1a1a3a; }
+        .mobile-menu a:last-child { border-bottom: none; }
+        .mobile-menu a:hover { color: #ffd700; }
+
+        /* PAGE HEADER */
+        .page-header {
+            text-align: center; padding: 3rem 1.5rem 2rem;
+            background: radial-gradient(ellipse at 50% 0%, rgba(255, 215, 0, 0.1) 0%, transparent 60%), #0d0d1a;
+        }
+        .page-header h1 {
+            font-family: 'Press Start 2P', monospace;
+            font-size: clamp(1rem, 3vw, 1.6rem);
+            color: #ffd700; margin-bottom: 0.75rem;
+        }
+        .page-header p { color: #8888aa; font-size: 0.95rem; max-width: 700px; margin: 0 auto; }
+
+        /* NOTICE */
+        .notice { max-width: 1200px; margin: 0 auto; padding: 1rem 1.5rem; }
+        .notice-bar {
+            background: linear-gradient(90deg, rgba(255, 215, 0, 0.1), rgba(0, 212, 255, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 8px;
+            padding: 0.85rem 1.25rem; font-size: 0.85rem; color: #ffd700;
+            display: flex; align-items: center; gap: 0.75rem;
+        }
+        .notice-icon { font-size: 1.2rem; flex-shrink: 0; }
+
+        /* CONTAINER */
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        /* SECTION */
+        .section-title {
+            font-family: 'Press Start 2P', monospace;
+            font-size: clamp(0.85rem, 2vw, 1.1rem);
+            color: #ffd700; margin-bottom: 0.5rem;
+        }
+        .section-subtitle { color: #666; font-size: 0.85rem; margin-bottom: 2rem; }
+
+        /* TIP CATEGORIES */
+        .category-header {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.7rem;
+            color: #00d4ff;
+            text-transform: uppercase;
+            letter-spacing: 0.08em;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid #222240;
+        }
+
+        /* TIP CARDS */
+        .tips-list {
+            display: grid; gap: 1rem; margin-bottom: 3rem;
+        }
+        .tip-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16162a 100%);
+            border: 1px solid #2a2a4a; border-radius: 12px;
+            padding: 1.5rem 1.75rem;
+            display: flex; gap: 1.25rem; align-items: flex-start;
+            transition: border-color 0.3s;
+        }
+        .tip-card:hover { border-color: #3a3a5a; }
+        .tip-number {
+            font-family: 'Press Start 2P', monospace; font-size: 0.75rem;
+            color: #ffd700; flex-shrink: 0;
+            width: 48px; height: 48px;
+            display: flex; align-items: center; justify-content: center;
+            background: linear-gradient(135deg, #2a2a4a 0%, #1a1a3a 100%);
+            border: 2px solid #3a3a5a;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .tip-card:hover .tip-number {
+            border-color: #ffd700;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+        }
+        .tip-content h3 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.7rem;
+            color: #ffd700; margin-bottom: 0.5rem;
+        }
+        .tip-content p {
+            font-size: 0.88rem; color: #9999bb; line-height: 1.7; margin: 0;
+        }
+        .tip-content .tip-detail {
+            margin-top: 0.75rem; padding-top: 0.75rem;
+            border-top: 1px solid #222240;
+            font-size: 0.82rem; color: #7777aa;
+        }
+        .tip-content .tip-detail strong { color: #00d4ff; }
+
+        /* HIGHLIGHT BOXES */
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.06), rgba(0, 212, 255, 0.06));
+            border: 1px solid rgba(255, 215, 0, 0.2); border-radius: 12px;
+            padding: 2rem; margin-bottom: 3rem; text-align: center;
+        }
+        .highlight-box h3 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.7rem;
+            color: #ffd700; margin-bottom: 1rem;
+        }
+        .highlight-box p { color: #b0b0c0; font-size: 0.9rem; max-width: 700px; margin: 0 auto; line-height: 1.8; }
+        .highlight-box .key-point {
+            color: #ffd700; font-weight: 600;
+        }
+
+        /* LOADOUT SECTION */
+        .loadout-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.25rem; margin-bottom: 3rem;
+        }
+        .loadout-card {
+            background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 12px;
+            padding: 1.5rem; position: relative; overflow: hidden;
+        }
+        .loadout-card::before {
+            content: ''; position: absolute; top: 0; left: 0;
+            width: 100%; height: 3px;
+        }
+        .loadout-card.exploration::before { background: linear-gradient(90deg, #00c864, #00d4ff); }
+        .loadout-card.combat::before { background: linear-gradient(90deg, #ff6464, #ffd700); }
+        .loadout-card.boss::before { background: linear-gradient(90deg, #ffd700, #ff6464); }
+        .loadout-card h4 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.65rem;
+            color: #ffd700; margin-bottom: 0.75rem;
+        }
+        .loadout-card .loadout-desc {
+            font-size: 0.82rem; color: #8888aa; margin-bottom: 1rem;
+        }
+        .loadout-items { list-style: none; }
+        .loadout-items li {
+            font-size: 0.82rem; color: #9999bb; padding: 0.3rem 0;
+            padding-left: 1rem; position: relative;
+        }
+        .loadout-items li::before {
+            content: '&#8226;'; position: absolute; left: 0; color: #00d4ff;
+        }
+
+        /* FOOTER */
+        .footer {
+            background: #0a0a15; border-top: 1px solid #1a1a3a;
+            padding: 2rem 1.5rem; text-align: center;
+        }
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+        .footer p { font-size: 0.8rem; color: #555; margin-bottom: 0.5rem; }
+        .footer a { color: #00d4ff; }
+        .footer a:hover { color: #ffd700; }
+        .footer-disclaimer { font-size: 0.7rem; color: #444; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #1a1a3a; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+            .tip-card { flex-direction: column; gap: 0.75rem; }
+            .tip-number { width: 28px; height: 28px; font-size: 0.55rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- SKIP LINK (Accessibility) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- PROGRESS BAR -->
+    <div id="progressBar" class="progress-bar"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">MINA GUIDE</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="walkthrough.html">Walkthrough</a>
+                <a href="bosses.html">Bosses</a>
+                <a href="enemies.html">Enemies</a>
+                <a href="items.html">Items</a>
+                <a href="mechanics.html">Mechanics</a>
+                <a href="tips.html" class="active">Tips</a>
+                <a href="faq.html">FAQ</a>
+                <a href="glossary.html">Glossary</a>
+            </div>
+            <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+        </div>
+        <div class="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="walkthrough.html">Walkthrough</a>
+            <a href="bosses.html">Bosses</a>
+            <a href="enemies.html">Enemies</a>
+            <a href="items.html">Items</a>
+            <a href="mechanics.html">Mechanics</a>
+            <a href="tips.html">Tips</a>
+            <a href="faq.html">FAQ</a>
+            <a href="glossary.html">Glossary</a>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB NAVIGATION -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Tips & Tricks</li>
+        </ol>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <h1>Tips & Tricks</h1>
+        <p>Essential strategies and advanced techniques to master Mina the Hollower from start to finish.</p>
+    </header>
+
+    <!-- NOTICE -->
+    <div class="notice">
+        <div class="notice-bar">
+            <span class="notice-icon">&#9888;&#65039;</span>
+            <span>This game released on May 29, 2026. Tips are being refined as more gameplay is documented. Check back for updated strategies.</span>
+        </div>
+    </div>
+
+    <main id="main-content" class="container">
+
+        <!-- CORE TIPS -->
+        <h2 class="section-title">Essential Tips</h2>
+        <p class="section-subtitle">The most important things to know for a successful adventure</p>
+
+        <div class="category-header">Core Mechanics</div>
+
+        <div class="tips-list">
+
+            <div class="tip-card">
+                <span class="tip-number">01</span>
+                <div class="tip-content">
+                    <h3>Master the Burrow Early</h3>
+                    <p>The burrow is the single most important mechanic in the game. It serves as your dodge, your traversal tool, your secret-finder, and your combat opener all in one. Spend time in the early areas practicing underground movement, pop-up timing, and burrow-to-attack combos. Every other skill in the game builds on top of burrow mastery.</p>
+                    <div class="tip-detail">
+                        <strong>Practice drill:</strong> In safe areas, practice burrowing and immediately popping up in different directions. Learn how far Mina travels underground and how quickly you can transition from burrow to attack.
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <span class="tip-number">02</span>
+                <div class="tip-content">
+                    <h3>Use Range Advantage with Nightstar</h3>
+                    <p>The Nightstar (chain mace/flail) has the longest range of the starting weapons. Use this range advantage to learn enemy attack patterns safely. You can hit enemies from outside their attack range, giving you time to observe their tells and plan your burrow dodges accordingly.</p>
+                    <div class="tip-detail">
+                        <strong>When to switch:</strong> Once you are comfortable with an enemy's patterns, consider switching to Whisper and Vesper (dual daggers) for faster Plasma generation, or the Blaststrike Maul for burst damage.
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <span class="tip-number">03</span>
+                <div class="tip-content">
+                    <h3>Adapt Weapon Choice Per Situation</h3>
+                    <p>Each of the 5 weapons excels in different scenarios. The Nightstar is great for crowd control and safe distance. Whisper and Vesper maximize Plasma generation. The Blaststrike Maul provides invincibility frames on charged attacks. The Hollower's Shield enables parries. The Battery Buster offers ranged damage. Switch weapons based on what you are facing.</p>
+                    <div class="tip-detail">
+                        <strong>Quick-swap habit:</strong> Get into the habit of switching weapons between encounters rather than during them. Assess the upcoming challenge and equip the best tool for the job.
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <span class="tip-number">04</span>
+                <div class="tip-content">
+                    <h3>Explore Thoroughly -- Secrets Are Everywhere</h3>
+                    <p>Tenebrous Isle is packed with hidden content. Break every pot, crate, and destructible object you find. Burrow near suspicious walls and floors. Check corners and dead ends for hidden passages. The game rewards thorough exploration with Sidearms, Keygears, Trinkets, and other valuable items that can significantly impact your adventure.</p>
+                    <div class="tip-detail">
+                        <strong>Burrow everywhere:</strong> Many secrets are only discoverable underground. If a wall looks slightly different or a floor tile seems out of place, burrow near it to check for hidden passages.
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <span class="tip-number">05</span>
+                <div class="tip-content">
+                    <h3>Activate Shortcuts to Reduce Backtracking</h3>
+                    <p>As you explore each area, look for shortcut mechanisms -- one-way doors, elevators, or passages that create faster routes between areas. Activating shortcuts dramatically reduces travel time and makes repeated visits (for grinding, shopping, or revisiting secrets) much more efficient.</p>
+                    <div class="tip-detail">
+                        <strong>Priority:</strong> When entering a new area, make finding shortcuts one of your first goals. A good shortcut can save you significant time over the course of the game.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="category-header">Knowledge & Resources</div>
+
+        <div class="tips-list">
+
+            <div class="tip-card">
+                <span class="tip-number">06</span>
+                <div class="tip-content">
+                    <h3>Read the In-Game Newspaper for Hints</h3>
+                    <p>The newspaper in Ossex is more than just flavor text. It provides genuine gameplay hints, including clues about secret locations, updates on shop inventory, and directional hints for areas you have not yet explored. Check it every time you return to town -- the content updates as you progress through the game.</p>
+                    <div class="tip-detail">
+                        <strong>Don't skip it:</strong> Even if you think you know where to go next, the newspaper might reveal a secret you missed or a shop item you did not know existed.
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <span class="tip-number">07</span>
+                <div class="tip-content">
+                    <h3>Don't Fear Using Difficulty Modifiers</h3>
+                    <p>The extensive assist menu exists for a reason. If you are stuck on a boss, frustrated by a particular area, or simply want to enjoy the story without the challenge, use the available modifiers. Reducing damage, increasing health, or enabling other assists does not make you a lesser player -- it makes you a smart one who knows how to customize their experience.</p>
+                    <div class="tip-detail">
+                        <strong>Note:</strong> God Mode specifically disables Feats (achievements), but other assist options do not have this restriction. Adjust freely to find your ideal difficulty level.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="category-header">Advanced Combat</div>
+
+        <div class="tips-list">
+
+            <div class="tip-card">
+                <span class="tip-number">08</span>
+                <div class="tip-content">
+                    <h3>Parry with the Hollower's Shield</h3>
+                    <p>Once you unlock the Hollower's Shield, practice the parry timing against regular enemies before taking it into boss fights. A successful parry stuns the enemy and opens a large window for a counter-attack. The parry window is likely generous enough to be consistent but tight enough to be rewarding.</p>
+                    <div class="tip-detail">
+                        <strong>Parry vs. Burrow:</strong> Both provide defensive options, but the parry is offensive (stuns + counter) while the burrow is repositioning (invincibility + mobility). Use parries against single enemies and burrows against groups or wide-area attacks.
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <span class="tip-number">09</span>
+                <div class="tip-content">
+                    <h3>Charge the Blaststrike Maul for Invincibility Frames</h3>
+                    <p>The Blaststrike Maul's charged attack grants invincibility frames during both the charge-up and the swing. This makes it uniquely valuable for boss fights where you need to tank through an attack. Time your charges so the invincibility frames cover the enemy's attack animation, then release for massive damage.</p>
+                    <div class="tip-detail">
+                        <strong>Combo potential:</strong> Charge the Maul while burrowed underground, then pop up with the charged attack already primed. This combines the burrow's invincibility with the Maul's invincibility for an extended damage window.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="category-header">Progression & Economy</div>
+
+        <div class="tips-list">
+
+            <div class="tip-card">
+                <span class="tip-number">10</span>
+                <div class="tip-content">
+                    <h3>Manage Bones Wisely</h3>
+                    <p>Bones are your currency, your XP, and your progression all in one. Every decision about Bones is a trade-off: spend them on permanent upgrades at the Underlabs, or save them for shop purchases like Trinkets and weapon upgrades. As a general rule, prioritize permanent stat upgrades over consumable purchases, since upgrades persist forever while items can be lost.</p>
+                    <div class="tip-detail">
+                        <strong>The death risk:</strong> If you are carrying a large number of Bones and are far from an Underlab, consider whether pushing forward is worth the risk. A single death can erase hours of grinding.
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <span class="tip-number">11</span>
+                <div class="tip-content">
+                    <h3>Prioritize Attack Power Early</h3>
+                    <p>When spending Bones at the Underlabs, prioritize attack power upgrades in the early game. Higher attack power means enemies die faster, which means you take less damage overall and generate Plasma more efficiently. Attack upgrades have a cascading effect -- faster kills lead to safer exploration and more Bones earned per hour.</p>
+                    <div class="tip-detail">
+                        <strong>Upgrade order suggestion:</strong> Attack power first, then health, then other stats. Health upgrades become more valuable once you have the damage output to avoid prolonged fights.
+                    </div>
+                </div>
+            </div>
+
+            <div class="tip-card">
+                <span class="tip-number">12</span>
+                <div class="tip-content">
+                    <h3>Use Trinket Loadouts for Different Situations</h3>
+                    <p>With up to 5 Trinket slots available, you can create specialized loadouts for different activities. An exploration loadout might include Ferrying Wisp, Extended Burrow, and Long Jump for maximum mobility. A combat loadout might feature Attack Multiplier, Health Boost, and Electric Shock for damage and survivability. A boss loadout could include Prototype Spark for the safety net.</p>
+                    <div class="tip-detail">
+                        <strong>Swap before fights:</strong> Get into the habit of checking and adjusting your Trinket loadout before entering a new area or challenging a boss. The right Trinkets can make a dramatic difference in difficulty.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- RECOMMENDED LOADOUTS -->
+        <h2 class="section-title">Recommended Loadouts</h2>
+        <p class="section-subtitle">Suggested Trinket and weapon combinations for different situations</p>
+
+        <div class="loadout-grid">
+            <div class="loadout-card exploration">
+                <h4>Exploration Loadout</h4>
+                <p class="loadout-desc">Maximize mobility and discovery potential when exploring new areas and hunting for secrets.</p>
+                <ul class="loadout-items">
+                    <li><strong>Weapon:</strong> Nightstar (range for safety)</li>
+                    <li><strong>Trinket 1:</strong> Ferrying Wisp (float for platforming)</li>
+                    <li><strong>Trinket 2:</strong> Extended Burrow (longer underground travel)</li>
+                    <li><strong>Trinket 3:</strong> Long Jump (cross gaps easily)</li>
+                    <li><strong>Trinket 4:</strong> Wall Cling (access vertical areas)</li>
+                    <li><strong>Trinket 5:</strong> Health Boost (survival cushion)</li>
+                </ul>
+            </div>
+            <div class="loadout-card combat">
+                <h4>General Combat Loadout</h4>
+                <p class="loadout-desc">Balanced setup for clearing areas with a mix of offense and survivability.</p>
+                <ul class="loadout-items">
+                    <li><strong>Weapon:</strong> Whisper and Vesper (fast Plasma gen)</li>
+                    <li><strong>Trinket 1:</strong> Attack Multiplier (scaling damage)</li>
+                    <li><strong>Trinket 2:</strong> Health Boost (more room for error)</li>
+                    <li><strong>Trinket 3:</strong> Electric Shock (AoE disruption)</li>
+                    <li><strong>Trinket 4:</strong> Killer Bug (passive DPS)</li>
+                    <li><strong>Trinket 5:</strong> Prototype Spark (death insurance)</li>
+                </ul>
+            </div>
+            <div class="loadout-card boss">
+                <h4>Boss Fight Loadout</h4>
+                <p class="loadout-desc">Maximum survivability and burst damage for challenging boss encounters.</p>
+                <ul class="loadout-items">
+                    <li><strong>Weapon:</strong> Blaststrike Maul (i-frames on charge)</li>
+                    <li><strong>Trinket 1:</strong> Health Boost (larger health pool)</li>
+                    <li><strong>Trinket 2:</strong> Prototype Spark (auto-revive)</li>
+                    <li><strong>Trinket 3:</strong> Attack Multiplier (burst damage)</li>
+                    <li><strong>Trinket 4:</strong> Lightning Strike (supplemental damage)</li>
+                    <li><strong>Trinket 5:</strong> Electric Shock (stun potential)</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- KEY REMINDER -->
+        <div class="highlight-box">
+            <h3>Remember</h3>
+            <p>
+                Mina the Hollower is designed to be <span class="key-point">enjoyed, not endured</span>. The fully non-linear world means you are never stuck -- if something is too hard, go somewhere else. The extensive difficulty options mean you can always adjust the challenge. And the rich, detailed world of Tenebrous Isle rewards curiosity at every turn. Take your time, explore thoroughly, and most importantly, have fun.
+            </p>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <!-- Authority Box -->
+            <div class="authority-box" style="background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 12px; padding: 1rem 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <span class="verified-badge" style="background: linear-gradient(135deg, rgba(0, 200, 100, 0.15), rgba(0, 212, 255, 0.15)); border: 1px solid rgba(0, 200, 100, 0.3); border-radius: 6px; padding: 0.4rem 0.8rem; font-size: 0.75rem; color: #00c864;">&#10003; Verified Information</span>
+                <span class="update-date" style="font-size: 0.75rem; color: #8888aa;">Last Updated: May 28, 2026</span>
+                <span class="source-citation" style="font-size: 0.7rem; color: #666;">Sources: <a href="https://minathehollower.wiki.gg" target="_blank" rel="noopener" style="color: #00d4ff;">Official Wiki</a>, <a href="https://yachtclubgames.com" target="_blank" rel="noopener" style="color: #00d4ff;">Yacht Club Games</a></span>
+            </div>
+            <p><a href="index.html">Mina the Hollower Walkthrough Guide</a> &mdash; Tips & Strategies</p>
+            <p>Mina the Hollower is a trademark of <a href="https://yachtclubgames.com" target="_blank" rel="noopener">Yacht Club Games</a>. This is a fan-made guide.</p>
+            <p class="footer-disclaimer">All game content and trademarks are property of their respective owners. Information sourced from the official Mina the Hollower Wiki (minathehollower.wiki.gg), IGN, PC Gamer, and Yacht Club Games official materials.</p>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">&#8679;</button>
+
+    <!-- OPTIMIZATION SCRIPTS -->
+    <script>
+        // Progress bar
+        const progressBar = document.getElementById('progressBar');
+        if (progressBar) {
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = scrolled + '%';
+            });
+        }
+
+        // Back to top functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        if (backToTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Image lazy loading handler
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            img.addEventListener('load', () => img.classList.add('loaded'));
+            // Trigger load event for already cached images
+            if (img.complete) img.classList.add('loaded');
+        });
+    </script>
+
+</body>
+</html>

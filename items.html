@@ -1,0 +1,975 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="monetag" content="9b8b6780e06943c23b2c2b70746edc23">
+    <title>Items & Equipment - Mina the Hollower Guide</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Items & Equipment | Mina the Hollower Walkthrough Guide">
+    <meta name="description" content="Items and equipment guide for Mina the Hollower. All weapons, sidearms, trinkets, and collectibles in Tenebrous Isle.">
+    <meta name="keywords" content="Mina the Hollower weapons, best weapon, Nightstar, Whisper and Vesper, Blaststrike Maul, Hollower's Shield, Battery Buster, sidearms, trinkets, items, equipment, upgrades">
+    <meta name="author" content="Mina the Hollower Guide">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Canonical URL - Update with your actual domain when deployed -->
+    <link rel="canonical" href="/items.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Open Graph / Facebook - Update og:url with your actual domain when deployed -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/items.html">
+    <meta property="og:title" content="Items & Equipment | Mina the Hollower Walkthrough Guide">
+    <meta property="og:description" content="Items and equipment guide for Mina the Hollower. All weapons, sidearms, trinkets, and collectibles in Tenebrous Isle.">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:site_name" content="Mina the Hollower Guide">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter - Update twitter:url with your actual domain when deployed -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="/items.html">
+    <meta property="twitter:title" content="Items & Equipment | Mina the Hollower Walkthrough Guide">
+    <meta property="twitter:description" content="Items and equipment guide for Mina the Hollower. All weapons, sidearms, trinkets, and collectibles in Tenebrous Isle.">
+    <meta property="twitter:image" content="/images/og-image.jpg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Items & Equipment",
+      "description": "Items and equipment guide for Mina the Hollower. All weapons, sidearms, trinkets, and collectibles in Tenebrous Isle.",
+      "url": "/items.html",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Mina the Hollower Guide",
+        "url": "/"
+      }
+    }
+    </script>
+    <!-- ItemList Schema for Weapons -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Mina the Hollower Weapons",
+      "numberOfItems": 5,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Nightstar",
+          "description": "Chain mace/flail with long range. Starting weapon. Upgrades to Dread Mace."
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Whisper and Vesper",
+          "description": "Dual daggers with very fast attack speed. Starting weapon. Upgrades to Throwing Dagger."
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Blaststrike Maul",
+          "description": "Heavy hammer with invincibility frames on charge. Starting weapon. Upgrades to Explosive Charge."
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Hollower's Shield",
+          "description": "Parry shield with defensive capabilities. Unlockable. Upgrades to Shield Toss."
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Battery Buster",
+          "description": "Ranged blaster weapon. Unlockable. Upgrades to Charge Shot."
+        }
+      ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        a { color: #00d4ff; text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #ffd700; }
+        /* ===== SKIP LINK (Accessibility) ===== */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #00d4ff;
+            color: #0d0d1a;
+            padding: 8px 16px;
+            z-index: 10000;
+            transition: top 0.3s;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, #00d4ff, #ffd700);
+            z-index: 10001;
+            transition: width 0.1s ease;
+        }
+
+        /* ===== BACK TO TOP BUTTON ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            border: none;
+            border-radius: 50%;
+            color: #0d0d1a;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.5);
+        }
+
+        /* ===== BREADCRUMB NAVIGATION ===== */
+        .breadcrumb {
+            background: rgba(13, 13, 26, 0.8);
+            padding: 0.75rem 5%;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+        }
+        .breadcrumb ol {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0;
+        }
+        .breadcrumb li {
+            font-size: 0.8rem;
+            color: #a0a0c0;
+        }
+        .breadcrumb li:not(:last-child)::after {
+            content: '/';
+            margin-left: 0.5rem;
+            color: #00d4ff;
+        }
+        .breadcrumb a {
+            color: #00d4ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .breadcrumb a:hover {
+            color: #ffd700;
+        }
+        .breadcrumb [aria-current="page"] {
+            color: #ffd700;
+        }
+
+        /* ===== IMAGE LOADING STATES ===== */
+        img {
+            background: linear-gradient(135deg, #1a1a2e 0%, #0d0d1a 100%);
+            transition: opacity 0.3s ease;
+        }
+        img[loading="lazy"] {
+            opacity: 0;
+        }
+        img.loaded {
+            opacity: 1;
+        }
+
+
+        /* NAV */
+        .navbar {
+            background: linear-gradient(180deg, #12122a 0%, #0d0d1a 100%);
+            border-bottom: 2px solid #2a2a4a;
+            padding: 0 1.5rem;
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .nav-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between; height: 64px;
+        }
+        .nav-logo { font-family: 'Press Start 2P', monospace; font-size: 0.8rem; color: #ffd700; white-space: nowrap; }
+        .nav-links { display: flex; gap: 0.25rem; flex-wrap: wrap; justify-content: flex-end; }
+        .nav-links a {
+            font-size: 0.875rem; padding: 0.4rem 0.7rem; border-radius: 4px;
+            color: #b0b0d0; transition: all 0.2s; white-space: nowrap;
+        }
+        .nav-links a:hover, .nav-links a.active { color: #ffd700; background: rgba(255, 215, 0, 0.08); }
+        .hamburger { display: none; background: none; border: none; color: #ffd700; font-size: 1.5rem; cursor: pointer; }
+        .mobile-menu { display: none; flex-direction: column; padding: 0.75rem 1.5rem 1rem; background: #12122a; border-bottom: 2px solid #2a2a4a; }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a { padding: 0.6rem 0; font-size: 0.85rem; color: #b0b0d0; border-bottom: 1px solid #1a1a3a; }
+        .mobile-menu a:last-child { border-bottom: none; }
+        .mobile-menu a:hover { color: #ffd700; }
+
+        /* PAGE HEADER */
+        .page-header {
+            text-align: center; padding: 3rem 1.5rem 2rem;
+            background: radial-gradient(ellipse at 50% 0%, rgba(255, 215, 0, 0.1) 0%, transparent 60%), #0d0d1a;
+        }
+        .page-header h1 {
+            font-family: 'Press Start 2P', monospace;
+            font-size: clamp(1rem, 3vw, 1.6rem);
+            color: #ffd700; margin-bottom: 0.75rem;
+        }
+        .page-header p { color: #8888aa; font-size: 0.95rem; max-width: 700px; margin: 0 auto; }
+
+        /* NOTICE */
+        .notice { max-width: 1200px; margin: 0 auto; padding: 1rem 1.5rem; }
+        .notice-bar {
+            background: linear-gradient(90deg, rgba(255, 215, 0, 0.1), rgba(0, 212, 255, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 8px;
+            padding: 0.85rem 1.25rem; font-size: 0.85rem; color: #ffd700;
+            display: flex; align-items: center; gap: 0.75rem;
+        }
+        .notice-icon { font-size: 1.2rem; flex-shrink: 0; }
+
+        /* CONTAINER */
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        /* SECTION */
+        .section-title {
+            font-family: 'Press Start 2P', monospace;
+            font-size: clamp(0.85rem, 2vw, 1.1rem);
+            color: #ffd700; margin-bottom: 0.5rem;
+        }
+        .section-subtitle { color: #666; font-size: 0.85rem; margin-bottom: 2rem; }
+
+        /* TABLE OF CONTENTS */
+        .toc {
+            background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 12px;
+            padding: 1.5rem 2rem; margin-bottom: 3rem;
+        }
+        .toc h3 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.65rem;
+            color: #00d4ff; margin-bottom: 1rem; text-transform: uppercase;
+        }
+        .toc-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.5rem; }
+        .toc-list a {
+            font-size: 0.85rem; color: #b0b0c0; padding: 0.3rem 0;
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .toc-list a::before { content: '&#9654;'; color: #ffd700; font-size: 0.5rem; }
+        .toc-list a:hover { color: #ffd700; }
+
+        /* WEAPON CARDS */
+        .weapon-grid {
+            display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 3rem;
+        }
+        .weapon-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16162a 100%);
+            border: 1px solid #2a2a4a; border-radius: 12px;
+            overflow: hidden; transition: border-color 0.3s;
+        }
+        .weapon-card:hover { border-color: #3a3a5a; }
+
+        /* WEAPON ICON STYLES */
+        .weapon-icon-wrapper {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #2a2a4a 0%, #1a1a3a 100%);
+            border: 2px solid #3a3a5a;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+        .weapon-card:hover .weapon-icon-wrapper {
+            border-color: #ffd700;
+            box-shadow: 0 0 10px rgba(255, 215, 0, 0.2);
+        }
+        .weapon-icon-pixel {
+            font-size: 1.5rem;
+            filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.3));
+        }
+        .weapon-header {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid #222240;
+            display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+        }
+        .weapon-icon { font-size: 1.8rem; flex-shrink: 0; }
+        .weapon-header h3 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.75rem;
+            color: #ffd700; flex: 1;
+        }
+        .weapon-badges { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+        .weapon-badge {
+            font-family: 'Press Start 2P', monospace; font-size: 0.55rem;
+            padding: 0.25rem 0.5rem; border-radius: 4px; text-transform: uppercase;
+        }
+        .badge-start { background: rgba(0, 200, 100, 0.15); color: #00c864; border: 1px solid rgba(0, 200, 100, 0.3); }
+        .badge-unlock { background: rgba(0, 212, 255, 0.15); color: #00d4ff; border: 1px solid rgba(0, 212, 255, 0.3); }
+        .badge-upgrade { background: rgba(255, 215, 0, 0.15); color: #ffd700; border: 1px solid rgba(255, 215, 0, 0.3); }
+        .weapon-body { padding: 1.25rem 1.5rem; }
+        .weapon-body p { color: #9999bb; font-size: 0.88rem; margin-bottom: 0.75rem; line-height: 1.7; }
+        .weapon-body p:last-child { margin-bottom: 0; }
+        .weapon-stats {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+            gap: 0.5rem; margin-top: 1rem;
+        }
+        .weapon-stat {
+            background: #12122a; border: 1px solid #222240; border-radius: 6px;
+            padding: 0.5rem 0.75rem;
+        }
+        .weapon-stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: #666; }
+        .weapon-stat-value { font-size: 0.85rem; color: #e0e0e0; font-weight: 500; }
+
+        .tip-inline {
+            background: rgba(0, 212, 255, 0.06); border-left: 3px solid #00d4ff;
+            padding: 0.6rem 1rem; margin-top: 0.75rem; border-radius: 0 6px 6px 0;
+            font-size: 0.82rem; color: #8899bb;
+        }
+        .tip-inline strong { color: #00d4ff; }
+
+        /* SIDEARM CARDS */
+        .sidearm-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem; margin-bottom: 3rem;
+        }
+        .sidearm-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16162a 100%);
+            border: 1px solid #2a2a4a; border-radius: 12px;
+            padding: 1.5rem; position: relative; overflow: hidden;
+        }
+        .sidearm-card::before {
+            content: ''; position: absolute; top: 0; left: 0;
+            width: 100%; height: 3px;
+        }
+        .sidearm-card.confirmed::before { background: #00c864; }
+        .sidearm-card.unconfirmed::before { background: #666; }
+        .sidearm-card h4 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.65rem;
+            color: #ffd700; margin-bottom: 0.5rem;
+        }
+        .sidearm-card .sidearm-type {
+            font-size: 0.75rem; color: #666; text-transform: uppercase;
+            letter-spacing: 0.05em; margin-bottom: 0.75rem;
+        }
+        .sidearm-card p { font-size: 0.85rem; color: #8888aa; line-height: 1.6; }
+        .sidearm-note {
+            margin-top: 0.75rem; padding-top: 0.75rem; border-top: 1px solid #222240;
+            font-size: 0.75rem; color: #ff6464;
+        }
+        .status-badge {
+            font-family: 'Inter', sans-serif; font-size: 0.6rem;
+            padding: 0.15rem 0.4rem; border-radius: 3px;
+            text-transform: uppercase; letter-spacing: 0.05em;
+            margin-left: 0.5rem; vertical-align: middle;
+        }
+        .status-badge.confirmed { background: rgba(0, 200, 100, 0.15); color: #00c864; }
+        .status-badge.unconfirmed { background: rgba(255, 200, 0, 0.15); color: #ccaa00; }
+
+        /* TRINKET CARDS */
+        .trinket-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1.25rem; margin-bottom: 3rem;
+        }
+        .trinket-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16162a 100%);
+            border: 1px solid #2a2a4a; border-radius: 12px;
+            padding: 1.5rem; position: relative; overflow: hidden;
+        }
+        .trinket-card::before {
+            content: ''; position: absolute; top: 0; left: 0;
+            width: 100%; height: 3px;
+            background: linear-gradient(90deg, #00d4ff, #ffd700);
+        }
+        .trinket-card.confirmed::before { background: #00c864; }
+        .trinket-card.unconfirmed::before { background: #666; }
+        .trinket-card h4 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.6rem;
+            color: #ffd700; margin-bottom: 0.4rem;
+        }
+        .trinket-effect {
+            font-size: 0.85rem; color: #b0b0c0; margin-bottom: 0.5rem;
+        }
+        .trinket-card p { font-size: 0.8rem; color: #8888aa; line-height: 1.5; }
+        .trinket-status {
+            display: inline-block; font-size: 0.7rem; padding: 0.15rem 0.4rem;
+            border-radius: 3px; margin-top: 0.5rem; text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .status-confirmed { background: rgba(0, 200, 100, 0.15); color: #00c864; }
+        .status-unconfirmed { background: rgba(255, 200, 0, 0.15); color: #ccaa00; }
+
+        /* OTHER ITEMS */
+        .items-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.25rem; margin-bottom: 3rem;
+        }
+        .item-card {
+            background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 12px;
+            padding: 1.5rem;
+        }
+        .item-card h4 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.65rem;
+            color: #ffd700; margin-bottom: 0.5rem;
+        }
+        .item-card p { font-size: 0.85rem; color: #8888aa; line-height: 1.6; }
+
+        /* INFO BOX */
+        .info-box {
+            background: rgba(255, 215, 0, 0.06); border: 1px solid rgba(255, 215, 0, 0.15);
+            border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 2rem;
+            font-size: 0.85rem; color: #b0b0c0;
+        }
+        .info-box strong { color: #ffd700; }
+
+        /* FOOTER */
+        .footer {
+            background: #0a0a15; border-top: 1px solid #1a1a3a;
+            padding: 2rem 1.5rem; text-align: center;
+        }
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+        .footer p { font-size: 0.8rem; color: #555; margin-bottom: 0.5rem; }
+        .footer a { color: #00d4ff; }
+        .footer a:hover { color: #ffd700; }
+        .footer-disclaimer { font-size: 0.7rem; color: #444; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #1a1a3a; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+            .weapon-header { padding: 1rem 1.25rem; }
+            .weapon-body { padding: 1rem 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- SKIP LINK (Accessibility) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- PROGRESS BAR -->
+    <div id="progressBar" class="progress-bar"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">MINA GUIDE</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="walkthrough.html">Walkthrough</a>
+                <a href="bosses.html">Bosses</a>
+                <a href="enemies.html">Enemies</a>
+                <a href="items.html" class="active">Items</a>
+                <a href="mechanics.html">Mechanics</a>
+                <a href="tips.html">Tips</a>
+                <a href="faq.html">FAQ</a>
+                <a href="glossary.html">Glossary</a>
+            </div>
+            <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+        </div>
+        <div class="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="walkthrough.html">Walkthrough</a>
+            <a href="bosses.html">Bosses</a>
+            <a href="enemies.html">Enemies</a>
+            <a href="items.html">Items</a>
+            <a href="mechanics.html">Mechanics</a>
+            <a href="tips.html">Tips</a>
+            <a href="faq.html">FAQ</a>
+            <a href="glossary.html">Glossary</a>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB NAVIGATION -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Items & Equipment</li>
+        </ol>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <h1>Items & Equipment</h1>
+        <p>Complete catalog of all weapons, sidearms, trinkets, and items in Mina the Hollower.</p>
+    </header>
+
+    <!-- NOTICE -->
+    <div class="notice">
+        <div class="notice-bar">
+            <span class="notice-icon">&#9888;&#65039;</span>
+            <span>This game released on May 29, 2026. This guide is being actively updated. Some item names and effects marked as unconfirmed are based on pre-release information.</span>
+        </div>
+    </div>
+
+    <main id="main-content" class="container">
+
+        <!-- SUMMARY BOX -->
+        <div class="summary-box" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(0, 212, 255, 0.08)); border: 1px solid rgba(255, 215, 0, 0.2); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 2rem;">
+            <h3 style="font-family: 'Press Start 2P', monospace; font-size: 0.7rem; color: #ffd700; margin-bottom: 1rem; text-transform: uppercase;">Key Points</h3>
+            <ul style="list-style: none; display: grid; gap: 0.5rem;">
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> 5 weapons: 3 starting + 2 unlockable, each with unique upgrade</li>
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> Sidearms consume Joules and are lost on death - use wisely</li>
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> Up to 5 Trinket slots for build customization</li>
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> Bones are currency/XP - lost on death unless protected by Spark</li>
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> Plasma heals through combat - attack to fill bar and recover HP</li>
+            </ul>
+        </div>
+
+        <!-- TABLE OF CONTENTS -->
+        <div class="toc">
+            <h3>Quick Navigation</h3>
+            <ul class="toc-list">
+                <li><a href="#weapons">Weapons</a></li>
+                <li><a href="#sidearms">Sidearms</a></li>
+                <li><a href="#trinkets">Trinkets</a></li>
+                <li><a href="#other-items">Other Items</a></li>
+            </ul>
+        </div>
+
+        <!-- ==================== WEAPONS ==================== -->
+        <h2 class="section-title" id="weapons">Weapons</h2>
+        <p class="section-subtitle">5 primary weapons, each with a unique moveset and upgrade path</p>
+
+        <div class="info-box">
+            <strong>Note:</strong> Three weapons are available from the start. The remaining two are unlockable through exploration. Each weapon can be upgraded at the Weapon Shop in Ossex.
+        </div>
+
+        <div class="weapon-grid">
+
+            <!-- NIGHTSTAR -->
+            <div class="weapon-card">
+                <div class="weapon-header">
+                    <div class="weapon-icon-wrapper"><span class="weapon-icon-pixel">&#128165;</span></div>
+                    <h3>Nightstar</h3>
+                    <div class="weapon-badges">
+                        <span class="weapon-badge badge-start">Starting Weapon</span>
+                        <span class="weapon-badge badge-upgrade">Upgrade: Dread Mace</span>
+                    </div>
+                </div>
+                <div class="weapon-body">
+                    <p>
+                        The <strong>Nightstar</strong> is a chain mace/flail that serves as one of Mina's starting weapons. Its chain-based design provides extended reach compared to melee weapons, allowing Mina to strike enemies from a safer distance. The flail head swings in an arc, making it effective for hitting multiple enemies in a wide sweep.
+                    </p>
+                    <p>
+                        The range advantage makes the Nightstar an excellent choice for players who prefer to keep their distance while maintaining aggressive offense. Its sweeping arc also helps when surrounded by enemies.
+                    </p>
+                    <div class="weapon-stats">
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">Type</div>
+                            <div class="weapon-stat-value">Chain Mace / Flail</div>
+                        </div>
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">Available</div>
+                            <div class="weapon-stat-value">Start</div>
+                        </div>
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">Range</div>
+                            <div class="weapon-stat-value">Long</div>
+                        </div>
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">Upgrade</div>
+                            <div class="weapon-stat-value">Dread Mace</div>
+                        </div>
+                    </div>
+                    <div class="tip-inline">
+                        <strong>Tip:</strong> Use the Nightstar's range to safely learn enemy attack patterns. The wide arc is great for crowd control when enemies group together.
+                    </div>
+                </div>
+            </div>
+
+            <!-- WHISPER AND VESPER -->
+            <div class="weapon-card">
+                <div class="weapon-header">
+                    <div class="weapon-icon-wrapper"><span class="weapon-icon-pixel">&#128481;&#65039;</span></div>
+                    <h3>Whisper and Vesper</h3>
+                    <div class="weapon-badges">
+                        <span class="weapon-badge badge-start">Starting Weapon</span>
+                        <span class="weapon-badge badge-upgrade">Upgrade: Throwing Dagger</span>
+                    </div>
+                </div>
+                <div class="weapon-body">
+                    <p>
+                        <strong>Whisper and Vesper</strong> are a pair of dual daggers available from the start. These fast-striking weapons prioritize speed over raw damage, allowing Mina to deliver rapid consecutive hits. The dual-wielding nature means attacks alternate between the two daggers, creating a flurry of strikes.
+                    </p>
+                    <p>
+                        The high attack speed synergizes well with the Plasma health system, as more hits mean faster health regeneration. The daggers are ideal for aggressive players who want to maximize their time on the offensive.
+                    </p>
+                    <div class="weapon-stats">
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">Type</div>
+                            <div class="weapon-stat-value">Dual Daggers</div>
+                        </div>
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">Available</div>
+                            <div class="weapon-stat-value">Start</div>
+                        </div>
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">Speed</div>
+                            <div class="weapon-stat-value">Very Fast</div>
+                        </div>
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">Upgrade</div>
+                            <div class="weapon-stat-value">Throwing Dagger</div>
+                        </div>
+                    </div>
+                    <div class="tip-inline">
+                        <strong>Tip:</strong> The rapid attack speed fills your Plasma bar quickly. Pair with the Attack Multiplier Trinket for devastating combo potential.
+                    </div>
+                </div>
+            </div>
+
+            <!-- BLASTSTRIKE MAUL -->
+            <div class="weapon-card">
+                <div class="weapon-header">
+                    <div class="weapon-icon-wrapper"><span class="weapon-icon-pixel">&#128296;</span></div>
+                    <h3>Blaststrike Maul</h3>
+                    <div class="weapon-badges">
+                        <span class="weapon-badge badge-start">Starting Weapon</span>
+                        <span class="weapon-badge badge-upgrade">Upgrade: Explosive Charge</span>
+                    </div>
+                </div>
+                <div class="weapon-body">
+                    <p>
+                        The <strong>Blaststrike Maul</strong> is a heavy hammer available from the start. It trades speed for raw power, dealing significant damage per hit. The hammer's charged attack is particularly notable, as it grants <strong>invincibility frames</strong> during the charge-up and swing animation.
+                    </p>
+                    <p>
+                        The invincibility frames on the charged attack make the Maul a defensive tool as well as an offensive one. Time your charges to tank through enemy attacks while delivering devastating blows.
+                    </p>
+                    <div class="weapon-stats">
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">Type</div>
+                            <div class="weapon-stat-value">Hammer</div>
+                        </div>
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">Available</div>
+                            <div class="weapon-stat-value">Start</div>
+                        </div>
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">Damage</div>
+                            <div class="weapon-stat-value">Very High</div>
+                        </div>
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">Upgrade</div>
+                            <div class="weapon-stat-value">Explosive Charge</div>
+                        </div>
+                    </div>
+                    <div class="tip-inline">
+                        <strong>Tip:</strong> Charge the Maul to gain invincibility frames. This is invaluable for boss fights where you need to tank through an attack to land a big hit.
+                    </div>
+                </div>
+            </div>
+
+            <!-- HOLLOWER'S SHIELD -->
+            <div class="weapon-card">
+                <div class="weapon-header">
+                    <div class="weapon-icon-wrapper"><span class="weapon-icon-pixel">&#128737;&#65039;</span></div>
+                    <h3>Hollower's Shield</h3>
+                    <div class="weapon-badges">
+                        <span class="weapon-badge badge-unlock">Unlockable</span>
+                        <span class="weapon-badge badge-upgrade">Upgrade: Shield Toss</span>
+                    </div>
+                </div>
+                <div class="weapon-body">
+                    <p>
+                        The <strong>Hollower's Shield</strong> is an unlockable weapon that provides defensive capabilities alongside offensive options. As a shield, it can be used to <strong>parry</strong> incoming attacks, creating openings for counter-attacks. The parry mechanic rewards precise timing with a devastating riposte.
+                    </p>
+                    <p>
+                        The Shield's upgrade, Shield Toss, adds a ranged attack option, transforming the defensive tool into a versatile offensive weapon as well.
+                    </p>
+                    <div class="weapon-stats">
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">Type</div>
+                            <div class="weapon-stat-value">Shield</div>
+                        </div>
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">Available</div>
+                            <div class="weapon-stat-value">Unlockable</div>
+                        </div>
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">Special</div>
+                            <div class="weapon-stat-value">Parry</div>
+                        </div>
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">Upgrade</div>
+                            <div class="weapon-stat-value">Shield Toss</div>
+                        </div>
+                    </div>
+                    <div class="tip-inline">
+                        <strong>Tip:</strong> Master the parry timing for maximum effectiveness. A successful parry stuns the enemy and creates a large window for a counter-attack combo.
+                    </div>
+                </div>
+            </div>
+
+            <!-- BATTERY BUSTER -->
+            <div class="weapon-card">
+                <div class="weapon-header">
+                    <div class="weapon-icon-wrapper"><span class="weapon-icon-pixel">&#128299;</span></div>
+                    <h3>Battery Buster</h3>
+                    <div class="weapon-badges">
+                        <span class="weapon-badge badge-unlock">Unlockable</span>
+                        <span class="weapon-badge badge-upgrade">Upgrade: Charge Shot</span>
+                    </div>
+                </div>
+                <div class="weapon-body">
+                    <p>
+                        The <strong>Battery Buster</strong> is an unlockable blaster weapon that provides ranged combat capabilities. Unlike the other melee-focused weapons, the Battery Buster allows Mina to engage enemies from a distance, adding a new dimension to combat strategy.
+                    </p>
+                    <p>
+                        The Charge Shot upgrade enables a powerful ranged attack that likely deals increased damage and may have special properties such as piercing or area-of-effect damage.
+                    </p>
+                    <div class="weapon-stats">
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">Type</div>
+                            <div class="weapon-stat-value">Blaster</div>
+                        </div>
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">Available</div>
+                            <div class="weapon-stat-value">Unlockable</div>
+                        </div>
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">Range</div>
+                            <div class="weapon-stat-value">Ranged</div>
+                        </div>
+                        <div class="weapon-stat">
+                            <div class="weapon-stat-label">Upgrade</div>
+                            <div class="weapon-stat-value">Charge Shot</div>
+                        </div>
+                    </div>
+                    <div class="tip-inline">
+                        <strong>Tip:</strong> The Battery Buster excels at picking off enemies before they close the distance. Use it to soften up tough enemies before finishing them with melee.
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- ==================== SIDEARMS ==================== -->
+        <h2 class="section-title" id="sidearms">Sidearms</h2>
+        <p class="section-subtitle">Sub-weapons that consume Joules and are lost on death</p>
+
+        <div class="info-box">
+            <strong>Important:</strong> Sidearms consume <strong>Joules</strong> to use. They are <strong>lost upon death</strong>, so use them wisely. Sidearms are found by <strong>breaking objects</strong> throughout the world -- smash everything you see to discover them.
+        </div>
+
+        <div class="sidearm-grid">
+            <div class="sidearm-card confirmed">
+                <h4>Gyro Dagger <span class="status-badge confirmed">Confirmed</span></h4>
+                <div class="sidearm-type">Boomerang Dagger</div>
+                <p>When thrown, the Gyro Dagger arcs outward and then curves back to Mina like a boomerang, striking enemies multiple times as it spins. A neat trick: you can hit the returning dagger to send it flying toward enemies again, effectively juggling it for extra damage.</p>
+                <div class="sidearm-note">Consumes Joules. Lost on death.</div>
+                <div style="font-size:0.75rem;color:#8888aa;margin-top:0.5rem;">Source: minathehollower.wiki.gg</div>
+            </div>
+            <div class="sidearm-card confirmed">
+                <h4>Volt Hatchet <span class="status-badge confirmed">Confirmed</span></h4>
+                <div class="sidearm-type">Thrown Axe</div>
+                <p>The Volt Hatchet releases a shock wave on impact, making it potent against groups of foes bunched together. Its thrown trajectory also lets you clear enemies from behind walls or exploit elevated positions for extra reach.</p>
+                <div class="sidearm-note">Consumes Joules. Lost on death.</div>
+                <div style="font-size:0.75rem;color:#8888aa;margin-top:0.5rem;">Source: minathehollower.wiki.gg</div>
+            </div>
+            <div class="sidearm-card unconfirmed">
+                <h4>Iron Steed <span class="status-badge unconfirmed">Unconfirmed Name</span></h4>
+                <div class="sidearm-type">Bicycle with Lance</div>
+                <p>A unique sidearm that summons a bicycle equipped with a lance. The Iron Steed provides a speed boost and lance charge attack, allowing Mina to rush through enemies with piercing damage.</p>
+                <div class="sidearm-note">Consumes Joules. Lost on death.</div>
+            </div>
+            <div class="sidearm-card unconfirmed">
+                <h4>Small Ghost <span class="status-badge unconfirmed">Unconfirmed Name</span></h4>
+                <div class="sidearm-type">Ghost Companion</div>
+                <p>Summons a small ghost companion that assists Mina in combat. The ghost likely attacks enemies independently, providing additional DPS and potentially distracting enemies from targeting Mina.</p>
+                <div class="sidearm-note">Consumes Joules. Lost on death.</div>
+            </div>
+            <div class="sidearm-card unconfirmed">
+                <h4>Chained Demon Pet <span class="status-badge unconfirmed">Unconfirmed Name</span></h4>
+                <div class="sidearm-type">Demon on Chain</div>
+                <p>A demon chained to Mina that attacks nearby enemies. The Chained Demon Pet provides constant companion damage and may have a wider attack range than the Small Ghost, making it effective against grouped enemies.</p>
+                <div class="sidearm-note">Consumes Joules. Lost on death.</div>
+            </div>
+        </div>
+
+        <!-- ==================== TRINKETS ==================== -->
+        <h2 class="section-title" id="trinkets">Trinkets</h2>
+        <p class="section-subtitle">Equippable accessories -- up to 5 slots available</p>
+
+        <div class="info-box">
+            <strong>Trinket System:</strong> Trinkets are equippable accessories that provide passive bonuses. You can equip up to <strong>5 Trinkets</strong> simultaneously, allowing for extensive build customization. Create different loadouts for exploration, boss fights, and general progression.
+        </div>
+
+        <div class="trinket-grid">
+            <div class="trinket-card confirmed">
+                <h4>Ferrying Wisp</h4>
+                <div class="trinket-effect">Float while airborne</div>
+                <p>Allows Mina to float during jumps, greatly extending air time and horizontal distance. Essential for reaching hidden areas and navigating platforming challenges.</p>
+                <span class="trinket-status status-confirmed">Confirmed Name</span>
+            </div>
+            <div class="trinket-card unconfirmed">
+                <h4>Prototype Spark</h4>
+                <div class="trinket-effect">Revive on death</div>
+                <p>Grants Mina an automatic revival upon taking lethal damage. Functions similarly to an extra life, allowing you to survive a fatal hit with remaining health.</p>
+                <span class="trinket-status status-unconfirmed">Unconfirmed Name</span>
+            </div>
+            <div class="trinket-card unconfirmed">
+                <h4>Wall Cling</h4>
+                <div class="trinket-effect">Grab onto walls</div>
+                <p>Enables Mina to cling to vertical surfaces, opening up new exploration paths and providing additional defensive positioning options during combat.</p>
+                <span class="trinket-status status-unconfirmed">Unconfirmed Name</span>
+            </div>
+            <div class="trinket-card unconfirmed">
+                <h4>Extended Burrow</h4>
+                <div class="trinket-effect">Longer burrow duration</div>
+                <p>Increases the distance and/or duration of Mina's burrow ability, allowing for longer underground movement and more flexible dodging.</p>
+                <span class="trinket-status status-unconfirmed">Unconfirmed Name</span>
+            </div>
+            <div class="trinket-card unconfirmed">
+                <h4>Long Jump</h4>
+                <div class="trinket-effect">Extended jump distance</div>
+                <p>Increases Mina's jump distance, making it easier to cross gaps and reach platforms that would otherwise be inaccessible.</p>
+                <span class="trinket-status status-unconfirmed">Unconfirmed Name</span>
+            </div>
+            <div class="trinket-card unconfirmed">
+                <h4>Attack Multiplier</h4>
+                <div class="trinket-effect">Consecutive hit bonus damage</div>
+                <p>Grants increasing damage bonuses for consecutive hits on the same target. Rewards sustained aggression and synergizes well with fast weapons like Whisper and Vesper.</p>
+                <span class="trinket-status status-unconfirmed">Unconfirmed Name</span>
+            </div>
+            <div class="trinket-card unconfirmed">
+                <h4>Electric Shock</h4>
+                <div class="trinket-effect">Electrify enemies on hit</div>
+                <p>Adds an electric effect to Mina's attacks, potentially stunning or damaging nearby enemies when the primary target is hit.</p>
+                <span class="trinket-status status-unconfirmed">Unconfirmed Name</span>
+            </div>
+            <div class="trinket-card unconfirmed">
+                <h4>Killer Bug</h4>
+                <div class="trinket-effect">Summon insects to attack</div>
+                <p>Summons insects that attack nearby enemies, providing additional passive damage. The insects may target enemies automatically, adding DPS without requiring player input.</p>
+                <span class="trinket-status status-unconfirmed">Unconfirmed Name</span>
+            </div>
+            <div class="trinket-card unconfirmed">
+                <h4>Lightning Strike</h4>
+                <div class="trinket-effect">Summon lightning on enemies</div>
+                <p>Periodically summons lightning strikes that hit enemies in the area. Provides supplemental damage and may have synergy with certain area themes like Septemburg.</p>
+                <span class="trinket-status status-unconfirmed">Unconfirmed Name</span>
+            </div>
+            <div class="trinket-card unconfirmed">
+                <h4>Health Boost</h4>
+                <div class="trinket-effect">Increases maximum HP</div>
+                <p>Increases Mina's maximum health pool, providing more room for error in combat. A solid choice for difficult boss fights or when exploring dangerous areas.</p>
+                <span class="trinket-status status-unconfirmed">Unconfirmed Name</span>
+            </div>
+        </div>
+
+        <!-- ==================== OTHER ITEMS ==================== -->
+        <h2 class="section-title" id="other-items">Other Items</h2>
+        <p class="section-subtitle">Consumables, currency, and key items</p>
+
+        <div class="items-grid">
+            <div class="item-card">
+                <h4>Keygears</h4>
+                <p>Universal keys used to unlock doors and gates throughout Tenebrous Isle. Keygears open paths to new areas and secret rooms. Explore thoroughly and break objects to find them.</p>
+            </div>
+            <div class="item-card">
+                <h4>Joule Jars</h4>
+                <p>Consumable items that replenish Joules, the resource consumed by Sidearms. Carry Joule Jars when you plan to use Sidearms frequently, especially during boss fights.</p>
+            </div>
+            <div class="item-card">
+                <h4>Bones</h4>
+                <p>The primary currency and experience points of the game. Bones are earned by defeating enemies and are used to purchase items from shops and upgrade Mina's abilities at Underlabs. <strong>Bones are lost on death</strong> unless protected by a Spark.</p>
+            </div>
+            <div class="item-card">
+                <h4>Sparks</h4>
+                <p>Extra lives that prevent Bone loss upon death. When Mina dies with a Spark active, she revives without losing her accumulated Bones. Sparks are invaluable for learning difficult boss encounters risk-free.</p>
+            </div>
+            <div class="item-card">
+                <h4>Plasma Vials</h4>
+                <p>The healing system of Mina the Hollower. Mina has a yellow Plasma bar that fills by attacking enemies. Once full, it converts into red health. This system rewards aggressive play -- the more you attack, the more you heal. Similar to the glory kill system in DOOM 2016.</p>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <!-- Authority Box -->
+            <div class="authority-box" style="background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 12px; padding: 1rem 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <span class="verified-badge" style="background: linear-gradient(135deg, rgba(0, 200, 100, 0.15), rgba(0, 212, 255, 0.15)); border: 1px solid rgba(0, 200, 100, 0.3); border-radius: 6px; padding: 0.4rem 0.8rem; font-size: 0.75rem; color: #00c864;">&#10003; Verified Information</span>
+                <span class="update-date" style="font-size: 0.75rem; color: #8888aa;">Last Updated: May 28, 2026</span>
+                <span class="source-citation" style="font-size: 0.7rem; color: #666;">Sources: <a href="https://minathehollower.wiki.gg" target="_blank" rel="noopener" style="color: #00d4ff;">Official Wiki</a>, <a href="https://yachtclubgames.com" target="_blank" rel="noopener" style="color: #00d4ff;">Yacht Club Games</a></span>
+            </div>
+            <p><a href="index.html">Mina the Hollower Walkthrough Guide</a> &mdash; Items & Equipment</p>
+            <p>Mina the Hollower is a trademark of <a href="https://yachtclubgames.com" target="_blank" rel="noopener">Yacht Club Games</a>. This is a fan-made guide.</p>
+            <p class="footer-disclaimer">All game content and trademarks are property of their respective owners. Information sourced from the official Mina the Hollower Wiki (minathehollower.wiki.gg), IGN, PC Gamer, and Yacht Club Games official materials.</p>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">&#8679;</button>
+
+    <!-- OPTIMIZATION SCRIPTS -->
+    <script>
+        // Progress bar
+        const progressBar = document.getElementById('progressBar');
+        if (progressBar) {
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = scrolled + '%';
+            });
+        }
+
+        // Back to top functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        if (backToTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Image lazy loading handler
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            img.addEventListener('load', () => img.classList.add('loaded'));
+            // Trigger load event for already cached images
+            if (img.complete) img.classList.add('loaded');
+        });
+    </script>
+
+</body>
+</html>

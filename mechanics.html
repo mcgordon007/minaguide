@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="monetag" content="9b8b6780e06943c23b2c2b70746edc23">
+    <title>Game Mechanics - Mina the Hollower Guide</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Game Mechanics | Mina the Hollower Walkthrough Guide">
+    <meta name="description" content="Game mechanics guide for Mina the Hollower. Burrow system, Bones currency, Plasma healing, Underlabs, and combat explained.">
+    <meta name="keywords" content="Mina the Hollower mechanics, burrow, dig underground, Plasma healing, how to heal, Bones currency, Underlab, save points, Joules, combat system, gameplay">
+    <meta name="author" content="Mina the Hollower Guide">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Canonical URL - Update with your actual domain when deployed -->
+    <link rel="canonical" href="/mechanics.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Open Graph / Facebook - Update og:url with your actual domain when deployed -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/mechanics.html">
+    <meta property="og:title" content="Game Mechanics | Mina the Hollower Walkthrough Guide">
+    <meta property="og:description" content="Game mechanics guide for Mina the Hollower. Burrow system, Bones currency, Plasma healing, Underlabs, and combat explained.">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:site_name" content="Mina the Hollower Guide">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter - Update twitter:url with your actual domain when deployed -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="/mechanics.html">
+    <meta property="twitter:title" content="Game Mechanics | Mina the Hollower Walkthrough Guide">
+    <meta property="twitter:description" content="Game mechanics guide for Mina the Hollower. Burrow system, Bones currency, Plasma healing, Underlabs, and combat explained.">
+    <meta property="twitter:image" content="/images/og-image.jpg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Game Mechanics",
+      "description": "Game mechanics guide for Mina the Hollower. Burrow, Plasma healing, Bones currency, Underlabs, Trinkets, difficulty modifiers, and progression systems.",
+      "url": "/mechanics.html",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Mina the Hollower Guide",
+        "url": "/"
+      }
+    }
+    </script>
+    <!-- HowTo Schema for Gameplay Basics -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HowTo",
+      "name": "How to Play Mina the Hollower",
+      "description": "Basic gameplay mechanics and systems in Mina the Hollower",
+      "step": [
+        {
+          "@type": "HowToStep",
+          "name": "Use the Burrow",
+          "text": "Press the burrow button to travel underground. Use it to dodge attacks, traverse beneath obstacles, discover secrets, and launch pop-up aerial attacks."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Generate Plasma",
+          "text": "Attack enemies to fill the yellow Plasma bar. When full, it converts to red health. This rewards aggressive play - the more you attack, the more you heal."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Collect Bones",
+          "text": "Defeat enemies to earn Bones, the currency and XP. Spend Bones at Underlabs for stat upgrades. Bones are lost on death unless protected by a Spark."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Use Underlabs",
+          "text": "Rest at Underlabs to save progress and spend Bones on upgrades. Note: resting respawns all enemies in the world."
+        },
+        {
+          "@type": "HowToStep",
+          "name": "Equip Trinkets",
+          "text": "Equip up to 5 Trinkets for passive bonuses. Combine different Trinkets to customize your build for different situations."
+        }
+      ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        a { color: #00d4ff; text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #ffd700; }
+        /* ===== SKIP LINK (Accessibility) ===== */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #00d4ff;
+            color: #0d0d1a;
+            padding: 8px 16px;
+            z-index: 10000;
+            transition: top 0.3s;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, #00d4ff, #ffd700);
+            z-index: 10001;
+            transition: width 0.1s ease;
+        }
+
+        /* ===== BACK TO TOP BUTTON ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            border: none;
+            border-radius: 50%;
+            color: #0d0d1a;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.5);
+        }
+
+        /* ===== BREADCRUMB NAVIGATION ===== */
+        .breadcrumb {
+            background: rgba(13, 13, 26, 0.8);
+            padding: 0.75rem 5%;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+        }
+        .breadcrumb ol {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0;
+        }
+        .breadcrumb li {
+            font-size: 0.8rem;
+            color: #a0a0c0;
+        }
+        .breadcrumb li:not(:last-child)::after {
+            content: '/';
+            margin-left: 0.5rem;
+            color: #00d4ff;
+        }
+        .breadcrumb a {
+            color: #00d4ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .breadcrumb a:hover {
+            color: #ffd700;
+        }
+        .breadcrumb [aria-current="page"] {
+            color: #ffd700;
+        }
+
+        /* ===== IMAGE LOADING STATES ===== */
+        img {
+            background: linear-gradient(135deg, #1a1a2e 0%, #0d0d1a 100%);
+            transition: opacity 0.3s ease;
+        }
+        img[loading="lazy"] {
+            opacity: 0;
+        }
+        img.loaded {
+            opacity: 1;
+        }
+
+
+        /* NAV */
+        .navbar {
+            background: linear-gradient(180deg, #12122a 0%, #0d0d1a 100%);
+            border-bottom: 2px solid #2a2a4a;
+            padding: 0 1.5rem;
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .nav-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between; height: 64px;
+        }
+        .nav-logo { font-family: 'Press Start 2P', monospace; font-size: 0.8rem; color: #ffd700; white-space: nowrap; }
+        .nav-links { display: flex; gap: 0.25rem; flex-wrap: wrap; justify-content: flex-end; }
+        .nav-links a {
+            font-size: 0.875rem; padding: 0.4rem 0.7rem; border-radius: 4px;
+            color: #b0b0d0; transition: all 0.2s; white-space: nowrap;
+        }
+        .nav-links a:hover, .nav-links a.active { color: #ffd700; background: rgba(255, 215, 0, 0.08); }
+        .hamburger { display: none; background: none; border: none; color: #ffd700; font-size: 1.5rem; cursor: pointer; }
+        .mobile-menu { display: none; flex-direction: column; padding: 0.75rem 1.5rem 1rem; background: #12122a; border-bottom: 2px solid #2a2a4a; }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a { padding: 0.6rem 0; font-size: 0.85rem; color: #b0b0d0; border-bottom: 1px solid #1a1a3a; }
+        .mobile-menu a:last-child { border-bottom: none; }
+        .mobile-menu a:hover { color: #ffd700; }
+
+        /* PAGE HEADER */
+        .page-header {
+            text-align: center; padding: 3rem 1.5rem 2rem;
+            background: radial-gradient(ellipse at 50% 0%, rgba(0, 212, 255, 0.1) 0%, transparent 60%), #0d0d1a;
+        }
+        .page-header h1 {
+            font-family: 'Press Start 2P', monospace;
+            font-size: clamp(1rem, 3vw, 1.6rem);
+            color: #ffd700; margin-bottom: 0.75rem;
+        }
+        .page-header p { color: #8888aa; font-size: 0.95rem; max-width: 700px; margin: 0 auto; }
+
+        /* NOTICE */
+        .notice { max-width: 1200px; margin: 0 auto; padding: 1rem 1.5rem; }
+        .notice-bar {
+            background: linear-gradient(90deg, rgba(255, 215, 0, 0.1), rgba(0, 212, 255, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 8px;
+            padding: 0.85rem 1.25rem; font-size: 0.85rem; color: #ffd700;
+            display: flex; align-items: center; gap: 0.75rem;
+        }
+        .notice-icon { font-size: 1.2rem; flex-shrink: 0; }
+
+        /* CONTAINER */
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        /* SECTION */
+        .section-title {
+            font-family: 'Press Start 2P', monospace;
+            font-size: clamp(0.85rem, 2vw, 1.1rem);
+            color: #ffd700; margin-bottom: 0.5rem;
+        }
+        .section-subtitle { color: #666; font-size: 0.85rem; margin-bottom: 2rem; }
+
+        /* TOC */
+        .toc {
+            background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 12px;
+            padding: 1.5rem 2rem; margin-bottom: 3rem;
+        }
+        .toc h3 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.65rem;
+            color: #00d4ff; margin-bottom: 1rem; text-transform: uppercase;
+        }
+        .toc-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.5rem; }
+        .toc-list a {
+            font-size: 0.85rem; color: #b0b0c0; padding: 0.3rem 0;
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .toc-list a::before { content: '&#9654;'; color: #ffd700; font-size: 0.5rem; }
+        .toc-list a:hover { color: #ffd700; }
+
+        /* MECHANIC SECTION */
+        .mechanic-section {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16162a 100%);
+            border: 1px solid #2a2a4a; border-radius: 12px;
+            margin-bottom: 2rem; overflow: hidden;
+        }
+        .mechanic-header {
+            padding: 1.25rem 2rem;
+            border-bottom: 1px solid #222240;
+            display: flex; align-items: center; gap: 1rem;
+        }
+        .mechanic-icon { font-size: 1.8rem; flex-shrink: 0; }
+
+        /* MECHANIC ICON STYLES */
+        .mechanic-icon-wrapper {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, #2a2a4a 0%, #1a1a3a 100%);
+            border: 2px solid #3a3a5a;
+            border-radius: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-shrink: 0;
+            transition: all 0.3s ease;
+        }
+        .mechanic-section:hover .mechanic-icon-wrapper {
+            border-color: #00d4ff;
+            box-shadow: 0 0 10px rgba(0, 212, 255, 0.2);
+        }
+        .mechanic-icon-pixel {
+            font-size: 1.5rem;
+            filter: drop-shadow(0 0 4px rgba(0, 212, 255, 0.3));
+        }
+        .mechanic-header h3 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.75rem;
+            color: #ffd700;
+        }
+        .mechanic-body { padding: 1.5rem 2rem; }
+        .mechanic-body p {
+            color: #9999bb; font-size: 0.9rem; margin-bottom: 1rem; line-height: 1.8;
+        }
+        .mechanic-body p:last-child { margin-bottom: 0; }
+        .highlight { color: #ffd700; font-weight: 600; }
+        .accent { color: #00d4ff; }
+
+        /* SUB-SECTIONS */
+        .mechanic-sub {
+            margin-top: 1.25rem; padding-top: 1.25rem;
+            border-top: 1px solid #222240;
+        }
+        .mechanic-sub h4 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.65rem;
+            color: #00d4ff; margin-bottom: 0.75rem; text-transform: uppercase;
+        }
+
+        /* FEATURE LIST */
+        .feature-list {
+            list-style: none; display: grid; gap: 0.75rem;
+        }
+        .feature-list li {
+            display: flex; gap: 0.75rem; align-items: flex-start;
+            padding: 0.6rem 0.75rem; background: #12122a; border-radius: 6px;
+            border: 1px solid #1a1a3a;
+        }
+        .feature-bullet {
+            color: #ffd700; flex-shrink: 0; font-size: 0.75rem; line-height: 1.5;
+        }
+        .feature-list li p { color: #9999bb; font-size: 0.85rem; margin: 0; }
+
+        /* COMPARISON BOX */
+        .comparison {
+            background: #12122a; border: 1px solid #222240; border-radius: 8px;
+            padding: 1.25rem; margin-top: 1rem;
+        }
+        .comparison h5 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.6rem;
+            color: #ffd700; margin-bottom: 0.75rem; text-transform: uppercase;
+        }
+        .comparison-grid {
+            display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;
+        }
+        .comparison-item {
+            padding: 0.75rem; background: #0d0d1a; border-radius: 6px;
+            border: 1px solid #1a1a3a;
+        }
+        .comparison-item h6 {
+            font-size: 0.8rem; color: #e0e0e0; margin-bottom: 0.3rem;
+        }
+        .comparison-item p { font-size: 0.78rem; color: #8888aa; margin: 0; }
+
+        /* DIFFICULTY TABLE */
+        .diff-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 0.75rem; margin-top: 1rem;
+        }
+        .diff-item {
+            background: #12122a; border: 1px solid #222240; border-radius: 8px;
+            padding: 1rem; text-align: center;
+        }
+        .diff-item h5 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.65rem;
+            color: #ffd700; margin-bottom: 0.5rem;
+        }
+        .diff-item p { font-size: 0.8rem; color: #8888aa; }
+
+        /* CALLOUT */
+        .callout {
+            background: rgba(0, 212, 255, 0.05); border: 1px solid rgba(0, 212, 255, 0.15);
+            border-radius: 8px; padding: 1rem 1.25rem; margin-top: 1rem;
+        }
+        .callout p { font-size: 0.85rem; color: #8899bb; margin: 0; }
+        .callout strong { color: #00d4ff; }
+
+        /* FOOTER */
+        .footer {
+            background: #0a0a15; border-top: 1px solid #1a1a3a;
+            padding: 2rem 1.5rem; text-align: center;
+        }
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+        .footer p { font-size: 0.8rem; color: #555; margin-bottom: 0.5rem; }
+        .footer a { color: #00d4ff; }
+        .footer a:hover { color: #ffd700; }
+        .footer-disclaimer { font-size: 0.7rem; color: #444; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #1a1a3a; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+            .mechanic-header { padding: 1rem 1.25rem; }
+            .mechanic-body { padding: 1rem 1.25rem; }
+            .comparison-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- SKIP LINK (Accessibility) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- PROGRESS BAR -->
+    <div id="progressBar" class="progress-bar"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">MINA GUIDE</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="walkthrough.html">Walkthrough</a>
+                <a href="bosses.html">Bosses</a>
+                <a href="enemies.html">Enemies</a>
+                <a href="items.html">Items</a>
+                <a href="mechanics.html" class="active">Mechanics</a>
+                <a href="tips.html">Tips</a>
+                <a href="faq.html">FAQ</a>
+                <a href="glossary.html">Glossary</a>
+            </div>
+            <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+        </div>
+        <div class="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="walkthrough.html">Walkthrough</a>
+            <a href="bosses.html">Bosses</a>
+            <a href="enemies.html">Enemies</a>
+            <a href="items.html">Items</a>
+            <a href="mechanics.html">Mechanics</a>
+            <a href="tips.html">Tips</a>
+            <a href="faq.html">FAQ</a>
+            <a href="glossary.html">Glossary</a>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB NAVIGATION -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Game Mechanics</li>
+        </ol>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <h1>Game Mechanics</h1>
+        <p>A deep dive into the core systems that drive Mina the Hollower's gameplay.</p>
+    </header>
+
+    <!-- NOTICE -->
+    <div class="notice">
+        <div class="notice-bar">
+            <span class="notice-icon">&#9888;&#65039;</span>
+            <span>This game released on May 29, 2026. This guide is being actively updated as mechanics are fully documented.</span>
+        </div>
+    </div>
+
+    <main id="main-content" class="container">
+
+        <!-- SUMMARY BOX -->
+        <div class="summary-box" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(0, 212, 255, 0.08)); border: 1px solid rgba(255, 215, 0, 0.2); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 2rem;">
+            <h3 style="font-family: 'Press Start 2P', monospace; font-size: 0.7rem; color: #ffd700; margin-bottom: 1rem; text-transform: uppercase;">Key Points</h3>
+            <ul style="list-style: none; display: grid; gap: 0.5rem;">
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> Burrow is the core mechanic - dodge, traverse, and attack underground</li>
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> Plasma healing rewards aggressive combat - attack to heal</li>
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> Bones = currency + XP, lost on death (souls-like progression)</li>
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> Underlabs save progress and respawn enemies when used</li>
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> Difficulty modifiers and accessibility options available</li>
+            </ul>
+        </div>
+
+        <!-- TOC -->
+        <div class="toc">
+            <h3>Quick Navigation</h3>
+            <ul class="toc-list">
+                <li><a href="#health">Health System</a></li>
+                <li><a href="#burrow">Burrow Mechanic</a></li>
+                <li><a href="#progression">Souls-Like Progression</a></li>
+                <li><a href="#underlabs">Underlabs</a></li>
+                <li><a href="#combat">Combat System</a></li>
+                <li><a href="#difficulty">Difficulty Modifiers</a></li>
+                <li><a href="#exploration">Exploration</a></li>
+            </ul>
+        </div>
+
+        <!-- HEALTH SYSTEM -->
+        <div class="mechanic-section" id="health">
+            <div class="mechanic-header">
+                <div class="mechanic-icon-wrapper"><span class="mechanic-icon-pixel">&#128154;</span></div>
+                <h3>Health System</h3>
+            </div>
+            <div class="mechanic-body">
+                <p>
+                    Mina the Hollower features a unique health system inspired by <span class="highlight">DOOM 2016's</span> glory kill mechanic. Instead of traditional health pickups, Mina must <span class="accent">attack enemies to heal</span>, creating a gameplay loop that constantly pushes the player toward aggression.
+                </p>
+
+                <div class="mechanic-sub">
+                    <h4>How It Works</h4>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Plasma Bar (Yellow):</strong> Mina has a yellow Plasma bar that fills up as she attacks enemies. Every hit contributes to filling this bar.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Health Conversion:</strong> Once the Plasma bar is full, it converts into <span class="highlight">red health</span> (actual HP recovery). This means sustained attacking directly heals Mina.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Aggression Rewarded:</strong> The system fundamentally rewards offensive play. Hesitating or playing passively means missing out on healing opportunities. The more you attack, the more you heal.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Plasma Vials:</strong> The yellow bar is visually represented as Plasma Vials. Think of them as a healing resource that refills through combat rather than through items.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="comparison">
+                    <h5>Comparison: DOOM 2016 vs Mina the Hollower</h5>
+                    <div class="comparison-grid">
+                        <div class="comparison-item">
+                            <h6>DOOM 2016</h6>
+                            <p>Glory kills on staggered enemies drop health pickups. Must get close to dying enemies to heal.</p>
+                        </div>
+                        <div class="comparison-item">
+                            <h6>Mina the Hollower</h6>
+                            <p>Every attack fills a Plasma bar. When full, it converts to red health. No need to finish enemies -- just keep attacking.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout">
+                    <p><strong>Key Takeaway:</strong> Never stop attacking. Even if an enemy is about to die, hitting it contributes to your Plasma bar. The best defense in Mina the Hollower is a relentless offense.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- BURROW MECHANIC -->
+        <div class="mechanic-section" id="burrow">
+            <div class="mechanic-header">
+                <div class="mechanic-icon-wrapper"><span class="mechanic-icon-pixel">&#128290;</span></div>
+                <h3>Burrow Mechanic</h3>
+            </div>
+            <div class="mechanic-body">
+                <p>
+                    The <span class="highlight">burrow</span> is Mina's signature ability and the defining mechanic of the game. As a Hollower, Mina can dive underground to move beneath the surface, creating a versatile tool that serves multiple purposes in combat, exploration, and puzzle-solving.
+                </p>
+
+                <div class="mechanic-sub">
+                    <h4>Burrow Functions</h4>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Underground Movement:</strong> While burrowed, Mina travels beneath the surface. This allows her to pass under enemies, obstacles, and certain hazards that block above-ground movement.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Pop-Up Aerial:</strong> Emerging from a burrow launches Mina into the air with an aerial attack. This pop-up attack deals bonus damage and can be used to reach elevated platforms.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Dodge / Invincibility:</strong> The burrow provides invincibility frames while underground. Most enemy attacks cannot hit Mina while she is burrowed, making it the primary dodge mechanic.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Finding Secrets:</strong> Many secrets are hidden underground. Burrowing near suspicious walls or floors can reveal hidden passages, items, and rooms that are invisible from the surface.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>No Roll:</strong> Unlike many action games, Mina does not have a traditional roll or dash. The burrow replaces this function entirely, serving as both dodge and repositioning tool.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="callout">
+                    <p><strong>Mastery Tip:</strong> The burrow-to-pop-up combo is the foundation of advanced combat. Practice timing your burrow so you emerge directly beneath or behind enemies for maximum damage and positional advantage.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- SOULS-LIKE PROGRESSION -->
+        <div class="mechanic-section" id="progression">
+            <div class="mechanic-header">
+                <div class="mechanic-icon-wrapper"><span class="mechanic-icon-pixel">&#128200;</span></div>
+                <h3>Souls-Like Progression</h3>
+            </div>
+            <div class="mechanic-body">
+                <p>
+                    Mina the Hollower draws inspiration from the <span class="highlight">Souls</span> series for its progression system. The core loop involves earning currency through combat, risking it on exploration, and spending it to grow stronger -- with the ever-present threat of losing it all upon death.
+                </p>
+
+                <div class="mechanic-sub">
+                    <h4>Core Systems</h4>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Bones (Currency/XP):</strong> Bones serve as both money and experience points. Every enemy defeated drops Bones, which accumulate as you explore and fight.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Bone Up (Level Up):</strong> At the Underlabs, Mina can spend Bones to permanently upgrade her stats. This is the primary progression system -- more Bones means more power.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Death Penalty:</strong> When Mina dies, she <span class="highlight">loses all accumulated Bones</span>. This creates tension during exploration -- do you push forward with a large Bone count, or retreat to the Underlabs to spend them safely?</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Sparks (Extra Lives):</strong> Sparks prevent Bone loss on death. When a Spark is active and Mina dies, she revives without losing her Bones. Sparks are the safety net that makes the Souls-like system more forgiving.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mechanic-sub">
+                    <h4>How to Obtain Bones</h4>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Defeating Enemies:</strong> The primary source of Bones. Every enemy defeated drops Bones that can be collected.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Digging:</strong> Bones can be dug up from the ground throughout Tenebrous Isle. Keep an eye out for diggable spots.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Bone Sinterer:</strong> Using a Bone Sinterer is another method to gain Bones. These devices help process and generate additional Bones.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="callout">
+                    <p><strong>Risk vs. Reward:</strong> The tension between pushing deeper with accumulated Bones versus retreating to safety is central to the experience. Use Sparks when attempting risky exploration or learning boss patterns.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- UNDERLABS -->
+        <div class="mechanic-section" id="underlabs">
+            <div class="mechanic-header">
+                <div class="mechanic-icon-wrapper"><span class="mechanic-icon-pixel">&#128366;</span></div>
+                <h3>Underlabs</h3>
+            </div>
+            <div class="mechanic-body">
+                <p>
+                    <span class="highlight">Underlabs</span> are the save points and upgrade hubs of Mina the Hollower. Scattered throughout Tenebrous Isle, these underground facilities serve as safe havens where Mina can rest, upgrade, and prepare for her next expedition.
+                </p>
+
+                <div class="mechanic-sub">
+                    <h4>Underlab Functions</h4>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Save Point:</strong> Resting at an Underlab saves your progress. This is the primary save mechanism -- always rest at an Underlab before attempting dangerous areas or boss fights.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Bone Up (Upgrades):</strong> Spend accumulated Bones to permanently upgrade Mina's stats. Upgrades include attack power, health, and other attributes that persist across the entire game.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Enemy Respawn:</strong> Resting at an Underlab causes all enemies in the world to respawn. This is a trade-off -- you get to save and upgrade, but the world resets to its hostile state.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Facilities:</strong> Underlabs may contain additional facilities and services that aid Mina's adventure. The specific facilities available may vary between Underlab locations.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="callout">
+                    <p><strong>Strategic Resting:</strong> Only rest when you're ready to spend your Bones or need to save. Remember that resting respawns all enemies, so plan your route accordingly. If you just need to save but want to keep exploring, consider whether the enemy respawn is worth it.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- COMBAT SYSTEM -->
+        <div class="mechanic-section" id="combat">
+            <div class="mechanic-header">
+                <div class="mechanic-icon-wrapper"><span class="mechanic-icon-pixel">&#9876;&#65039;</span></div>
+                <h3>Combat System</h3>
+            </div>
+            <div class="mechanic-body">
+                <p>
+                    Combat in Mina the Hollower is fast-paced, aggressive, and rewards skillful play. The top-down perspective combined with the unique burrow mechanic creates a combat system that feels distinct from other action RPGs.
+                </p>
+
+                <div class="mechanic-sub">
+                    <h4>Combat Features</h4>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>4-Directional Attacks:</strong> Mina can attack in four directions (up, down, left, right). Positioning relative to enemies is crucial -- face the right direction before attacking to ensure your strikes connect.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>No Roll/Dash:</strong> Unlike most action games, there is no traditional roll or dash dodge. The <span class="accent">burrow</span> is your only dodge mechanic. This makes mastering the burrow essential for survival.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Aggressive Play Rewarded:</strong> The Plasma health system means every attack contributes to your survival. Playing aggressively is not just viable -- it's the optimal strategy. The more you hit, the more you heal.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Weapon Variety:</strong> Five distinct weapons offer different playstyles, from the long-range Nightstar to the fast Whisper and Vesper daggers. Each weapon has a unique moveset and upgrade path.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Sidearms:</strong> Sub-weapons that consume Joules and provide additional tactical options. Sidearms are found by breaking objects and are lost on death, adding a layer of resource management to combat.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Parry (Hollower's Shield):</strong> When equipped with the Hollower's Shield, Mina can parry incoming attacks. A successful parry stuns the enemy and creates an opening for a devastating counter-attack.</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- DIFFICULTY MODIFIERS -->
+        <div class="mechanic-section" id="difficulty">
+            <div class="mechanic-header">
+                <div class="mechanic-icon-wrapper"><span class="mechanic-icon-pixel">&#9881;&#65039;</span></div>
+                <h3>Difficulty Modifiers</h3>
+            </div>
+            <div class="mechanic-body">
+                <p>
+                    Mina the Hollower features an <span class="highlight">extensive cheat/assist menu</span> that allows players to customize their experience. Yacht Club Games has emphasized that the game should be enjoyable for everyone, regardless of skill level.
+                </p>
+
+                <div class="mechanic-sub">
+                    <h4>Available Options</h4>
+                    <div class="diff-grid">
+                        <div class="diff-item">
+                            <h5>God Mode</h5>
+                            <p>Makes Mina invincible. Note: enabling God Mode <span class="highlight">disables Feats</span> (in-game achievements).</p>
+                        </div>
+                        <div class="diff-item">
+                            <h5>NG+ to NG+7</h5>
+                            <p>New Game Plus mode with up to 7 iterations. Each NG+ cycle increases difficulty, providing a challenge for veteran players.</p>
+                        </div>
+                        <div class="diff-item">
+                            <h5>Assist Options</h5>
+                            <p>Various toggles for damage, health, and other parameters. Fine-tune the experience to match your preferred difficulty level.</p>
+                        </div>
+                        <div class="diff-item">
+                            <h5>No Penalty</h5>
+                            <p>Options to reduce or eliminate the death penalty, making the Souls-like progression more forgiving for casual players.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="callout">
+                    <p><strong>Design Philosophy:</strong> Yacht Club Games wants every player to experience the full game. Using difficulty modifiers is not penalized (except God Mode disabling Feats). If you're stuck, adjust the settings -- there is no shame in customizing the experience to your skill level.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXPLORATION -->
+        <div class="mechanic-section" id="exploration">
+            <div class="mechanic-header">
+                <div class="mechanic-icon-wrapper"><span class="mechanic-icon-pixel">&#128269;</span></div>
+                <h3>Exploration</h3>
+            </div>
+            <div class="mechanic-body">
+                <p>
+                    Exploration is at the heart of Mina the Hollower. The game features a <span class="highlight">fully open world</span> with no required sequence, no ability gates, and secrets hidden throughout every corner of Tenebrous Isle.
+                </p>
+
+                <div class="mechanic-sub">
+                    <h4>Exploration Features</h4>
+                    <ul class="feature-list">
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Fully Open World:</strong> All 7 areas of Tenebrous Isle are accessible from the beginning. There are no ability locks, required items, or sequence breaks. Go wherever you want, in whatever order you choose.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>No Item Gates:</strong> Unlike traditional Metroidvanias, you will never find a door that requires a specific item to open. Every area is reachable with your base abilities.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Secrets Everywhere:</strong> The world is packed with hidden rooms, breakable walls, underground passages, and concealed items. Use the burrow to discover secrets that are invisible from the surface.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Shortcuts System:</strong> Activate shortcuts throughout the world to reduce backtracking and create faster routes between areas. Shortcuts are essential for efficient exploration and repeated visits to areas.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Breakable Objects:</strong> Smash pots, crates, and other objects to find Sidearms, Joule Jars, Keygears, and other items. Everything breakable might contain something valuable.</p>
+                        </li>
+                        <li>
+                            <span class="feature-bullet">&#9654;</span>
+                            <p><strong>Newspaper Hints:</strong> The in-game newspaper in Ossex provides hints about the world, including clues about secret locations, shop updates, and area directions. Read it regularly.</p>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="callout">
+                    <p><strong>Exploration Philosophy:</strong> There is no "wrong" way to explore. If you find an area too difficult, simply go somewhere else and come back later. The non-linear design means you are never stuck -- there is always another path to take.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <!-- Authority Box -->
+            <div class="authority-box" style="background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 12px; padding: 1rem 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <span class="verified-badge" style="background: linear-gradient(135deg, rgba(0, 200, 100, 0.15), rgba(0, 212, 255, 0.15)); border: 1px solid rgba(0, 200, 100, 0.3); border-radius: 6px; padding: 0.4rem 0.8rem; font-size: 0.75rem; color: #00c864;">&#10003; Verified Information</span>
+                <span class="update-date" style="font-size: 0.75rem; color: #8888aa;">Last Updated: May 28, 2026</span>
+                <span class="source-citation" style="font-size: 0.7rem; color: #666;">Sources: <a href="https://minathehollower.wiki.gg" target="_blank" rel="noopener" style="color: #00d4ff;">Official Wiki</a>, <a href="https://yachtclubgames.com" target="_blank" rel="noopener" style="color: #00d4ff;">Yacht Club Games</a></span>
+            </div>
+            <p><a href="index.html">Mina the Hollower Walkthrough Guide</a> &mdash; Game Mechanics</p>
+            <p>Mina the Hollower is a trademark of <a href="https://yachtclubgames.com" target="_blank" rel="noopener">Yacht Club Games</a>. This is a fan-made guide.</p>
+            <p class="footer-disclaimer">All game content and trademarks are property of their respective owners. Information sourced from the official Mina the Hollower Wiki (minathehollower.wiki.gg), IGN, PC Gamer, and Yacht Club Games official materials.</p>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">&#8679;</button>
+
+    <!-- OPTIMIZATION SCRIPTS -->
+    <script>
+        // Progress bar
+        const progressBar = document.getElementById('progressBar');
+        if (progressBar) {
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = scrolled + '%';
+            });
+        }
+
+        // Back to top functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        if (backToTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Image lazy loading handler
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            img.addEventListener('load', () => img.classList.add('loaded'));
+            // Trigger load event for already cached images
+            if (img.complete) img.classList.add('loaded');
+        });
+    </script>
+
+</body>
+</html>

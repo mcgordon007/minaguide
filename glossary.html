@@ -1,0 +1,644 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="monetag" content="9b8b6780e06943c23b2c2b70746edc23">
+    <title>Glossary - Mina the Hollower Guide</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Glossary of Game Terms | Mina the Hollower Walkthrough Guide">
+    <meta name="description" content="Glossary of Mina the Hollower game terms. Definitions for Hollower, Tenebrous Isle, Spark Generator, Underlab, Bones, Plasma, Joules, Trinket, Sidearm, Keygear, Kears, Burrow, Pop-up.">
+    <meta name="keywords" content="Mina the Hollower glossary, terms, definitions, Hollower, Tenebrous Isle, Spark Generator, Underlab, Bones, Plasma, game terminology">
+    <meta name="author" content="Mina the Hollower Guide">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Canonical URL - Update with your actual domain when deployed -->
+    <link rel="canonical" href="/glossary.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Open Graph / Facebook - Update og:url with your actual domain when deployed -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/glossary.html">
+    <meta property="og:title" content="Glossary of Game Terms | Mina the Hollower Walkthrough Guide">
+    <meta property="og:description" content="Glossary of Mina the Hollower game terms. Definitions for Hollower, Tenebrous Isle, Spark Generator, Underlab, Bones, Plasma, Joules, Trinket, Sidearm, Keygear, Kears, Burrow, Pop-up.">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:site_name" content="Mina the Hollower Guide">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter - Update twitter:url with your actual domain when deployed -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="/glossary.html">
+    <meta property="twitter:title" content="Glossary of Game Terms | Mina the Hollower Walkthrough Guide">
+    <meta property="twitter:description" content="Glossary of Mina the Hollower game terms. Definitions for Hollower, Tenebrous Isle, Spark Generator, Underlab, Bones, Plasma, Joules, Trinket, Sidearm, Keygear, Kears, Burrow, Pop-up.">
+    <meta property="twitter:image" content="/images/og-image.jpg">
+
+    <!-- Glossary Schema JSON-LD -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Glossary of Game Terms",
+      "description": "Glossary of Mina the Hollower game terms. Definitions for Hollower, Tenebrous Isle, Spark Generator, Underlab, Bones, Plasma, Joules, Trinket, Sidearm, Keygear, Kears, Burrow, Pop-up.",
+      "url": "/glossary.html",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Mina the Hollower Guide",
+        "url": "/"
+      }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        a { color: #00d4ff; text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #ffd700; }
+        /* ===== SKIP LINK (Accessibility) ===== */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #00d4ff;
+            color: #0d0d1a;
+            padding: 8px 16px;
+            z-index: 10000;
+            transition: top 0.3s;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, #00d4ff, #ffd700);
+            z-index: 10001;
+            transition: width 0.1s ease;
+        }
+
+        /* ===== BACK TO TOP BUTTON ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            border: none;
+            border-radius: 50%;
+            color: #0d0d1a;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.5);
+        }
+
+        /* ===== BREADCRUMB NAVIGATION ===== */
+        .breadcrumb {
+            background: rgba(13, 13, 26, 0.8);
+            padding: 0.75rem 5%;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+        }
+        .breadcrumb ol {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0;
+        }
+        .breadcrumb li {
+            font-size: 0.8rem;
+            color: #a0a0c0;
+        }
+        .breadcrumb li:not(:last-child)::after {
+            content: '/';
+            margin-left: 0.5rem;
+            color: #00d4ff;
+        }
+        .breadcrumb a {
+            color: #00d4ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .breadcrumb a:hover {
+            color: #ffd700;
+        }
+        .breadcrumb [aria-current="page"] {
+            color: #ffd700;
+        }
+
+        /* ===== IMAGE LOADING STATES ===== */
+        img {
+            background: linear-gradient(135deg, #1a1a2e 0%, #0d0d1a 100%);
+            transition: opacity 0.3s ease;
+        }
+        img[loading="lazy"] {
+            opacity: 0;
+        }
+        img.loaded {
+            opacity: 1;
+        }
+
+
+        /* NAV */
+        .navbar {
+            background: linear-gradient(180deg, #12122a 0%, #0d0d1a 100%);
+            border-bottom: 2px solid #2a2a4a;
+            padding: 0 1.5rem;
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .nav-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between; height: 64px;
+        }
+        .nav-logo { font-family: 'Press Start 2P', monospace; font-size: 0.8rem; color: #ffd700; white-space: nowrap; }
+        .nav-links { display: flex; gap: 0.25rem; flex-wrap: wrap; justify-content: flex-end; }
+        .nav-links a {
+            font-size: 0.875rem; padding: 0.4rem 0.7rem; border-radius: 4px;
+            color: #b0b0d0; transition: all 0.2s; white-space: nowrap;
+        }
+        .nav-links a:hover, .nav-links a.active { color: #ffd700; background: rgba(255, 215, 0, 0.08); }
+        .hamburger { display: none; background: none; border: none; color: #ffd700; font-size: 1.5rem; cursor: pointer; }
+        .mobile-menu { display: none; flex-direction: column; padding: 0.75rem 1.5rem 1rem; background: #12122a; border-bottom: 2px solid #2a2a4a; }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a { padding: 0.6rem 0; font-size: 0.85rem; color: #b0b0d0; border-bottom: 1px solid #1a1a3a; }
+        .mobile-menu a:last-child { border-bottom: none; }
+        .mobile-menu a:hover { color: #ffd700; }
+
+        /* PAGE HEADER */
+        .page-header {
+            text-align: center; padding: 3rem 1.5rem 2rem;
+            background: radial-gradient(ellipse at 50% 0%, rgba(0, 212, 255, 0.1) 0%, transparent 60%), #0d0d1a;
+        }
+        .page-header h1 {
+            font-family: 'Press Start 2P', monospace;
+            font-size: clamp(1rem, 3vw, 1.6rem);
+            color: #ffd700; margin-bottom: 0.75rem;
+        }
+        .page-header p { color: #8888aa; font-size: 0.95rem; max-width: 700px; margin: 0 auto; }
+
+        /* CONTAINER */
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        /* SUMMARY BOX */
+        .summary-box {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(0, 212, 255, 0.08));
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 2rem;
+        }
+        .summary-box h3 {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.7rem;
+            color: #ffd700;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        .summary-box ul {
+            list-style: none;
+            display: grid;
+            gap: 0.5rem;
+        }
+        .summary-box li {
+            font-size: 0.85rem;
+            color: #b0b0c0;
+            padding-left: 1.2rem;
+            position: relative;
+        }
+        .summary-box li::before {
+            content: '\2713';
+            position: absolute;
+            left: 0;
+            color: #00d4ff;
+            font-weight: bold;
+        }
+
+        /* ALPHABET NAV */
+        .alphabet-nav {
+            background: #1a1a2e;
+            border: 1px solid #2a2a4a;
+            border-radius: 12px;
+            padding: 1rem 1.5rem;
+            margin-bottom: 2rem;
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .alphabet-nav a {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.6rem;
+            padding: 0.4rem 0.6rem;
+            border-radius: 4px;
+            color: #b0b0d0;
+            background: #12122a;
+            border: 1px solid #222240;
+            transition: all 0.2s;
+        }
+        .alphabet-nav a:hover, .alphabet-nav a.active {
+            color: #ffd700;
+            background: rgba(255, 215, 0, 0.15);
+            border-color: #ffd700;
+        }
+
+        /* GLOSSARY SECTION */
+        .glossary-section {
+            margin-bottom: 2rem;
+        }
+        .letter-header {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.9rem;
+            color: #ffd700;
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #2a2a4a;
+        }
+
+        /* GLOSSARY GRID */
+        .glossary-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1rem;
+        }
+        .glossary-item {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16162a 100%);
+            border: 1px solid #2a2a4a;
+            border-radius: 12px;
+            padding: 1.25rem 1.5rem;
+            transition: border-color 0.3s;
+        }
+        .glossary-item:hover { border-color: #3a3a5a; }
+        .glossary-term {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.7rem;
+            color: #ffd700;
+            margin-bottom: 0.75rem;
+        }
+        .glossary-def {
+            font-size: 0.88rem;
+            color: #9999bb;
+            line-height: 1.7;
+        }
+        .glossary-def strong { color: #00d4ff; }
+
+        /* AUTHORITY BOX */
+        .authority-box {
+            background: #1a1a2e;
+            border: 1px solid #2a2a4a;
+            border-radius: 12px;
+            padding: 1.5rem;
+            margin-top: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+        .verified-badge {
+            background: linear-gradient(135deg, rgba(0, 200, 100, 0.15), rgba(0, 212, 255, 0.15));
+            border: 1px solid rgba(0, 200, 100, 0.3);
+            border-radius: 6px;
+            padding: 0.5rem 1rem;
+            font-size: 0.8rem;
+            color: #00c864;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .verified-badge::before {
+            content: '\2713';
+            font-weight: bold;
+        }
+        .update-date {
+            font-size: 0.8rem;
+            color: #8888aa;
+        }
+        .source-citation {
+            font-size: 0.75rem;
+            color: #666;
+        }
+        .source-citation a { color: #00d4ff; }
+
+        /* FOOTER */
+        .footer {
+            background: #0a0a15;
+            border-top: 1px solid #1a1a3a;
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+        .footer p { font-size: 0.8rem; color: #555; margin-bottom: 0.5rem; }
+        .footer a { color: #00d4ff; }
+        .footer a:hover { color: #ffd700; }
+        .footer-disclaimer { font-size: 0.7rem; color: #444; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #1a1a3a; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+            .alphabet-nav { padding: 0.75rem 1rem; gap: 0.35rem; }
+            .alphabet-nav a { font-size: 0.5rem; padding: 0.3rem 0.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- SKIP LINK (Accessibility) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- PROGRESS BAR -->
+    <div id="progressBar" class="progress-bar"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">MINA GUIDE</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="walkthrough.html">Walkthrough</a>
+                <a href="bosses.html">Bosses</a>
+                <a href="enemies.html">Enemies</a>
+                <a href="items.html">Items</a>
+                <a href="mechanics.html">Mechanics</a>
+                <a href="tips.html">Tips</a>
+                <a href="faq.html">FAQ</a>
+                <a href="glossary.html" class="active">Glossary</a>
+            </div>
+            <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+        </div>
+        <div class="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="walkthrough.html">Walkthrough</a>
+            <a href="bosses.html">Bosses</a>
+            <a href="enemies.html">Enemies</a>
+            <a href="items.html">Items</a>
+            <a href="mechanics.html">Mechanics</a>
+            <a href="tips.html">Tips</a>
+            <a href="faq.html">FAQ</a>
+            <a href="glossary.html">Glossary</a>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB NAVIGATION -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Glossary</li>
+        </ol>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <h1>Glossary of Game Terms</h1>
+        <p>Complete definitions of all terms, mechanics, and locations in Mina the Hollower.</p>
+    </header>
+
+    <main id="main-content" class="container">
+
+        <!-- SUMMARY BOX -->
+        <div class="summary-box">
+            <h3>Key Terms</h3>
+            <ul>
+                <li><strong>Hollower</strong> - Mina's title, those who can burrow underground</li>
+                <li><strong>Bones</strong> - Primary currency and XP, lost on death</li>
+                <li><strong>Plasma</strong> - Yellow bar that converts to health when attacking</li>
+                <li><strong>Underlab</strong> - Save point and upgrade hub</li>
+                <li><strong>Trinket</strong> - Equippable accessory with passive bonuses</li>
+            </ul>
+        </div>
+
+        <!-- ALPHABET NAV -->
+        <nav class="alphabet-nav">
+            <a href="#section-b" class="active">B</a>
+            <a href="#section-h">H</a>
+            <a href="#section-j">J</a>
+            <a href="#section-k">K</a>
+            <a href="#section-p">P</a>
+            <a href="#section-s">S</a>
+            <a href="#section-t">T</a>
+            <a href="#section-u">U</a>
+        </nav>
+
+        <!-- B SECTION -->
+        <section class="glossary-section" id="section-b">
+            <div class="letter-header">B</div>
+            <div class="glossary-grid">
+                <div class="glossary-item">
+                    <div class="glossary-term">Bones</div>
+                    <div class="glossary-def">The primary <strong>currency and experience points</strong> in Mina the Hollower. Bones are earned by defeating enemies and can be spent at Underlabs for permanent stat upgrades or used to purchase items from shops. Bones are lost upon death unless protected by a Spark, creating a risk-reward progression system similar to Souls games.</div>
+                </div>
+                <div class="glossary-item">
+                    <div class="glossary-term">Bone Beach</div>
+                    <div class="glossary-def">One of the 7 areas of Tenebrous Isle. Bone Beach is a <strong>mining town built inside a giant creature's carcass</strong>, featuring conveyor belt traversal mechanics and an industrial-meets-organic aesthetic.</div>
+                </div>
+                <div class="glossary-item">
+                    <div class="glossary-term">Blaststrike Maul</div>
+                    <div class="glossary-def">A heavy hammer weapon available from the start. The Blaststrike Maul trades speed for raw power and grants <strong>invincibility frames during charged attacks</strong>, making it valuable for tanking through enemy attacks while delivering devastating blows.</div>
+                </div>
+                <div class="glossary-item">
+                    <div class="glossary-term">Burrow</div>
+                    <div class="glossary-def">Mina's signature ability that lets her <strong>travel underground</strong>. The burrow serves multiple functions: dodging attacks with invincibility frames, traversing beneath obstacles, discovering hidden secrets, and launching pop-up aerial attacks. The burrow replaces traditional dodge rolls found in other action games.</div>
+                </div>
+                <div class="glossary-item">
+                    <div class="glossary-term">Battery Buster</div>
+                    <div class="glossary-def">An unlockable <strong>ranged blaster weapon</strong> that allows Mina to engage enemies from a distance. The Charge Shot upgrade enables a powerful ranged attack with increased damage.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- H SECTION -->
+        <section class="glossary-section" id="section-h">
+            <div class="letter-header">H</div>
+            <div class="glossary-grid">
+                <div class="glossary-item">
+                    <div class="glossary-term">Hollower</div>
+                    <div class="glossary-def">A title given to those who possess the ability to <strong>travel beneath the surface</strong> of Tenebrous Isle. Mina is a Hollower, which is central to the game's mechanics and lore. Hollowers can navigate underground passages, dodge attacks, and launch pop-up strikes.</div>
+                </div>
+                <div class="glossary-item">
+                    <div class="glossary-term">Hollower's Shield</div>
+                    <div class="glossary-def">An unlockable weapon that provides <strong>defensive capabilities alongside offensive options</strong>. The shield can be used to parry incoming attacks, creating openings for counter-attacks. A successful parry stuns the enemy and enables a devastating riposte.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- J SECTION -->
+        <section class="glossary-section" id="section-j">
+            <div class="letter-header">J</div>
+            <div class="glossary-grid">
+                <div class="glossary-item">
+                    <div class="glossary-term">Joules</div>
+                    <div class="glossary-def">The resource consumed by <strong>Sidearms</strong> when using their special abilities. Joules must be managed carefully, as Sidearms are lost on death. Joule Jars can be found throughout the world to replenish this resource.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- K SECTION -->
+        <section class="glossary-section" id="section-k">
+            <div class="letter-header">K</div>
+            <div class="glossary-grid">
+                <div class="glossary-item">
+                    <div class="glossary-term">Keygear</div>
+                    <div class="glossary-def">Universal keys used to <strong>unlock doors and gates</strong> throughout Tenebrous Isle. Keygears open paths to new areas and secret rooms. They are found by exploring thoroughly and breaking objects throughout the world.</div>
+                </div>
+                <div class="glossary-item">
+                    <div class="glossary-term">Kears</div>
+                    <div class="glossary-def">A special collectible currency that <strong>unlocks various things</strong> throughout the game. Kears can be purchased from the Kear Shop in Ossex and are described as making "the world go round."</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- P SECTION -->
+        <section class="glossary-section" id="section-p">
+            <div class="letter-header">P</div>
+            <div class="glossary-grid">
+                <div class="glossary-item">
+                    <div class="glossary-term">Plasma</div>
+                    <div class="glossary-def">The unique <strong>healing system</strong> of Mina the Hollower. Mina has a yellow Plasma bar that fills by attacking enemies. Once full, it converts into red health (actual HP recovery). This system rewards aggressive play - the more you attack, the more you heal. Inspired by DOOM 2016's glory kill mechanic.</div>
+                </div>
+                <div class="glossary-item">
+                    <div class="glossary-term">Pop-up</div>
+                    <div class="glossary-def">The attack performed when <strong>emerging from a burrow</strong>. The pop-up launches Mina into the air with an aerial attack that deals bonus damage. Positioning directly beneath enemies before surfacing maximizes the effectiveness of pop-up strikes.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- S SECTION -->
+        <section class="glossary-section" id="section-s">
+            <div class="letter-header">S</div>
+            <div class="glossary-grid">
+                <div class="glossary-item">
+                    <div class="glossary-term">Spark Generator</div>
+                    <div class="glossary-def">The <strong>stolen artifacts</strong> that Mina must recover throughout her adventure on Tenebrous Isle. The spark generators are central to the game's story, with various antagonists controlling different generators across the island's regions.</div>
+                </div>
+                <div class="glossary-item">
+                    <div class="glossary-term">Sparks</div>
+                    <div class="glossary-def">Extra lives that <strong>prevent Bone loss upon death</strong>. When Mina dies with a Spark active, she revives without losing her accumulated Bones. Sparks are invaluable for learning difficult boss encounters risk-free through trial-and-error.</div>
+                </div>
+                <div class="glossary-item">
+                    <div class="glossary-term">Sidearm</div>
+                    <div class="glossary-def">Sub-weapons that <strong>consume Joules</strong> and provide additional tactical options. Sidearms are found by breaking objects throughout the world and are lost on death. Examples include Gyro Dagger (boomerang), Volt Hatchet (thrown axe), and Iron Steed (bicycle with lance).</div>
+                </div>
+                <div class="glossary-item">
+                    <div class="glossary-term">Septemburg</div>
+                    <div class="glossary-def">One of the 7 areas of Tenebrous Isle. Septemburg captures the feeling of an <strong>endless Halloween night</strong> with pumpkins, scarecrows, hedge mazes, and dynamic lightning strikes that may reveal hidden paths.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- T SECTION -->
+        <section class="glossary-section" id="section-t">
+            <div class="letter-header">T</div>
+            <div class="glossary-grid">
+                <div class="glossary-item">
+                    <div class="glossary-term">Tenebrous Isle</div>
+                    <div class="glossary-def">The <strong>gothic, interconnected game world</strong> where Mina the Hollower takes place. It is a dark island divided into 7 distinct areas with unique themes. The island's lore involves stolen spark generators that Mina must recover, with various antagonists controlling different regions.</div>
+                </div>
+                <div class="glossary-item">
+                    <div class="glossary-term">Trinket</div>
+                    <div class="glossary-def">Equippable accessories that provide <strong>passive bonuses</strong>. You can equip up to 5 Trinkets simultaneously for build customization. Examples include Ferrying Wisp (floating), Prototype Spark (revive on death), Attack Multiplier (bonus damage), and Health Boost (increased HP).</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- U SECTION -->
+        <section class="glossary-section" id="section-u">
+            <div class="letter-header">U</div>
+            <div class="glossary-grid">
+                <div class="glossary-item">
+                    <div class="glossary-term">Underlab</div>
+                    <div class="glossary-def"><strong>Save points and upgrade hubs</strong> scattered throughout Tenebrous Isle. Resting at an Underlab saves progress and lets you spend Bones on permanent stat upgrades. However, resting also respawns all enemies in the world, requiring strategic timing.</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- AUTHORITY BOX -->
+        <div class="authority-box">
+            <span class="verified-badge">Verified Information</span>
+            <span class="update-date">Last Updated: May 28, 2026</span>
+            <span class="source-citation">Sources: <a href="https://minathehollower.wiki.gg" target="_blank" rel="noopener">Official Wiki</a>, <a href="https://yachtclubgames.com" target="_blank" rel="noopener">Yacht Club Games</a></span>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <p><a href="index.html">Mina the Hollower Walkthrough Guide</a> &mdash; Glossary</p>
+            <p>Mina the Hollower is a trademark of <a href="https://yachtclubgames.com" target="_blank" rel="noopener">Yacht Club Games</a>. This is a fan-made guide.</p>
+            <p class="footer-disclaimer">All game content and trademarks are property of their respective owners. Information sourced from the official Mina the Hollower Wiki (minathehollower.wiki.gg), IGN, PC Gamer, and Yacht Club Games official materials.</p>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">&#8679;</button>
+
+    <!-- OPTIMIZATION SCRIPTS -->
+    <script>
+        // Progress bar
+        const progressBar = document.getElementById('progressBar');
+        if (progressBar) {
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = scrolled + '%';
+            });
+        }
+
+        // Back to top functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        if (backToTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Image lazy loading handler
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            img.addEventListener('load', () => img.classList.add('loaded'));
+            // Trigger load event for already cached images
+            if (img.complete) img.classList.add('loaded');
+        });
+    </script>
+
+</body>
+</html>

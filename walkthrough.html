@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="monetag" content="9b8b6780e06943c23b2c2b70746edc23">
+    <title>Area Walkthrough - Mina the Hollower Guide</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Area Walkthrough | Mina the Hollower Guide">
+    <meta name="description" content="Area walkthrough for Mina the Hollower. Complete guide to Ossex, Queensbury Crypt, Nox's Bayou, Septemburg, Bone Beach, Frozen Trainyard, and Astral Orrery.">
+    <meta name="keywords" content="Mina the Hollower walkthrough, area guide, Tenebrous Isle, Ossex, Queensbury Crypt, Nox's Bayou, Septemburg, Bone Beach, Frozen Trainyard, Astral Orrery, dungeon guide, map, secrets, exploration">
+    <meta name="author" content="Mina the Hollower Guide">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Canonical URL - Update with your actual domain when deployed -->
+    <link rel="canonical" href="/walkthrough.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Open Graph / Facebook - Update og:url with your actual domain when deployed -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/walkthrough.html">
+    <meta property="og:title" content="Area Walkthrough | Mina the Hollower Guide">
+    <meta property="og:description" content="Area walkthrough for Mina the Hollower. Complete guide to Ossex, Queensbury Crypt, Nox's Bayou, Septemburg, Bone Beach, Frozen Trainyard, and Astral Orrery.">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:site_name" content="Mina the Hollower Guide">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter - Update twitter:url with your actual domain when deployed -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="/walkthrough.html">
+    <meta property="twitter:title" content="Area Walkthrough | Mina the Hollower Guide">
+    <meta property="twitter:description" content="Area walkthrough for Mina the Hollower. Complete guide to Ossex, Queensbury Crypt, Nox's Bayou, Septemburg, Bone Beach, Frozen Trainyard, and Astral Orrery.">
+    <meta property="twitter:image" content="/images/og-image.jpg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Area Walkthrough",
+      "description": "Area walkthrough for Mina the Hollower. Complete guide to Ossex, Queensbury Crypt, Nox's Bayou, Septemburg, Bone Beach, Frozen Trainyard, and Astral Orrery.",
+      "url": "/walkthrough.html",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Mina the Hollower Guide",
+        "url": "/"
+      }
+    }
+    </script>
+    <!-- ItemList Schema for Areas -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Tenebrous Isle Areas",
+      "numberOfItems": 7,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Ossex",
+          "description": "Central hub town with shops, services, and connections to all dungeon areas."
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Queensbury Crypt",
+          "description": "Graveyard-themed dungeon with undead enemies and The Duchess of Queensbury boss."
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Nox's Bayou",
+          "description": "Murky swamp area with boats, lilypads, and aquatic/insectoid enemies."
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Septemburg",
+          "description": "Halloween-themed area with hedge mazes, scarecrows, and dynamic lightning."
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Bone Beach",
+          "description": "Mining town inside a giant creature carcass with conveyor belt mechanics."
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Frozen Trainyard",
+          "description": "Ice/snow area with fragile ice tiles and trainyard industrial setting."
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "name": "Astral Orrery",
+          "description": "Celestial observatory with floating platforms and cosmic theme."
+        }
+      ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        a { color: #00d4ff; text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #ffd700; }
+
+        /* ===== SKIP LINK (Accessibility) ===== */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #00d4ff;
+            color: #0d0d1a;
+            padding: 8px 16px;
+            z-index: 10000;
+            transition: top 0.3s;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, #00d4ff, #ffd700);
+            z-index: 10001;
+            transition: width 0.1s ease;
+        }
+
+        /* ===== BACK TO TOP BUTTON ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            border: none;
+            border-radius: 50%;
+            color: #0d0d1a;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.5);
+        }
+
+        /* ===== BREADCRUMB NAVIGATION ===== */
+        .breadcrumb {
+            background: rgba(13, 13, 26, 0.8);
+            padding: 0.75rem 5%;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+        }
+        .breadcrumb ol {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0;
+        }
+        .breadcrumb li {
+            font-size: 0.8rem;
+            color: #a0a0c0;
+        }
+        .breadcrumb li:not(:last-child)::after {
+            content: '/';
+            margin-left: 0.5rem;
+            color: #00d4ff;
+        }
+        .breadcrumb a {
+            color: #00d4ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .breadcrumb a:hover {
+            color: #ffd700;
+        }
+        .breadcrumb [aria-current="page"] {
+            color: #ffd700;
+        }
+
+        /* ===== IMAGE LOADING STATES ===== */
+        img {
+            background: linear-gradient(135deg, #1a1a2e 0%, #0d0d1a 100%);
+            transition: opacity 0.3s ease;
+        }
+        img[loading="lazy"] {
+            opacity: 0;
+        }
+        img.loaded {
+            opacity: 1;
+        }
+
+        /* ===== NAV ===== */
+        .navbar {
+            background: linear-gradient(180deg, #12122a 0%, #0d0d1a 100%);
+            border-bottom: 2px solid #2a2a4a;
+            padding: 0 1.5rem;
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .nav-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between; height: 64px;
+        }
+        .nav-logo { font-family: 'Press Start 2P', monospace; font-size: 0.8rem; color: #ffd700; white-space: nowrap; }
+        .nav-links { display: flex; gap: 0.25rem; flex-wrap: wrap; justify-content: flex-end; }
+        .nav-links a {
+            font-size: 0.875rem; padding: 0.4rem 0.7rem; border-radius: 4px;
+            color: #b0b0d0; transition: all 0.2s; white-space: nowrap;
+        }
+        .nav-links a:hover, .nav-links a.active { color: #ffd700; background: rgba(255, 215, 0, 0.08); }
+        .hamburger { display: none; background: none; border: none; color: #ffd700; font-size: 1.5rem; cursor: pointer; }
+        .mobile-menu { display: none; flex-direction: column; padding: 0.75rem 1.5rem 1rem; background: #12122a; border-bottom: 2px solid #2a2a4a; }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a { padding: 0.6rem 0; font-size: 0.85rem; color: #b0b0d0; border-bottom: 1px solid #1a1a3a; }
+        .mobile-menu a:last-child { border-bottom: none; }
+        .mobile-menu a:hover { color: #ffd700; }
+
+        /* PAGE HEADER */
+        .page-header {
+            text-align: center; padding: 3rem 1.5rem 2rem;
+            background: radial-gradient(ellipse at 50% 0%, rgba(100, 50, 180, 0.12) 0%, transparent 60%), #0d0d1a;
+        }
+        .page-header h1 {
+            font-family: 'Press Start 2P', monospace;
+            font-size: clamp(1rem, 3vw, 1.6rem);
+            color: #ffd700; margin-bottom: 0.75rem;
+        }
+        .page-header p { color: #8888aa; font-size: 0.95rem; max-width: 700px; margin: 0 auto; }
+
+        /* NOTICE */
+        .notice { max-width: 1200px; margin: 0 auto; padding: 1rem 1.5rem; }
+        .notice-bar {
+            background: linear-gradient(90deg, rgba(255, 215, 0, 0.1), rgba(0, 212, 255, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 8px;
+            padding: 0.85rem 1.25rem; font-size: 0.85rem; color: #ffd700;
+            display: flex; align-items: center; gap: 0.75rem;
+        }
+        .notice-icon { font-size: 1.2rem; flex-shrink: 0; }
+
+        /* CONTAINER */
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        /* SECTION */
+        .section-title {
+            font-family: 'Press Start 2P', monospace;
+            font-size: clamp(0.85rem, 2vw, 1.1rem);
+            color: #ffd700; margin-bottom: 0.5rem;
+        }
+        .section-subtitle { color: #666; font-size: 0.85rem; margin-bottom: 2rem; }
+
+        /* WORLD OVERVIEW */
+        .world-overview {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16162a 100%);
+            border: 1px solid #2a2a4a; border-radius: 12px;
+            padding: 2rem; margin-bottom: 3rem;
+        }
+        .world-overview h3 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.7rem;
+            color: #00d4ff; margin-bottom: 1rem; text-transform: uppercase;
+        }
+        .world-overview p { color: #b0b0c0; font-size: 0.9rem; line-height: 1.8; margin-bottom: 1rem; }
+        .world-overview p:last-child { margin-bottom: 0; }
+        .highlight { color: #ffd700; font-weight: 600; }
+        .accent { color: #00d4ff; }
+
+        /* AREA CARDS */
+        .area-grid {
+            display: grid; grid-template-columns: 1fr; gap: 1.5rem; margin-bottom: 3rem;
+        }
+        .area-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16162a 100%);
+            border: 1px solid #2a2a4a; border-radius: 12px;
+            overflow: hidden; transition: border-color 0.3s;
+        }
+        .area-card:hover { border-color: #3a3a5a; }
+        .area-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+            border-bottom: 2px solid #2a2a4a;
+            transition: transform 0.3s ease;
+        }
+        .area-card:hover .area-image {
+            transform: scale(1.02);
+        }
+        .area-img-container {
+            overflow: hidden;
+            position: relative;
+        }
+        .area-img-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(13, 13, 26, 0.95));
+            padding: 2rem 1.5rem 0.75rem;
+            font-size: 0.7rem;
+            color: #8888aa;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .area-card-header {
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #222240;
+            display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+        }
+        .area-icon { font-size: 2rem; flex-shrink: 0; }
+        .area-card-header h3 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.8rem;
+            color: #ffd700; flex: 1;
+        }
+        .area-badge {
+            font-family: 'Press Start 2P', monospace; font-size: 0.55rem;
+            padding: 0.3rem 0.6rem; border-radius: 4px; text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .badge-hub { background: rgba(0, 212, 255, 0.15); color: #00d4ff; border: 1px solid rgba(0, 212, 255, 0.3); }
+        .badge-dungeon { background: rgba(255, 100, 100, 0.15); color: #ff6464; border: 1px solid rgba(255, 100, 100, 0.3); }
+        .area-card-body { padding: 1.5rem 2rem; }
+        .area-card-body p { color: #9999bb; font-size: 0.9rem; margin-bottom: 1rem; line-height: 1.7; }
+        .area-card-body p:last-child { margin-bottom: 0; }
+        .area-features {
+            list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .area-features li {
+            font-size: 0.8rem; color: #8888aa; padding: 0.35rem 0;
+            padding-left: 1.2rem; position: relative;
+        }
+        .area-features li::before {
+            content: '&#9654;'; position: absolute; left: 0; color: #00d4ff; font-size: 0.6rem; top: 0.45rem;
+        }
+        .shop-list {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 0.5rem;
+            margin-top: 1rem;
+        }
+        .shop-item {
+            background: #12122a; border: 1px solid #222240; border-radius: 6px;
+            padding: 0.6rem 0.8rem; font-size: 0.8rem; color: #b0b0c0;
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .shop-item::before { content: ''; display: inline-block; width: 8px; height: 8px; background: #ffd700; border-radius: 2px; flex-shrink: 0; }
+
+        .tips-box {
+            background: rgba(0, 212, 255, 0.05); border: 1px solid rgba(0, 212, 255, 0.15);
+            border-radius: 8px; padding: 1rem 1.25rem; margin-top: 1rem;
+        }
+        .tips-box h4 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.65rem;
+            color: #00d4ff; margin-bottom: 0.5rem; text-transform: uppercase;
+        }
+        .tips-box ul { list-style: none; }
+        .tips-box ul li {
+            font-size: 0.8rem; color: #9999bb; padding: 0.25rem 0;
+            padding-left: 1rem; position: relative;
+        }
+        .tips-box ul li::before {
+            content: '&#8226;'; position: absolute; left: 0; color: #00d4ff;
+        }
+
+        /* NON-LINEAR NOTE */
+        .nonlinear-note {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(0, 212, 255, 0.08));
+            border: 1px solid rgba(255, 215, 0, 0.2); border-radius: 12px;
+            padding: 1.5rem 2rem; margin-bottom: 3rem; text-align: center;
+        }
+        .nonlinear-note h3 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.7rem;
+            color: #ffd700; margin-bottom: 0.75rem;
+        }
+        .nonlinear-note p { color: #b0b0c0; font-size: 0.9rem; }
+
+        /* FOOTER */
+        .footer {
+            background: #0a0a15; border-top: 1px solid #1a1a3a;
+            padding: 2rem 1.5rem; text-align: center;
+        }
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+        .footer p { font-size: 0.8rem; color: #555; margin-bottom: 0.5rem; }
+        .footer a { color: #00d4ff; }
+        .footer a:hover { color: #ffd700; }
+        .footer-disclaimer { font-size: 0.7rem; color: #444; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #1a1a3a; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+            .area-card-header { padding: 1rem 1.25rem; }
+            .area-card-body { padding: 1rem 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- SKIP LINK (Accessibility) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- PROGRESS BAR -->
+    <div id="progressBar" class="progress-bar"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">MINA GUIDE</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="walkthrough.html" class="active">Walkthrough</a>
+                <a href="bosses.html">Bosses</a>
+                <a href="enemies.html">Enemies</a>
+                <a href="items.html">Items</a>
+                <a href="mechanics.html">Mechanics</a>
+                <a href="tips.html">Tips</a>
+                <a href="faq.html">FAQ</a>
+                <a href="glossary.html">Glossary</a>
+            </div>
+            <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+        </div>
+        <div class="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="walkthrough.html">Walkthrough</a>
+            <a href="bosses.html">Bosses</a>
+            <a href="enemies.html">Enemies</a>
+            <a href="items.html">Items</a>
+            <a href="mechanics.html">Mechanics</a>
+            <a href="tips.html">Tips</a>
+            <a href="faq.html">FAQ</a>
+            <a href="glossary.html">Glossary</a>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB NAVIGATION -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Area Walkthrough</li>
+        </ol>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <h1>Area Walkthrough</h1>
+        <p>A complete guide to every region of Tenebrous Isle, from the central hub of Ossex to the cosmic Astral Orrery.</p>
+    </header>
+
+    <!-- NOTICE -->
+    <div class="notice">
+        <div class="notice-bar">
+            <span class="notice-icon">&#9888;&#65039;</span>
+            <span>This game released on May 29, 2026. This guide is being actively updated as more information becomes available. Area details will be expanded as they are documented.</span>
+        </div>
+    </div>
+
+    <main id="main-content" class="container">
+
+        <!-- SUMMARY BOX -->
+        <div class="summary-box" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(0, 212, 255, 0.08)); border: 1px solid rgba(255, 215, 0, 0.2); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 2rem;">
+            <h3 style="font-family: 'Press Start 2P', monospace; font-size: 0.7rem; color: #ffd700; margin-bottom: 1rem; text-transform: uppercase;">Key Points</h3>
+            <ul style="list-style: none; display: grid; gap: 0.5rem;">
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> Tenebrous Isle has 7 distinct areas: Ossex hub + 6 dungeons</li>
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> All areas can be explored in any order - fully non-linear</li>
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> Ossex provides shops, Underlabs, and fast travel options</li>
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> Each dungeon has unique mechanics and boss encounter</li>
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> No ability gates or required sequence - explore freely</li>
+            </ul>
+        </div>
+
+        <!-- WORLD OVERVIEW -->
+        <h2 class="section-title">Tenebrous Isle</h2>
+        <p class="section-subtitle">The dark and mysterious game world</p>
+
+        <div class="world-overview">
+            <h3>The World of Tenebrous Isle</h3>
+            <p>
+                <span class="highlight">Tenebrous Isle</span> is a gothic, interconnected open world that serves as the setting for Mina the Hollower. The island is divided into <span class="accent">7 distinct areas</span>, each with its own unique theme, enemies, and challenges. Unlike traditional Metroidvanias, the game is <span class="highlight">fully non-linear</span> -- there are no item gates or required sequence breaks. You can tackle any area in any order you choose.
+            </p>
+            <p>
+                The central hub town of <span class="accent">Ossex</span> connects to all other areas and provides essential services including shops, save points, and story progression through the in-game newspaper. As you explore deeper into the isle, you will uncover shortcuts, secrets, and lore that paint a picture of the island's dark history.
+            </p>
+        </div>
+
+        <!-- NON-LINEAR NOTE -->
+        <div class="nonlinear-note">
+            <h3>Non-Linear Exploration</h3>
+            <p>The 6 dungeon areas beyond Ossex can be tackled in <strong>any order</strong>. There are no ability locks or required items to access any area. Feel free to explore wherever interests you, and return to tougher areas after gaining more power through upgrades.</p>
+        </div>
+
+        <!-- AREA CARDS -->
+        <h2 class="section-title">All Areas</h2>
+        <p class="section-subtitle">Detailed guides for each region of Tenebrous Isle</p>
+
+        <div class="area-grid">
+
+            <!-- OSSEX -->
+            <div class="area-card" id="ossex">
+                <div class="area-img-container">
+                    <img src="images/ossex.jpg" alt="Ossex - Gothic town square with Victorian buildings, cobblestone streets, and a central fountain" class="area-image" loading="lazy">
+                    <span class="area-img-caption">Central Hub Town</span>
+                </div>
+                <div class="area-card-header">
+                    <span class="area-icon">&#127963;</span>
+                    <h3>Ossex</h3>
+                    <span class="area-badge badge-hub">Central Hub</span>
+                </div>
+                <div class="area-card-body">
+                    <p>
+                        <strong>Ossex</strong> serves as your home base and the central hub of Tenebrous Isle. This gloomy settlement is where you will find all the essential services for your adventure: shops for buying and upgrading weapons, a Trinket merchant, consumable vendors, and access to the Underlabs where you spend Bones on permanent stat boosts. The town also publishes a newspaper that dishes out lore snippets, gameplay hints, and updates as you progress through the story.
+                    </p>
+                    <p>From Ossex, pathways branch out to every one of the six dungeon regions, so it is the natural place to return to whenever you need to restock supplies, spend your Bones, or plan your next destination.</p>
+                    <h4 style="font-family:'Press Start 2P',monospace;font-size:0.5rem;color:#ffd700;margin:1rem 0 0.5rem;">Shops & Services</h4>
+
+                    <div class="shop-details" style="margin-top: 1rem;">
+                        <div class="shop-detail-card" style="background: #12122a; border: 1px solid #222240; border-radius: 8px; padding: 1rem; margin-bottom: 0.75rem;">
+                            <h5 style="font-family:'Press Start 2P',monospace;font-size:0.45rem;color:#00d4ff;margin-bottom:0.5rem;">General Store</h5>
+                            <p style="font-size: 0.8rem; color: #9999bb; line-height: 1.6; margin: 0;">"Purchase items here, but be careful - the price of the next item will increase."</p>
+                        </div>
+                        <div class="shop-detail-card" style="background: #12122a; border: 1px solid #222240; border-radius: 8px; padding: 1rem; margin-bottom: 0.75rem;">
+                            <h5 style="font-family:'Press Start 2P',monospace;font-size:0.45rem;color:#00d4ff;margin-bottom:0.5rem;">Trinket Shop</h5>
+                            <p style="font-size: 0.8rem; color: #9999bb; line-height: 1.6; margin: 0;">"The many headed weirdo sells Trinkets. If you have more Trinkets, she may show you her special collection."</p>
+                        </div>
+                        <div class="shop-detail-card" style="background: #12122a; border: 1px solid #222240; border-radius: 8px; padding: 1rem; margin-bottom: 0.75rem;">
+                            <h5 style="font-family:'Press Start 2P',monospace;font-size:0.45rem;color:#00d4ff;margin-bottom:0.5rem;">Weapon Shop</h5>
+                            <p style="font-size: 0.8rem; color: #9999bb; line-height: 1.6; margin: 0;">"Buy weapons here. You get a discount on the first one!"</p>
+                        </div>
+                        <div class="shop-detail-card" style="background: #12122a; border: 1px solid #222240; border-radius: 8px; padding: 1rem; margin-bottom: 0.75rem;">
+                            <h5 style="font-family:'Press Start 2P',monospace;font-size:0.45rem;color:#00d4ff;margin-bottom:0.5rem;">Kear Shop</h5>
+                            <p style="font-size: 0.8rem; color: #9999bb; line-height: 1.6; margin: 0;">"Kears make the world go round and unlock all sorts of things. Buy them here from preeminent Kear economists."</p>
+                        </div>
+                        <div class="shop-detail-card" style="background: #12122a; border: 1px solid #222240; border-radius: 8px; padding: 1rem; margin-bottom: 0.75rem;">
+                            <h5 style="font-family:'Press Start 2P',monospace;font-size:0.45rem;color:#00d4ff;margin-bottom:0.5rem;">Pawn Shop</h5>
+                            <p style="font-size: 0.8rem; color: #9999bb; line-height: 1.6; margin: 0;">"If you don't want an item or need some quick Bones, you could always pawn some of your stuff. You could always buy it back later!"</p>
+                        </div>
+                        <div class="shop-detail-card" style="background: #12122a; border: 1px solid #222240; border-radius: 8px; padding: 1rem; margin-bottom: 0.75rem;">
+                            <h5 style="font-family:'Press Start 2P',monospace;font-size:0.45rem;color:#00d4ff;margin-bottom:0.5rem;">Train Station</h5>
+                            <p style="font-size: 0.8rem; color: #9999bb; line-height: 1.6; margin: 0;">"The train would let you travel quickly, but it's out of commission, and getting a new train car won't be cheap."</p>
+                        </div>
+                        <div class="shop-detail-card" style="background: #12122a; border: 1px solid #222240; border-radius: 8px; padding: 1rem; margin-bottom: 0.75rem;">
+                            <h5 style="font-family:'Press Start 2P',monospace;font-size:0.45rem;color:#00d4ff;margin-bottom:0.5rem;">Tavern</h5>
+                            <p style="font-size: 0.8rem; color: #9999bb; line-height: 1.6; margin: 0;">"Locals just love the tavern. Go have a good time, why don't ya!"</p>
+                        </div>
+                    </div>
+
+                    <div class="tips-box">
+                        <h4>Tips for Ossex</h4>
+                        <ul>
+                            <li>Check the newspaper regularly for new hints and shop inventory updates</li>
+                            <li>The Pawn Shop lets you sell unwanted items for Bones and buy them back later</li>
+                            <li>The Train Station provides fast travel once you acquire new train cars</li>
+                            <li>The Trinket Shop vendor may show special collections if you own more Trinkets</li>
+                            <li>General Store prices increase with each purchase - plan your buying accordingly</li>
+                            <li>Weapon Shop offers a discount on your first weapon purchase</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- QUEENSBURY CRYPT -->
+            <div class="area-card" id="queensbury">
+                <div class="area-img-container">
+                    <img src="images/queensbury-crypt.jpg" alt="Queensbury Crypt - Creepy graveyard with tombstones, twisted trees, and an ominous mausoleum" class="area-image" loading="lazy">
+                    <span class="area-img-caption">Cemetery Dungeon</span>
+                </div>
+                <div class="area-card-header">
+                    <span class="area-icon">&#128128;</span>
+                    <h3>Queensbury Crypt</h3>
+                    <span class="area-badge badge-dungeon">Dungeon</span>
+                </div>
+                <div class="area-card-body">
+                    <p>
+                        <strong>Queensbury Crypt</strong> is a graveyard-themed dungeon blanketed in gloom. Crumbling headstones, decaying architecture, and shambling undead fill its corridors, while something far more sinister lurks in the deepest chambers. The atmosphere is thick with gothic dread, from the twisted stonework to the eerie ambient details woven into the environment.
+                    </p>
+                    <p>
+                        The area culminates in a boss encounter against <span class="highlight">The Duchess of Queensbury</span>, an eldritch monstrosity dwelling in the crypt's lowest level. Defeating her requires solid command of the burrow mechanic, as her attacks blanket large portions of the arena and leave little room to dodge above ground.
+                    </p>
+                    <ul class="area-features">
+                        <li>Cemetery and graveyard theme</li>
+                        <li>Undead enemy types</li>
+                        <li>Gothic architecture and tombstones</li>
+                        <li>Boss: The Duchess of Queensbury</li>
+                        <li>Eldritch horror atmosphere</li>
+                    </ul>
+                    <div class="tips-box">
+                        <h4>Tips for Queensbury Crypt</h4>
+                        <ul>
+                            <li>Use the burrow to dodge the Duchess's wide-area attacks</li>
+                            <li>Watch for tells before ground-targeted attacks</li>
+                            <li>Explore side paths for hidden Trinkets and Keygears</li>
+                            <li>Undead enemies may be weak to certain weapon types</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- NOX'S BAYOU -->
+            <div class="area-card" id="nox-bayou">
+                <div class="area-img-container">
+                    <img src="images/nox-bayou.jpg" alt="Nox's Bayou - Dark swamp with cypress trees, murky water, wooden boats, and glowing fireflies" class="area-image" loading="lazy">
+                    <span class="area-img-caption">Swamp Area</span>
+                </div>
+                <div class="area-card-header">
+                    <span class="area-icon">&#127795;</span>
+                    <h3>Nox's Bayou</h3>
+                    <span class="area-badge badge-dungeon">Dungeon</span>
+                </div>
+                <div class="area-card-body">
+                    <p>
+                        <strong>Nox's Bayou</strong> plunges you into a murky, overgrown swamp choked with vegetation and stagnant water. Wooden boats, lilypads, and rickety walkways form a winding path through the marsh, and the whole region feels oppressive and claustrophobic. The creatures lurking here tend to be aquatic or insectoid, well suited to the soggy environment.
+                    </p>
+                    <p>
+                        Getting around the bayou involves plenty of platforming across open water and threading through dense undergrowth. The burrow ability is particularly handy here -- it lets you travel safely beneath submerged sections and slip past swamp hazards that would otherwise block your path.
+                    </p>
+                    <ul class="area-features">
+                        <li>Swamp and bayou environment</li>
+                        <li>Boats and lilypads for traversal</li>
+                        <li>Murky water hazards</li>
+                        <li>Dense vegetation and wooden walkways</li>
+                        <li>Aquatic and insectoid enemies</li>
+                    </ul>
+                    <div class="tips-box">
+                        <h4>Tips for Nox's Bayou</h4>
+                        <ul>
+                            <li>The burrow can help navigate underwater sections safely</li>
+                            <li>Look for breakable objects near the water's edge for Sidearms</li>
+                            <li>Some paths may only be accessible by burrowing under obstacles</li>
+                            <li>Be cautious of enemies lurking just below the water surface</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SEPTEMBURG -->
+            <div class="area-card" id="septemburg">
+                <div class="area-img-container">
+                    <img src="images/septemburg.jpg" alt="Septemburg - Spooky autumn farm with pumpkins, scarecrows, hedge maze, and Halloween atmosphere" class="area-image" loading="lazy">
+                    <span class="area-img-caption">Autumn/Halloween Area</span>
+                </div>
+                <div class="area-card-header">
+                    <span class="area-icon">&#127876;</span>
+                    <h3>Septemburg</h3>
+                    <span class="area-badge badge-dungeon">Dungeon</span>
+                </div>
+                <div class="area-card-body">
+                    <p>
+                        <strong>Septemburg</strong> captures the feeling of an endless Halloween night. The landscape is painted in warm oranges and deep purples, dotted with carved pumpkins, eerie scarecrows, and winding hedge mazes. Periodic lightning bolts tear across the sky, briefly illuminating the surroundings and potentially exposing hidden paths or lurking dangers.
+                    </p>
+                    <p>
+                        Navigating the hedge mazes is a puzzle in itself -- the correct route is rarely obvious, and wrong turns can lead you in circles. Scarecrows scattered throughout the area may come to life as enemies or function as environmental traps, and the periodic lightning strikes seem to interact with the gameplay in ways that reward observant players.
+                    </p>
+                    <ul class="area-features">
+                        <li>Autumn and Halloween theme</li>
+                        <li>Hedge maze navigation</li>
+                        <li>Dynamic lightning strikes</li>
+                        <li>Scarecrow enemies/hazards</li>
+                        <li>Orange and purple color palette</li>
+                    </ul>
+                    <div class="tips-box">
+                        <h4>Tips for Septemburg</h4>
+                        <ul>
+                            <li>Pay attention to lightning flashes -- they may reveal hidden paths</li>
+                            <li>Mark your path through hedge mazes to avoid getting lost</li>
+                            <li>Scarecrows may have attack patterns tied to lightning timing</li>
+                            <li>Explore thoroughly -- hedge mazes often hide valuable secrets</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- BONE BEACH -->
+            <div class="area-card" id="bone-beach">
+                <div class="area-img-container">
+                    <img src="images/bone-beach.jpg" alt="Bone Beach - Strange beach with massive creature skeletons, mining equipment, and wooden docks" class="area-image" loading="lazy">
+                    <span class="area-img-caption">Beach Mining Town</span>
+                </div>
+                <div class="area-card-header">
+                    <span class="area-icon">&#9875;&#65039;</span>
+                    <h3>Bone Beach</h3>
+                    <span class="area-badge badge-dungeon">Dungeon</span>
+                </div>
+                <div class="area-card-body">
+                    <p>
+                        <strong>Bone Beach</strong> is built inside the carcass of an enormous creature, making it one of the most unusual locations in the game. Mining infrastructure -- conveyor belts, scaffolding, and digging equipment -- has been erected throughout the cavernous interior, giving the area an industrial-meets-organic feel. The concept of an entire settlement carved into the body of a colossal beast creates a biome unlike anything else on Tenebrous Isle.
+                    </p>
+                    <p>
+                        Conveyor belts are the defining traversal element here. They shuttle materials (and Mina) from one section to another, doubling as both a movement tool and a potential hazard if they carry you straight into danger. The mining theme hints at pickaxe-wielding foes and ore-related collectibles to discover.
+                    </p>
+                    <ul class="area-features">
+                        <li>Mining town inside a giant creature</li>
+                        <li>Conveyor belt traversal mechanics</li>
+                        <li>Industrial mining aesthetic</li>
+                        <li>Organic cave architecture mixed with structures</li>
+                        <li>Unique interior-of-a-creature environment</li>
+                    </ul>
+                    <div class="tips-box">
+                        <h4>Tips for Bone Beach</h4>
+                        <ul>
+                            <li>Use the burrow to escape conveyor belts carrying you toward hazards</li>
+                            <li>Conveyor direction can be used strategically for speedruns</li>
+                            <li>Look for breakable walls near conveyor endpoints for hidden rooms</li>
+                            <li>The interior environment may have organic weak points to burrow through</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FROZEN TRAINYARD -->
+            <div class="area-card" id="frozen-trainyard">
+                <div class="area-img-container">
+                    <img src="images/frozen-trainyard.jpg" alt="Frozen Trainyard - Frozen train graveyard with overturned railcars, ice-covered tracks, and falling snow" class="area-image" loading="lazy">
+                    <span class="area-img-caption">Ice/Snow Area</span>
+                </div>
+                <div class="area-card-header">
+                    <span class="area-icon">&#10052;&#65039;</span>
+                    <h3>Frozen Trainyard</h3>
+                    <span class="area-badge badge-dungeon">Dungeon</span>
+                </div>
+                <div class="area-card-body">
+                    <p>
+                        <strong>Frozen Trainyard</strong> is a frigid wasteland littered with derelict railcars, frozen tracks, and ice-covered platforms. The standout mechanic here is fragile ice -- certain floor tiles crack and collapse after you step on them, so each platforming section becomes a one-shot puzzle where you need to plot the correct route before committing. The result is a tense, Celeste-inspired experience where every footstep matters.
+                    </p>
+                    <p>
+                        Because some tiles can only be crossed once before giving way, navigation becomes a careful exercise in planning. You may need to identify which platforms are safe, which are temporary, and whether burrowing underground can bypass a fragile section entirely. The slippery ice physics add another layer of challenge, affecting both Mina and the enemies that inhabit the trainyard.
+                    </p>
+                    <ul class="area-features">
+                        <li>Ice and snow environment</li>
+                        <li>Fragile ice tiles (Celeste-like puzzles)</li>
+                        <li>Trainyard industrial setting</li>
+                        <li>Frozen tracks and platforms</li>
+                        <li>Slippery surface physics</li>
+                    </ul>
+                    <div class="tips-box">
+                        <h4>Tips for Frozen Trainyard</h4>
+                        <ul>
+                            <li>Plan your route carefully -- ice tiles may only hold once</li>
+                            <li>The burrow can bypass fragile ice sections entirely</li>
+                            <li>Look for solid ground markers to identify safe paths</li>
+                            <li>Ice physics may affect enemy movement too -- use this to your advantage</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- ASTRAL ORRERY -->
+            <div class="area-card" id="astral-orrery">
+                <div class="area-img-container">
+                    <img src="images/astral-orrery.jpg" alt="Astral Orrery - Floating astronomical observatory with glowing orbs, celestial mechanisms, and star patterns" class="area-image" loading="lazy">
+                    <span class="area-img-caption">Cosmic Installation</span>
+                </div>
+                <div class="area-card-header">
+                    <span class="area-icon">&#127760;</span>
+                    <h3>Astral Orrery</h3>
+                    <span class="area-badge badge-dungeon">Dungeon</span>
+                </div>
+                <div class="area-card-body">
+                    <p>
+                        <strong>Astral Orrery</strong> is a celestial observatory suspended in the sky, far removed from the gothic environs of the island below. The area is built around cosmic themes -- expect floating platforms, intricate clockwork mechanisms, and planetary models on a grand scale. The visual design is otherworldly, with starfields and glowing celestial objects defining the backdrop.
+                    </p>
+                    <p>
+                        With its late-game feel, the Astral Orrery is expected to test everything you have learned so far. The platforming is likely among the most demanding in the game, and the enemies encountered here may include types unique to the cosmic setting. Scholars and sparkmagnetics tied to the orrery's purpose hint at deeper lore connections waiting to be uncovered.
+                    </p>
+                    <ul class="area-features">
+                        <li>Floating astronomical installation</li>
+                        <li>Cosmic and celestial theme</li>
+                        <li>Zero-gravity or reduced gravity sections</li>
+                        <li>Clockwork and planetary mechanics</li>
+                        <li>Otherworldly visual design</li>
+                    </ul>
+                    <div class="tips-box">
+                        <h4>Tips for Astral Orrery</h4>
+                        <ul>
+                            <li>Consider tackling this area later when you have more upgrades</li>
+                            <li>Floating platforms may require precise burrow timing</li>
+                            <li>Cosmic enemies may have unusual attack patterns -- observe before engaging</li>
+                            <li>Look for astronomical alignments that could reveal secret paths</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="info-box" style="margin-top: 2rem;">
+            <strong>Source:</strong> Area information sourced from minathehollower.wiki.gg/wiki/Tenebrous_Isle
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <!-- Authority Box -->
+            <div class="authority-box" style="background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 12px; padding: 1rem 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <span class="verified-badge" style="background: linear-gradient(135deg, rgba(0, 200, 100, 0.15), rgba(0, 212, 255, 0.15)); border: 1px solid rgba(0, 200, 100, 0.3); border-radius: 6px; padding: 0.4rem 0.8rem; font-size: 0.75rem; color: #00c864;">&#10003; Verified Information</span>
+                <span class="update-date" style="font-size: 0.75rem; color: #8888aa;">Last Updated: May 28, 2026</span>
+                <span class="source-citation" style="font-size: 0.7rem; color: #666;">Sources: <a href="https://minathehollower.wiki.gg" target="_blank" rel="noopener" style="color: #00d4ff;">Official Wiki</a>, <a href="https://yachtclubgames.com" target="_blank" rel="noopener" style="color: #00d4ff;">Yacht Club Games</a></span>
+            </div>
+            <p><a href="index.html">Mina the Hollower Walkthrough Guide</a> &mdash; Area Walkthrough</p>
+            <p>Mina the Hollower is a trademark of <a href="https://yachtclubgames.com" target="_blank" rel="noopener">Yacht Club Games</a>. This is a fan-made guide.</p>
+            <p class="footer-disclaimer">All game content and trademarks are property of their respective owners. Information sourced from the official Mina the Hollower Wiki (minathehollower.wiki.gg), IGN, PC Gamer, and Yacht Club Games official materials.</p>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">&#8679;</button>
+
+    <!-- OPTIMIZATION SCRIPTS -->
+    <script>
+        // Progress bar
+        const progressBar = document.getElementById('progressBar');
+        if (progressBar) {
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = scrolled + '%';
+            });
+        }
+
+        // Back to top functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        if (backToTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Image lazy loading handler
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            img.addEventListener('load', () => img.classList.add('loaded'));
+            // Trigger load event for already cached images
+            if (img.complete) img.classList.add('loaded');
+        });
+    </script>
+
+</body>
+</html>

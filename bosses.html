@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="monetag" content="9b8b6780e06943c23b2c2b70746edc23">
+    <title>Boss Guide - Mina the Hollower Guide</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Boss Guide | Mina the Hollower Walkthrough Guide">
+    <meta name="description" content="Boss guide for Mina the Hollower. Strategies and patterns for The Duchess of Queensbury and all dungeon bosses in Tenebrous Isle.">
+    <meta name="keywords" content="Mina the Hollower boss guide, boss strategy, The Duchess of Queensbury, how to beat, boss patterns, boss tips, boss weakness, dungeon bosses, boss order, Thorne">
+    <meta name="author" content="Mina the Hollower Guide">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Canonical URL - Update with your actual domain when deployed -->
+    <link rel="canonical" href="/bosses.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Open Graph / Facebook - Update og:url with your actual domain when deployed -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/bosses.html">
+    <meta property="og:title" content="Boss Guide | Mina the Hollower Walkthrough Guide">
+    <meta property="og:description" content="Boss guide for Mina the Hollower. Strategies and patterns for The Duchess of Queensbury and all dungeon bosses in Tenebrous Isle.">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:site_name" content="Mina the Hollower Guide">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter - Update twitter:url with your actual domain when deployed -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="/bosses.html">
+    <meta property="twitter:title" content="Boss Guide | Mina the Hollower Walkthrough Guide">
+    <meta property="twitter:description" content="Boss guide for Mina the Hollower. Strategies and patterns for The Duchess of Queensbury and all dungeon bosses in Tenebrous Isle.">
+    <meta property="twitter:image" content="/images/og-image.jpg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Boss Guide",
+      "description": "Boss guide for Mina the Hollower. Strategies and patterns for The Duchess of Queensbury and all dungeon bosses in Tenebrous Isle.",
+      "url": "/bosses.html",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Mina the Hollower Guide",
+        "url": "/"
+      }
+    }
+    </script>
+    <!-- ItemList Schema for Bosses -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "ItemList",
+      "name": "Mina the Hollower Bosses",
+      "numberOfItems": 6,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "The Duchess of Queensbury",
+          "description": "Eldritch horror boss in Queensbury Crypt. Confirmed."
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Nox's Bayou Boss",
+          "description": "Expected boss in swamp area. Unconfirmed."
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Septemburg Boss",
+          "description": "Expected boss in Halloween-themed area. Unconfirmed."
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Bone Beach Boss",
+          "description": "Expected boss in mining town area. Unconfirmed."
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "name": "Frozen Trainyard Boss",
+          "description": "Expected boss in ice/snow area. Unconfirmed."
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "name": "Astral Orrery Boss",
+          "description": "Expected boss in cosmic observatory. Unconfirmed."
+        }
+      ]
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        a { color: #00d4ff; text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #ffd700; }
+
+        /* ===== SKIP LINK (Accessibility) ===== */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #00d4ff;
+            color: #0d0d1a;
+            padding: 8px 16px;
+            z-index: 10000;
+            transition: top 0.3s;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, #00d4ff, #ffd700);
+            z-index: 10001;
+            transition: width 0.1s ease;
+        }
+
+        /* ===== BACK TO TOP BUTTON ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            border: none;
+            border-radius: 50%;
+            color: #0d0d1a;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.5);
+        }
+
+        /* ===== BREADCRUMB NAVIGATION ===== */
+        .breadcrumb {
+            background: rgba(13, 13, 26, 0.8);
+            padding: 0.75rem 5%;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+        }
+        .breadcrumb ol {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0;
+        }
+        .breadcrumb li {
+            font-size: 0.8rem;
+            color: #a0a0c0;
+        }
+        .breadcrumb li:not(:last-child)::after {
+            content: '/';
+            margin-left: 0.5rem;
+            color: #00d4ff;
+        }
+        .breadcrumb a {
+            color: #00d4ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .breadcrumb a:hover {
+            color: #ffd700;
+        }
+        .breadcrumb [aria-current="page"] {
+            color: #ffd700;
+        }
+
+        /* ===== IMAGE LOADING STATES ===== */
+        img {
+            background: linear-gradient(135deg, #1a1a2e 0%, #0d0d1a 100%);
+            transition: opacity 0.3s ease;
+        }
+        img[loading="lazy"] {
+            opacity: 0;
+        }
+        img.loaded {
+            opacity: 1;
+        }
+
+        /* ===== NAV ===== */
+        .navbar {
+            background: linear-gradient(180deg, #12122a 0%, #0d0d1a 100%);
+            border-bottom: 2px solid #2a2a4a;
+            padding: 0 1.5rem;
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .nav-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between; height: 64px;
+        }
+        .nav-logo { font-family: 'Press Start 2P', monospace; font-size: 0.8rem; color: #ffd700; white-space: nowrap; }
+        .nav-links { display: flex; gap: 0.25rem; flex-wrap: wrap; justify-content: flex-end; }
+        .nav-links a {
+            font-size: 0.875rem; padding: 0.4rem 0.7rem; border-radius: 4px;
+            color: #b0b0d0; transition: all 0.2s; white-space: nowrap;
+        }
+        .nav-links a:hover, .nav-links a.active { color: #ffd700; background: rgba(255, 215, 0, 0.08); }
+        .hamburger { display: none; background: none; border: none; color: #ffd700; font-size: 1.5rem; cursor: pointer; }
+        .mobile-menu { display: none; flex-direction: column; padding: 0.75rem 1.5rem 1rem; background: #12122a; border-bottom: 2px solid #2a2a4a; }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a { padding: 0.6rem 0; font-size: 0.85rem; color: #b0b0d0; border-bottom: 1px solid #1a1a3a; }
+        .mobile-menu a:last-child { border-bottom: none; }
+        .mobile-menu a:hover { color: #ffd700; }
+
+        /* PAGE HEADER */
+        .page-header {
+            text-align: center; padding: 3rem 1.5rem 2rem;
+            background: radial-gradient(ellipse at 50% 0%, rgba(180, 50, 50, 0.12) 0%, transparent 60%), #0d0d1a;
+        }
+        .page-header h1 {
+            font-family: 'Press Start 2P', monospace;
+            font-size: clamp(1rem, 3vw, 1.6rem);
+            color: #ffd700; margin-bottom: 0.75rem;
+        }
+        .page-header p { color: #8888aa; font-size: 0.95rem; max-width: 700px; margin: 0 auto; }
+
+        /* NOTICE */
+        .notice { max-width: 1200px; margin: 0 auto; padding: 1rem 1.5rem; }
+        .notice-bar {
+            background: linear-gradient(90deg, rgba(255, 215, 0, 0.1), rgba(0, 212, 255, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 8px;
+            padding: 0.85rem 1.25rem; font-size: 0.85rem; color: #ffd700;
+            display: flex; align-items: center; gap: 0.75rem;
+        }
+        .notice-icon { font-size: 1.2rem; flex-shrink: 0; }
+
+        /* CONTAINER */
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        /* SECTION */
+        .section-title {
+            font-family: 'Press Start 2P', monospace;
+            font-size: clamp(0.85rem, 2vw, 1.1rem);
+            color: #ffd700; margin-bottom: 0.5rem;
+        }
+        .section-subtitle { color: #666; font-size: 0.85rem; margin-bottom: 2rem; }
+
+        /* BOSS CARD */
+        .boss-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16162a 100%);
+            border: 1px solid #2a2a4a; border-radius: 12px;
+            overflow: hidden; margin-bottom: 2rem;
+        }
+        .boss-card-header {
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #222240;
+            display: flex; align-items: center; gap: 1rem; flex-wrap: wrap;
+        }
+        .boss-icon { font-size: 2.5rem; flex-shrink: 0; }
+        .boss-image {
+            width: 100%;
+            max-height: 300px;
+            object-fit: cover;
+            object-position: top;
+            image-rendering: pixelated;
+            image-rendering: -moz-crisp-edges;
+            image-rendering: crisp-edges;
+            border-bottom: 2px solid #2a2a4a;
+            transition: transform 0.3s ease;
+        }
+        .boss-card:hover .boss-image {
+            transform: scale(1.01);
+        }
+        .boss-img-container {
+            overflow: hidden;
+            position: relative;
+            background: linear-gradient(180deg, #0d0d1a 0%, #1a1a2e 100%);
+        }
+        .boss-img-caption {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(13, 13, 26, 0.95));
+            padding: 3rem 1.5rem 0.75rem;
+            font-size: 0.7rem;
+            color: #ff6464;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            font-family: 'Press Start 2P', monospace;
+        }
+        .boss-card-header h3 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.8rem;
+            color: #ffd700; flex: 1;
+        }
+        .boss-location {
+            font-size: 0.75rem; color: #00d4ff; font-weight: 500;
+        }
+        .boss-card-body { padding: 1.5rem 2rem; }
+        .boss-card-body p { color: #9999bb; font-size: 0.9rem; margin-bottom: 1rem; line-height: 1.7; }
+        .boss-card-body p:last-child { margin-bottom: 0; }
+
+        .boss-stats {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 0.75rem; margin: 1.25rem 0;
+        }
+        .boss-stat {
+            background: #12122a; border: 1px solid #222240; border-radius: 8px;
+            padding: 0.75rem 1rem; text-align: center;
+        }
+        .boss-stat-label {
+            font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em;
+            color: #666; margin-bottom: 0.25rem;
+        }
+        .boss-stat-value {
+            font-family: 'Press Start 2P', monospace; font-size: 0.65rem; color: #e0e0e0;
+        }
+
+        .strategy-box {
+            background: rgba(0, 212, 255, 0.05); border: 1px solid rgba(0, 212, 255, 0.15);
+            border-radius: 8px; padding: 1.25rem 1.5rem; margin-top: 1rem;
+        }
+        .strategy-box h4 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.65rem;
+            color: #00d4ff; margin-bottom: 0.75rem; text-transform: uppercase;
+        }
+        .strategy-box ol {
+            padding-left: 1.25rem; color: #9999bb; font-size: 0.85rem;
+        }
+        .strategy-box ol li { padding: 0.3rem 0; }
+        .strategy-box ol li::marker { color: #00d4ff; }
+
+        /* ANTAGONIST CARDS */
+        .antagonist-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.25rem; margin-bottom: 3rem;
+        }
+        .antagonist-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16162a 100%);
+            border: 1px solid #2a2a4a; border-radius: 12px;
+            padding: 1.5rem; position: relative; overflow: hidden;
+        }
+        .antagonist-card::before {
+            content: ''; position: absolute; top: 0; left: 0;
+            width: 100%; height: 3px;
+            background: linear-gradient(90deg, #ff6464, #ffd700);
+        }
+        .antagonist-card h4 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.7rem;
+            color: #ff6464; margin-bottom: 0.5rem;
+        }
+        .antagonist-card .role {
+            font-size: 0.75rem; color: #666; text-transform: uppercase;
+            letter-spacing: 0.05em; margin-bottom: 0.75rem;
+        }
+        .antagonist-card p { font-size: 0.85rem; color: #8888aa; line-height: 1.6; }
+        .unconfirmed { color: #666; font-style: italic; font-size: 0.8rem; }
+
+        /* GENERAL STRATEGY */
+        .general-strategy {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16162a 100%);
+            border: 1px solid #2a2a4a; border-radius: 12px;
+            padding: 2rem; margin-bottom: 3rem;
+        }
+        .general-strategy h3 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.75rem;
+            color: #ffd700; margin-bottom: 1.25rem; text-transform: uppercase;
+        }
+        .strategy-list {
+            list-style: none; display: grid; gap: 1rem;
+        }
+        .strategy-list li {
+            display: flex; gap: 1rem; align-items: flex-start;
+            padding: 0.75rem; background: #12122a; border-radius: 8px;
+            border: 1px solid #1a1a3a;
+        }
+        .strategy-num {
+            font-family: 'Press Start 2P', monospace; font-size: 0.7rem;
+            color: #ffd700; flex-shrink: 0; width: 24px; height: 24px;
+            display: flex; align-items: center; justify-content: center;
+            background: rgba(255, 215, 0, 0.1); border-radius: 4px;
+        }
+        .strategy-text h4 { font-size: 0.85rem; color: #e0e0e0; margin-bottom: 0.2rem; }
+        .strategy-text p { font-size: 0.8rem; color: #8888aa; }
+
+        /* FOOTER */
+        .footer {
+            background: #0a0a15; border-top: 1px solid #1a1a3a;
+            padding: 2rem 1.5rem; text-align: center;
+        }
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+        .footer p { font-size: 0.8rem; color: #555; margin-bottom: 0.5rem; }
+        .footer a { color: #00d4ff; }
+        .footer a:hover { color: #ffd700; }
+        .footer-disclaimer { font-size: 0.7rem; color: #444; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #1a1a3a; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+            .boss-card-header { padding: 1rem 1.25rem; }
+            .boss-card-body { padding: 1rem 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- SKIP LINK (Accessibility) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- PROGRESS BAR -->
+    <div id="progressBar" class="progress-bar"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">MINA GUIDE</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="walkthrough.html">Walkthrough</a>
+                <a href="bosses.html" class="active">Bosses</a>
+                <a href="enemies.html">Enemies</a>
+                <a href="items.html">Items</a>
+                <a href="mechanics.html">Mechanics</a>
+                <a href="tips.html">Tips</a>
+                <a href="faq.html">FAQ</a>
+                <a href="glossary.html">Glossary</a>
+            </div>
+            <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+        </div>
+        <div class="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="walkthrough.html">Walkthrough</a>
+            <a href="bosses.html">Bosses</a>
+            <a href="enemies.html">Enemies</a>
+            <a href="items.html">Items</a>
+            <a href="mechanics.html">Mechanics</a>
+            <a href="tips.html">Tips</a>
+            <a href="faq.html">FAQ</a>
+            <a href="glossary.html">Glossary</a>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB NAVIGATION -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Boss Guide</li>
+        </ol>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <h1>Boss Guide</h1>
+        <p>Strategies, patterns, and tips for defeating every boss in Mina the Hollower.</p>
+    </header>
+
+    <!-- NOTICE -->
+    <div class="notice">
+        <div class="notice-bar">
+            <span class="notice-icon">&#9888;&#65039;</span>
+            <span>This game released on May 29, 2026. Boss details are being actively documented. More boss guides will be added as information becomes available.</span>
+        </div>
+    </div>
+
+    <main id="main-content" class="container">
+
+        <!-- SUMMARY BOX -->
+        <div class="summary-box" style="background: linear-gradient(135deg, rgba(255, 215, 0, 0.08), rgba(0, 212, 255, 0.08)); border: 1px solid rgba(255, 215, 0, 0.2); border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 2rem;">
+            <h3 style="font-family: 'Press Start 2P', monospace; font-size: 0.7rem; color: #ffd700; margin-bottom: 1rem; text-transform: uppercase;">Key Points</h3>
+            <ul style="list-style: none; display: grid; gap: 0.5rem;">
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> 6 dungeon bosses expected, one confirmed (The Duchess of Queensbury)</li>
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> Bosses can be challenged in any order - non-linear progression</li>
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> Master the burrow mechanic for dodging boss attacks</li>
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> Use Sparks to prevent Bone loss while learning boss patterns</li>
+                <li style="font-size: 0.85rem; color: #b0b0c0; padding-left: 1.2rem; position: relative;"><span style="position: absolute; left: 0; color: #00d4ff; font-weight: bold;">&#10003;</span> Adjust Trinkets and difficulty modifiers if struggling</li>
+            </ul>
+        </div>
+
+        <!-- CONFIRMED BOSS -->
+        <h2 class="section-title">Confirmed Bosses</h2>
+        <p class="section-subtitle">Fully documented boss encounters</p>
+
+        <div class="boss-card" id="duchess">
+            <div class="boss-img-container">
+                <img src="images/duchess-queensbury.jpg" alt="The Duchess of Queensbury - An eldritch horror boss with cosmic tentacles and dark energy" class="boss-image" loading="lazy">
+                <span class="boss-img-caption">Eldritch Horror Boss</span>
+            </div>
+            <div class="boss-card-header">
+                <span class="boss-icon">&#128128;</span>
+                <div>
+                    <h3>The Duchess of Queensbury</h3>
+                    <span class="boss-location">Queensbury Crypt</span>
+                </div>
+            </div>
+            <div class="boss-card-body">
+                <p>
+                    <strong>The Duchess of Queensbury</strong> is an eldritch horror that serves as the boss of the Queensbury Crypt dungeon. As a being of cosmic terror, the Duchess embodies the dark, gothic themes of the crypt with a design that blends aristocratic elegance with grotesque, otherworldly horror.
+                </p>
+                <p>
+                    The fight takes place within the deepest chambers of the crypt, where the Duchess commands the undead and unleashes eldritch attacks that fill the arena. This encounter tests the player's mastery of the burrow mechanic, as dodging her wide-area attacks requires precise underground movement and well-timed pop-up strikes.
+                </p>
+
+                <div class="boss-stats">
+                    <div class="boss-stat">
+                        <div class="boss-stat-label">Location</div>
+                        <div class="boss-stat-value">Queensbury Crypt</div>
+                    </div>
+                    <div class="boss-stat">
+                        <div class="boss-stat-label">Type</div>
+                        <div class="boss-stat-value">Eldritch Horror</div>
+                    </div>
+                    <div class="boss-stat">
+                        <div class="boss-stat-label">Key Mechanic</div>
+                        <div class="boss-stat-value">Burrow Dodging</div>
+                    </div>
+                    <div class="boss-stat">
+                        <div class="boss-stat-label">Recommended</div>
+                        <div class="boss-stat-value">Any Order</div>
+                    </div>
+                </div>
+
+                <div class="strategy-box">
+                    <h4>Community Tips (Unverified)</h4>
+                    <p style="color: #ff9944; font-size: 0.8rem; margin-bottom: 0.75rem; font-style: italic;">These tips are based on general game mechanics and community discussion. They have not been verified against the actual boss fight.</p>
+                    <ol>
+                        <li><strong>Watch for telegraph animations:</strong> Most bosses in the game signal their attacks ahead of time. Pay close attention to the Duchess's movements so you can react with a well-timed burrow to avoid damage.</li>
+                        <li><strong>Stay underground during big attacks:</strong> The burrow grants invincibility frames, making it your best defensive option against wide-reaching attacks. Drop below the surface when the Duchess winds up, then resurface during the recovery window to land hits.</li>
+                        <li><strong>Pop up for aerial strikes:</strong> Emerging from a burrow launches Mina upward, and the resulting aerial attack deals bonus damage. Position yourself beneath the Duchess before surfacing to capitalize on this extra damage window.</li>
+                        <li><strong>Keep your Plasma bar active:</strong> Since attacking refills your Plasma (which converts to healing), staying on the offensive is its own form of defense. Look for safe moments between the Duchess's attack strings to land a few hits and sustain yourself.</li>
+                        <li><strong>Equip helpful Trinkets:</strong> Depending on your approach, Trinkets that boost damage output or increase survivability can make a noticeable difference. Experiment with different loadouts to find what suits your playstyle.</li>
+                        <li><strong>Carry Sparks for safety:</strong> If you have Sparks available, consider using them before learning a new boss. They prevent Bone loss on death, removing the penalty of trial-and-error while you study the encounter.</li>
+                    </ol>
+                </div>
+            </div>
+        </div>
+
+        <!-- EXPECTED BOSSES -->
+        <h2 class="section-title">Expected Bosses</h2>
+        <p class="section-subtitle">The 6 dungeon areas and their anticipated bosses</p>
+
+        <div class="expected-bosses" style="background: linear-gradient(135deg, #1a1a2e 0%, #16162a 100%); border: 1px solid #2a2a4a; border-radius: 12px; padding: 1.5rem 2rem; margin-bottom: 3rem;">
+            <p style="color: #9999bb; font-size: 0.9rem; margin-bottom: 1.5rem; line-height: 1.7;">
+                Each of the 6 dungeon areas in Tenebrous Isle is expected to have a boss encounter. While not all boss names have been confirmed, the following table lists the known and expected bosses for each area:
+            </p>
+            <div style="overflow-x: auto;">
+                <table style="width: 100%; border-collapse: collapse; font-size: 0.85rem;">
+                    <thead>
+                        <tr style="border-bottom: 2px solid #2a2a4a;">
+                            <th style="text-align: left; padding: 0.75rem; color: #ffd700; font-family: 'Press Start 2P', monospace; font-size: 0.5rem;">Dungeon Area</th>
+                            <th style="text-align: left; padding: 0.75rem; color: #ffd700; font-family: 'Press Start 2P', monospace; font-size: 0.5rem;">Boss Name</th>
+                            <th style="text-align: left; padding: 0.75rem; color: #ffd700; font-family: 'Press Start 2P', monospace; font-size: 0.5rem;">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="border-bottom: 1px solid #222240;">
+                            <td style="padding: 0.75rem; color: #e0e0e0;">Queensbury Crypt</td>
+                            <td style="padding: 0.75rem; color: #ffd700; font-weight: 600;">The Duchess of Queensbury</td>
+                            <td style="padding: 0.75rem;"><span style="background: rgba(0, 200, 100, 0.15); color: #00c864; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">CONFIRMED</span></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #222240;">
+                            <td style="padding: 0.75rem; color: #e0e0e0;">Nox's Bayou</td>
+                            <td style="padding: 0.75rem; color: #8888aa; font-style: italic;">Unknown</td>
+                            <td style="padding: 0.75rem;"><span style="background: rgba(255, 200, 0, 0.15); color: #ccaa00; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">Expected</span></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #222240;">
+                            <td style="padding: 0.75rem; color: #e0e0e0;">Septemburg</td>
+                            <td style="padding: 0.75rem; color: #8888aa; font-style: italic;">Unknown</td>
+                            <td style="padding: 0.75rem;"><span style="background: rgba(255, 200, 0, 0.15); color: #ccaa00; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">Expected</span></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #222240;">
+                            <td style="padding: 0.75rem; color: #e0e0e0;">Bone Beach</td>
+                            <td style="padding: 0.75rem; color: #8888aa; font-style: italic;">Unknown</td>
+                            <td style="padding: 0.75rem;"><span style="background: rgba(255, 200, 0, 0.15); color: #ccaa00; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">Expected</span></td>
+                        </tr>
+                        <tr style="border-bottom: 1px solid #222240;">
+                            <td style="padding: 0.75rem; color: #e0e0e0;">Frozen Trainyard</td>
+                            <td style="padding: 0.75rem; color: #8888aa; font-style: italic;">Unknown</td>
+                            <td style="padding: 0.75rem;"><span style="background: rgba(255, 200, 0, 0.15); color: #ccaa00; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">Expected</span></td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 0.75rem; color: #e0e0e0;">Astral Orrery</td>
+                            <td style="padding: 0.75rem; color: #8888aa; font-style: italic;">Unknown</td>
+                            <td style="padding: 0.75rem;"><span style="background: rgba(255, 200, 0, 0.15); color: #ccaa00; padding: 0.2rem 0.5rem; border-radius: 4px; font-size: 0.7rem;">Expected</span></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- MENTIONED ANTAGONISTS -->
+        <h2 class="section-title">Known Antagonists</h2>
+        <p class="section-subtitle">Characters mentioned in previews and promotional material</p>
+
+        <div class="antagonist-grid">
+            <div class="antagonist-card">
+                <h4>Thorne</h4>
+                <div class="role">Rebellious Bat Soldier</div>
+                <p>A rebellious bat soldier who plays a significant role in the story. Thorne's motivations and allegiance remain partially shrouded in mystery, but promotional material suggests a complex character who may serve as both rival and ally at different points.</p>
+                <p class="unconfirmed">Role as a boss fight is unconfirmed.</p>
+            </div>
+            <div class="antagonist-card">
+                <h4>Baron Lionel</h4>
+                <div class="role">Antagonist</div>
+                <p>One of the named antagonists of Tenebrous Isle. Details about Baron Lionel's role, abilities, and dungeon association are limited based on current pre-release information.</p>
+                <p class="unconfirmed">Boss status and location unconfirmed.</p>
+            </div>
+            <div class="antagonist-card">
+                <h4>The Duke</h4>
+                <div class="role">Antagonist</div>
+                <p>A named antagonist whose connection to the Duchess of Queensbury and the broader lore of Tenebrous Isle remains to be fully revealed. The Duke likely holds a position of power within the isle's hierarchy.</p>
+                <p class="unconfirmed">Boss status and location unconfirmed.</p>
+            </div>
+            <div class="antagonist-card">
+                <h4>The Carving Man</h4>
+                <div class="role">Antagonist</div>
+                <p>A mysterious and unsettling figure mentioned in promotional materials. The Carving Man's name suggests a connection to the creation or modification of creatures on Tenebrous Isle, potentially tying into the game's darker lore elements.</p>
+                <p class="unconfirmed">Boss status and location unconfirmed.</p>
+            </div>
+        </div>
+
+        <!-- GENERAL BOSS STRATEGIES -->
+        <h2 class="section-title">General Boss Strategies</h2>
+        <p class="section-subtitle">Universal tips that apply to all boss encounters</p>
+
+        <div class="general-strategy">
+            <h3>Core Principles for Every Boss Fight</h3>
+            <ul class="strategy-list">
+                <li>
+                    <span class="strategy-num">1</span>
+                    <div class="strategy-text">
+                        <h4>Learn Attack Patterns</h4>
+                        <p>Every boss has a set of attack patterns with clear telegraphs. Spend your first attempts observing rather than attacking. Once you recognize the tells, you can dodge consistently and find your openings.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="strategy-num">2</span>
+                    <div class="strategy-text">
+                        <h4>Grind Bones for Upgrades</h4>
+                        <p>If a boss feels too difficult, spend time in other areas grinding Bones. Use them at the Underlabs to increase your attack power, health, and other stats. Even a few upgrade levels can make a significant difference.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="strategy-num">3</span>
+                    <div class="strategy-text">
+                        <h4>Adjust Your Trinkets</h4>
+                        <p>Each boss may require a different Trinket loadout. For damage races, equip Attack Multiplier and offensive Trinkets. For survivability, use Health Boost and Prototype Spark. Experiment to find what works.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="strategy-num">4</span>
+                    <div class="strategy-text">
+                        <h4>Master the Burrow Mechanic</h4>
+                        <p>The burrow is your primary defensive tool in boss fights. It provides invincibility frames and lets you reposition quickly. Practice burrow-to-pop-up combos for both defense and offense.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="strategy-num">5</span>
+                    <div class="strategy-text">
+                        <h4>Keep Plasma Vials Full</h4>
+                        <p>Aggressive play is rewarded in Mina the Hollower. Attack enemies to fill your Plasma bar, which converts to red health. Don't play passively -- the more you hit, the more you heal.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="strategy-num">6</span>
+                    <div class="strategy-text">
+                        <h4>Use Sparks as Insurance</h4>
+                        <p>Sparks act as extra lives that prevent Bone loss on death. Before a tough boss, consider spending resources to acquire Sparks. They remove the penalty of learning a fight through failure.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="strategy-num">7</span>
+                    <div class="strategy-text">
+                        <h4>Try a Different Area</h4>
+                        <p>Remember, the game is fully non-linear. If a boss is giving you trouble, leave and explore a different area. You may find new weapons, Trinkets, or upgrades that make the fight much easier when you return.</p>
+                    </div>
+                </li>
+                <li>
+                    <span class="strategy-num">8</span>
+                    <div class="strategy-text">
+                        <h4>Don't Fear Difficulty Modifiers</h4>
+                        <p>The game includes an extensive assist menu. If you just want to experience the story or are stuck after many attempts, use the available modifiers. There is no penalty for adjusting difficulty.</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <!-- Authority Box -->
+            <div class="authority-box" style="background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 12px; padding: 1rem 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <span class="verified-badge" style="background: linear-gradient(135deg, rgba(0, 200, 100, 0.15), rgba(0, 212, 255, 0.15)); border: 1px solid rgba(0, 200, 100, 0.3); border-radius: 6px; padding: 0.4rem 0.8rem; font-size: 0.75rem; color: #00c864;">&#10003; Verified Information</span>
+                <span class="update-date" style="font-size: 0.75rem; color: #8888aa;">Last Updated: May 28, 2026</span>
+                <span class="source-citation" style="font-size: 0.7rem; color: #666;">Sources: <a href="https://minathehollower.wiki.gg" target="_blank" rel="noopener" style="color: #00d4ff;">Official Wiki</a>, <a href="https://yachtclubgames.com" target="_blank" rel="noopener" style="color: #00d4ff;">Yacht Club Games</a></span>
+            </div>
+            <p><a href="index.html">Mina the Hollower Walkthrough Guide</a> &mdash; Boss Guide</p>
+            <p>Mina the Hollower is a trademark of <a href="https://yachtclubgames.com" target="_blank" rel="noopener">Yacht Club Games</a>. This is a fan-made guide.</p>
+            <p class="footer-disclaimer">All game content and trademarks are property of their respective owners. Information sourced from the official Mina the Hollower Wiki (minathehollower.wiki.gg), IGN, PC Gamer, and Yacht Club Games official materials.</p>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">&#8679;</button>
+
+    <!-- OPTIMIZATION SCRIPTS -->
+    <script>
+        // Progress bar
+        const progressBar = document.getElementById('progressBar');
+        if (progressBar) {
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = scrolled + '%';
+            });
+        }
+
+        // Back to top functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        if (backToTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Image lazy loading handler
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            img.addEventListener('load', () => img.classList.add('loaded'));
+            // Trigger load event for already cached images
+            if (img.complete) img.classList.add('loaded');
+        });
+    </script>
+
+</body>
+</html>

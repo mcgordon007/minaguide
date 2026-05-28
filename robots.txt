@@ -1,0 +1,24 @@
+# Robots.txt for Mina the Hollower Guide
+# Update with your actual domain when deployed
+
+User-agent: *
+Allow: /
+
+# Sitemap location - update with your actual domain when deployed
+Sitemap: /sitemap.xml
+
+# Crawl-delay for polite crawling
+Crawl-delay: 1
+
+# Allow all search engines
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Slurp
+Allow: /

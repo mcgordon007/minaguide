@@ -1,0 +1,581 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="monetag" content="9b8b6780e06943c23b2c2b70746edc23">
+    <title>Enemies - Mina the Hollower Guide</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Enemy Guide | Mina the Hollower Walkthrough Guide">
+    <meta name="description" content="Enemy guide for Mina the Hollower. Complete bestiary including Gooper, Hulk Trooper, and all foes in Tenebrous Isle.">
+    <meta name="keywords" content="Mina the Hollower enemies, bestiary, Gooper, Hulk Trooper, Shock Trooper, enemy types, enemy guide, foe list, creature guide, monster guide">
+    <meta name="author" content="Mina the Hollower Guide">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="revisit-after" content="7 days">
+
+    <!-- Canonical URL - Update with your actual domain when deployed -->
+    <link rel="canonical" href="/enemies.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Open Graph / Facebook - Update og:url with your actual domain when deployed -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/enemies.html">
+    <meta property="og:title" content="Enemy Guide | Mina the Hollower Walkthrough Guide">
+    <meta property="og:description" content="Enemy guide for Mina the Hollower. Complete bestiary including Gooper, Hulk Trooper, and all foes in Tenebrous Isle.">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:site_name" content="Mina the Hollower Guide">
+    <meta property="og:locale" content="en_US">
+
+    <!-- Twitter - Update twitter:url with your actual domain when deployed -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="/enemies.html">
+    <meta property="twitter:title" content="Enemy Guide | Mina the Hollower Walkthrough Guide">
+    <meta property="twitter:description" content="Enemy guide for Mina the Hollower. Complete bestiary including Gooper, Hulk Trooper, and all foes in Tenebrous Isle.">
+    <meta property="twitter:image" content="/images/og-image.jpg">
+
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": "Enemy Guide",
+      "description": "Enemy guide for Mina the Hollower. Complete bestiary including Gooper, Hulk Trooper, and all foes in Tenebrous Isle.",
+      "url": "/enemies.html",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "Mina the Hollower Guide",
+        "url": "/"
+      }
+    }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        a { color: #00d4ff; text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #ffd700; }
+        /* ===== SKIP LINK (Accessibility) ===== */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #00d4ff;
+            color: #0d0d1a;
+            padding: 8px 16px;
+            z-index: 10000;
+            transition: top 0.3s;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .skip-link:focus {
+            top: 0;
+        }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, #00d4ff, #ffd700);
+            z-index: 10001;
+            transition: width 0.1s ease;
+        }
+
+        /* ===== BACK TO TOP BUTTON ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            border: none;
+            border-radius: 50%;
+            color: #0d0d1a;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.5);
+        }
+
+        /* ===== BREADCRUMB NAVIGATION ===== */
+        .breadcrumb {
+            background: rgba(13, 13, 26, 0.8);
+            padding: 0.75rem 5%;
+            border-bottom: 1px solid rgba(0, 212, 255, 0.1);
+        }
+        .breadcrumb ol {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0;
+        }
+        .breadcrumb li {
+            font-size: 0.8rem;
+            color: #a0a0c0;
+        }
+        .breadcrumb li:not(:last-child)::after {
+            content: '/';
+            margin-left: 0.5rem;
+            color: #00d4ff;
+        }
+        .breadcrumb a {
+            color: #00d4ff;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+        .breadcrumb a:hover {
+            color: #ffd700;
+        }
+        .breadcrumb [aria-current="page"] {
+            color: #ffd700;
+        }
+
+        /* ===== IMAGE LOADING STATES ===== */
+        img {
+            background: linear-gradient(135deg, #1a1a2e 0%, #0d0d1a 100%);
+            transition: opacity 0.3s ease;
+        }
+        img[loading="lazy"] {
+            opacity: 0;
+        }
+        img.loaded {
+            opacity: 1;
+        }
+
+
+        /* NAV */
+        .navbar {
+            background: linear-gradient(180deg, #12122a 0%, #0d0d1a 100%);
+            border-bottom: 2px solid #2a2a4a;
+            padding: 0 1.5rem;
+            position: sticky; top: 0; z-index: 1000;
+        }
+        .nav-inner {
+            max-width: 1200px; margin: 0 auto;
+            display: flex; align-items: center; justify-content: space-between; height: 64px;
+        }
+        .nav-logo { font-family: 'Press Start 2P', monospace; font-size: 0.8rem; color: #ffd700; white-space: nowrap; }
+        .nav-links { display: flex; gap: 0.25rem; flex-wrap: wrap; justify-content: flex-end; }
+        .nav-links a {
+            font-size: 0.875rem; padding: 0.4rem 0.7rem; border-radius: 4px;
+            color: #b0b0d0; transition: all 0.2s; white-space: nowrap;
+        }
+        .nav-links a:hover, .nav-links a.active { color: #ffd700; background: rgba(255, 215, 0, 0.08); }
+        .hamburger { display: none; background: none; border: none; color: #ffd700; font-size: 1.5rem; cursor: pointer; }
+        .mobile-menu { display: none; flex-direction: column; padding: 0.75rem 1.5rem 1rem; background: #12122a; border-bottom: 2px solid #2a2a4a; }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a { padding: 0.6rem 0; font-size: 0.85rem; color: #b0b0d0; border-bottom: 1px solid #1a1a3a; }
+        .mobile-menu a:last-child { border-bottom: none; }
+        .mobile-menu a:hover { color: #ffd700; }
+
+        /* PAGE HEADER */
+        .page-header {
+            text-align: center; padding: 3rem 1.5rem 2rem;
+            background: radial-gradient(ellipse at 50% 0%, rgba(100, 50, 50, 0.15) 0%, transparent 60%), #0d0d1a;
+        }
+        .page-header h1 {
+            font-family: 'Press Start 2P', monospace;
+            font-size: clamp(1rem, 3vw, 1.6rem);
+            color: #ffd700; margin-bottom: 0.75rem;
+        }
+        .page-header p { color: #8888aa; font-size: 0.95rem; max-width: 700px; margin: 0 auto; }
+
+        /* NOTICE */
+        .notice { max-width: 1200px; margin: 0 auto; padding: 1rem 1.5rem; }
+        .notice-bar {
+            background: linear-gradient(90deg, rgba(255, 215, 0, 0.1), rgba(0, 212, 255, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.3); border-radius: 8px;
+            padding: 0.85rem 1.25rem; font-size: 0.85rem; color: #ffd700;
+            display: flex; align-items: center; gap: 0.75rem;
+        }
+        .notice-icon { font-size: 1.2rem; flex-shrink: 0; }
+
+        /* CONTAINER */
+        .container { max-width: 1200px; margin: 0 auto; padding: 2rem 1.5rem; }
+
+        /* SECTION */
+        .section-title {
+            font-family: 'Press Start 2P', monospace;
+            font-size: clamp(0.85rem, 2vw, 1.1rem);
+            color: #ffd700; margin-bottom: 0.5rem;
+        }
+        .section-subtitle { color: #666; font-size: 0.85rem; margin-bottom: 2rem; }
+
+        /* TOC */
+        .toc {
+            background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 12px;
+            padding: 1.5rem 2rem; margin-bottom: 3rem;
+        }
+        .toc h3 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.65rem;
+            color: #00d4ff; margin-bottom: 1rem; text-transform: uppercase;
+        }
+        .toc-list { list-style: none; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.5rem; }
+        .toc-list a {
+            font-size: 0.85rem; color: #b0b0c0; padding: 0.3rem 0;
+            display: flex; align-items: center; gap: 0.5rem;
+        }
+        .toc-list a::before { content: '\25B6'; color: #ffd700; font-size: 0.5rem; }
+        .toc-list a:hover { color: #ffd700; }
+
+        /* ENEMY CARDS */
+        .enemy-grid {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 1.25rem; margin-bottom: 3rem;
+        }
+        .enemy-card {
+            background: linear-gradient(135deg, #1a1a2e 0%, #16162a 100%);
+            border: 1px solid #2a2a4a; border-radius: 12px;
+            overflow: hidden; transition: border-color 0.3s;
+        }
+        .enemy-card:hover { border-color: #3a3a5a; }
+        .enemy-card-header {
+            padding: 1.25rem 1.5rem;
+            border-bottom: 1px solid #222240;
+            display: flex; align-items: center; gap: 1rem;
+        }
+        .enemy-icon { font-size: 1.8rem; flex-shrink: 0; }
+        .enemy-card-header h3 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.75rem;
+            color: #ffd700; flex: 1;
+        }
+        .enemy-type {
+            font-family: 'Press Start 2P', monospace; font-size: 0.55rem;
+            padding: 0.25rem 0.5rem; border-radius: 4px; text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .type-basic { background: rgba(0, 200, 100, 0.15); color: #00c864; border: 1px solid rgba(0, 200, 100, 0.3); }
+        .type-mini { background: rgba(255, 100, 100, 0.15); color: #ff6464; border: 1px solid rgba(255, 100, 100, 0.3); }
+        .type-boss { background: rgba(255, 215, 0, 0.15); color: #ffd700; border: 1px solid rgba(255, 215, 0, 0.3); }
+        .enemy-card-body { padding: 1.25rem 1.5rem; }
+        .enemy-card-body p { color: #9999bb; font-size: 0.88rem; margin-bottom: 1rem; line-height: 1.7; }
+        .enemy-card-body p:last-child { margin-bottom: 0; }
+
+        .enemy-stats {
+            display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+            gap: 0.5rem; margin-top: 1rem;
+        }
+        .enemy-stat {
+            background: #12122a; border: 1px solid #222240; border-radius: 6px;
+            padding: 0.5rem 0.75rem;
+        }
+        .enemy-stat-label { font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.08em; color: #666; }
+        .enemy-stat-value { font-size: 0.85rem; color: #e0e0e0; font-weight: 500; }
+
+        /* STRATEGY BOX */
+        .strategy-box {
+            background: rgba(0, 212, 255, 0.05); border: 1px solid rgba(0, 212, 255, 0.15);
+            border-radius: 8px; padding: 1rem 1.25rem; margin-top: 1rem;
+        }
+        .strategy-box h4 {
+            font-family: 'Press Start 2P', monospace; font-size: 0.65rem;
+            color: #00d4ff; margin-bottom: 0.75rem; text-transform: uppercase;
+        }
+        .strategy-box ul {
+            list-style: none; padding: 0;
+        }
+        .strategy-box ul li {
+            font-size: 0.82rem; color: #9999bb; padding: 0.3rem 0;
+            padding-left: 1rem; position: relative;
+        }
+        .strategy-box ul li::before {
+            content: '\2022'; position: absolute; left: 0; color: #00d4ff;
+        }
+
+        /* INFO BOX */
+        .info-box {
+            background: rgba(255, 215, 0, 0.06); border: 1px solid rgba(255, 215, 0, 0.15);
+            border-radius: 8px; padding: 1rem 1.25rem; margin-bottom: 2rem;
+            font-size: 0.85rem; color: #b0b0c0;
+        }
+        .info-box strong { color: #ffd700; }
+
+        /* RELATED NOTE */
+        .related-note {
+            background: #12122a; border: 1px solid #222240; border-radius: 8px;
+            padding: 1rem 1.25rem; margin-top: 1rem;
+            font-size: 0.8rem; color: #8888aa;
+        }
+        .related-note strong { color: #00d4ff; }
+
+        /* FOOTER */
+        .footer {
+            background: #0a0a15; border-top: 1px solid #1a1a3a;
+            padding: 2rem 1.5rem; text-align: center;
+        }
+        .footer-inner { max-width: 1200px; margin: 0 auto; }
+        .footer p { font-size: 0.8rem; color: #555; margin-bottom: 0.5rem; }
+        .footer a { color: #00d4ff; }
+        .footer a:hover { color: #ffd700; }
+        .footer-disclaimer { font-size: 0.7rem; color: #444; margin-top: 1rem; padding-top: 1rem; border-top: 1px solid #1a1a3a; }
+
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+            .enemy-card-header { padding: 1rem 1.25rem; }
+            .enemy-card-body { padding: 1rem 1.25rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- SKIP LINK (Accessibility) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- PROGRESS BAR -->
+    <div id="progressBar" class="progress-bar"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">MINA GUIDE</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="walkthrough.html">Walkthrough</a>
+                <a href="bosses.html">Bosses</a>
+                <a href="enemies.html" class="active">Enemies</a>
+                <a href="items.html">Items</a>
+                <a href="mechanics.html">Mechanics</a>
+                <a href="tips.html">Tips</a>
+                <a href="faq.html">FAQ</a>
+                <a href="glossary.html">Glossary</a>
+            </div>
+            <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">&#9776;</button>
+        </div>
+        <div class="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="walkthrough.html">Walkthrough</a>
+            <a href="bosses.html">Bosses</a>
+            <a href="enemies.html">Enemies</a>
+            <a href="items.html">Items</a>
+            <a href="mechanics.html">Mechanics</a>
+            <a href="tips.html">Tips</a>
+            <a href="faq.html">FAQ</a>
+            <a href="glossary.html">Glossary</a>
+        </div>
+    </nav>
+
+    <!-- BREADCRUMB NAVIGATION -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+        <ol>
+            <li><a href="index.html">Home</a></li>
+            <li aria-current="page">Enemy Guide</li>
+        </ol>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <h1>Enemy Guide</h1>
+        <p>Comprehensive information on all enemies and mini-bosses in Mina the Hollower.</p>
+    </header>
+
+    <!-- NOTICE -->
+    <div class="notice">
+        <div class="notice-bar">
+            <span class="notice-icon">&#9888;&#65039;</span>
+            <span>This game released on May 29, 2026. Enemy details are being actively documented. More enemies will be added as information becomes available.</span>
+        </div>
+    </div>
+
+    <main id="main-content" class="container">
+
+        <!-- TABLE OF CONTENTS -->
+        <div class="toc">
+            <h3>Quick Navigation</h3>
+            <ul class="toc-list">
+                <li><a href="#basic">Basic Enemies</a></li>
+                <li><a href="#mini-bosses">Mini-Bosses</a></li>
+            </ul>
+        </div>
+
+        <!-- BASIC ENEMIES -->
+        <h2 class="section-title" id="basic">Basic Enemies</h2>
+        <p class="section-subtitle">Common foes found throughout Tenebrous Isle</p>
+
+        <div class="info-box">
+            <strong>Note:</strong> Enemy information is based on official wiki data. More enemy types will be added as they are confirmed and documented.
+        </div>
+
+        <div class="enemy-grid">
+
+            <!-- GOOPER -->
+            <div class="enemy-card">
+                <div class="enemy-card-header">
+                    <span class="enemy-icon">&#128167;</span>
+                    <h3>Gooper</h3>
+                    <span class="enemy-type type-basic">Basic</span>
+                </div>
+                <div class="enemy-card-body">
+                    <p>
+                        Goopers are gelatinous creatures found across Tenebrous Isle. These slimes are native to the island but have multiplied rapidly as the corruption spread. On their own, a single Gooper poses little threat -- their movements are sluggish and they attack with simple leaps. However, when several of them appear together, they can quickly box you in and overwhelm you with numbers.
+                    </p>
+                    <div class="enemy-stats">
+                        <div class="enemy-stat">
+                            <div class="enemy-stat-label">Type</div>
+                            <div class="enemy-stat-value">Slime</div>
+                        </div>
+                        <div class="enemy-stat">
+                            <div class="enemy-stat-label">Threat</div>
+                            <div class="enemy-stat-value">Low (High in groups)</div>
+                        </div>
+                        <div class="enemy-stat">
+                            <div class="enemy-stat-label">Behavior</div>
+                            <div class="enemy-stat-value">Slow, jumping</div>
+                        </div>
+                    </div>
+                    <div class="strategy-box">
+                        <h4>Combat Tips</h4>
+                        <ul>
+                            <li>They creep forward at a leisurely pace and occasionally hop toward you</li>
+                            <li>Easy to deal with one-on-one, but a cluster of them can quickly become dangerous</li>
+                            <li>Wide-sweeping weapons like the Nightstar are effective when multiple Goopers group up</li>
+                            <li>Take them out fast before they have a chance to surround you</li>
+                        </ul>
+                    </div>
+                    <div class="related-note">
+                        <strong>Source:</strong> minathehollower.wiki.gg
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- MINI-BOSSES -->
+        <h2 class="section-title" id="mini-bosses">Mini-Bosses</h2>
+        <p class="section-subtitle">Tougher enemies that pose a significant challenge</p>
+
+        <div class="enemy-grid">
+
+            <!-- HULK TROOPER -->
+            <div class="enemy-card">
+                <div class="enemy-card-header">
+                    <span class="enemy-icon">&#128128;</span>
+                    <h3>Hulk Trooper</h3>
+                    <span class="enemy-type type-mini">Mini-Boss</span>
+                </div>
+                <div class="enemy-card-body">
+                    <p>
+                        The Hulk Trooper is a beefed-up variant of the standard Shock Trooper, noticeably larger and far more aggressive. Thanks to its imposing size and surprising speed, it can close the distance quickly and strike across a wide area, making it tough to escape once it locks onto you.
+                    </p>
+                    <div class="enemy-stats">
+                        <div class="enemy-stat">
+                            <div class="enemy-stat-label">Type</div>
+                            <div class="enemy-stat-value">Enhanced Trooper</div>
+                        </div>
+                        <div class="enemy-stat">
+                            <div class="enemy-stat-label">Base Form</div>
+                            <div class="enemy-stat-value">Shock Trooper</div>
+                        </div>
+                        <div class="enemy-stat">
+                            <div class="enemy-stat-label">Threat</div>
+                            <div class="enemy-stat-value">High</div>
+                        </div>
+                    </div>
+                    <div class="related-note">
+                        <strong>Note:</strong> The Hulk Trooper is an enhanced version of the "Shock Trooper" base enemy type. The Shock Trooper serves as the foundation for this more dangerous variant.
+                    </div>
+                    <div class="strategy-box">
+                        <h4>Combat Tips</h4>
+                        <ul>
+                            <li>Its bulk and quick movement give it an unusually long attack reach</li>
+                            <li>Trying to simply run away is not effective -- it will hunt you down relentlessly</li>
+                            <li>Dodge its strikes by burrowing underground and repositioning</li>
+                            <li>Wait for it to finish an attack animation, then punish the recovery window</li>
+                            <li>The Blaststrike Maul's charged attack grants invincibility frames, letting you absorb a hit while dealing heavy damage</li>
+                        </ul>
+                    </div>
+                    <div class="related-note">
+                        <strong>Source:</strong> minathehollower.wiki.gg
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <!-- Authority Box -->
+            <div class="authority-box" style="background: #1a1a2e; border: 1px solid #2a2a4a; border-radius: 12px; padding: 1rem 1.5rem; margin-bottom: 1.5rem; display: flex; align-items: center; gap: 1rem; flex-wrap: wrap; justify-content: center;">
+                <span class="verified-badge" style="background: linear-gradient(135deg, rgba(0, 200, 100, 0.15), rgba(0, 212, 255, 0.15)); border: 1px solid rgba(0, 200, 100, 0.3); border-radius: 6px; padding: 0.4rem 0.8rem; font-size: 0.75rem; color: #00c864;">&#10003; Verified Information</span>
+                <span class="update-date" style="font-size: 0.75rem; color: #8888aa;">Last Updated: May 28, 2026</span>
+                <span class="source-citation" style="font-size: 0.7rem; color: #666;">Sources: <a href="https://minathehollower.wiki.gg" target="_blank" rel="noopener" style="color: #00d4ff;">Official Wiki</a>, <a href="https://yachtclubgames.com" target="_blank" rel="noopener" style="color: #00d4ff;">Yacht Club Games</a></span>
+            </div>
+            <p><a href="index.html">Mina the Hollower Walkthrough Guide</a> &mdash; Enemy Guide</p>
+            <p>Mina the Hollower is a trademark of <a href="https://yachtclubgames.com" target="_blank" rel="noopener">Yacht Club Games</a>. This is a fan-made guide.</p>
+            <p class="footer-disclaimer">All game content and trademarks are property of their respective owners. Information sourced from the official Mina the Hollower Wiki (minathehollower.wiki.gg), IGN, PC Gamer, and Yacht Club Games official materials.</p>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">&#8679;</button>
+
+    <!-- OPTIMIZATION SCRIPTS -->
+    <script>
+        // Progress bar
+        const progressBar = document.getElementById('progressBar');
+        if (progressBar) {
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = scrolled + '%';
+            });
+        }
+
+        // Back to top functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        if (backToTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+
+        // Image lazy loading handler
+        document.querySelectorAll('img[loading="lazy"]').forEach(img => {
+            img.addEventListener('load', () => img.classList.add('loaded'));
+            // Trigger load event for already cached images
+            if (img.complete) img.classList.add('loaded');
+        });
+    </script>
+
+</body>
+</html>
