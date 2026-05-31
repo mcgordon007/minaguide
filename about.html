@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>About Us | Mina the Hollower Walkthrough Guide</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="About Us | Mina the Hollower Guide">
+    <meta name="description" content="Learn about the Mina the Hollower Walkthrough Guide. A fan-made resource dedicated to helping players master Tenebrous Isle. Contact us for questions or feedback.">
+    <meta name="keywords" content="about, contact, Mina the Hollower, fan guide, Yacht Club Games, walkthrough">
+    <meta name="author" content="Mina the Hollower Guide">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="/about.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/about.html">
+    <meta property="og:title" content="About Us | Mina the Hollower Guide">
+    <meta property="og:description" content="Learn about the Mina the Hollower Walkthrough Guide. A fan-made resource dedicated to helping players master Tenebrous Isle.">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:site_name" content="Mina the Hollower Guide">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="/about.html">
+    <meta property="twitter:title" content="About Us | Mina the Hollower Guide">
+    <meta property="twitter:description" content="Learn about the Mina the Hollower Walkthrough Guide. A fan-made resource dedicated to helping players master Tenebrous Isle.">
+    <meta property="twitter:image" content="/images/og-image.jpg">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2485720330662082" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== CSS RESET & BASE ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        a { color: #00d4ff; text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #ffd700; }
+
+        /* ===== SKIP LINK (Accessibility) ===== */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #00d4ff;
+            color: #0d0d1a;
+            padding: 8px 16px;
+            z-index: 10000;
+            transition: top 0.3s;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .skip-link:focus { top: 0; }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, #00d4ff, #ffd700);
+            z-index: 10001;
+            transition: width 0.1s ease;
+        }
+
+        /* ===== BACK TO TOP BUTTON ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            border: none;
+            border-radius: 50%;
+            color: #0d0d1a;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.5);
+        }
+
+        /* ===== NAVIGATION ===== */
+        .navbar {
+            background: linear-gradient(180deg, #12122a 0%, #0d0d1a 100%);
+            border-bottom: 2px solid #2a2a4a;
+            padding: 0 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        .nav-logo {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.8rem;
+            color: #ffd700;
+            white-space: nowrap;
+        }
+        .nav-links { display: flex; gap: 0.25rem; flex-wrap: wrap; justify-content: flex-end; }
+        .nav-links a {
+            font-size: 0.875rem;
+            padding: 0.4rem 0.7rem;
+            border-radius: 4px;
+            color: #b0b0d0;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #ffd700;
+            background: rgba(255, 215, 0, 0.08);
+        }
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: #ffd700;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            padding: 0.75rem 1.5rem 1rem;
+            background: #12122a;
+            border-bottom: 2px solid #2a2a4a;
+        }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a {
+            padding: 0.6rem 0;
+            font-size: 0.85rem;
+            color: #b0b0d0;
+            border-bottom: 1px solid #1a1a3a;
+        }
+        .mobile-menu a:last-child { border-bottom: none; }
+        .mobile-menu a:hover { color: #ffd700; }
+
+        /* ===== PAGE HEADER ===== */
+        .page-header {
+            text-align: center;
+            padding: 4rem 1.5rem 3rem;
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(100, 50, 180, 0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 50% 100%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
+                linear-gradient(rgba(13, 13, 26, 0.9), rgba(13, 13, 26, 0.95));
+            border-bottom: 2px solid #2a2a4a;
+        }
+        .page-title {
+            font-family: 'Press Start 2P', monospace;
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: #ffd700;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3), 0 4px 8px rgba(0,0,0,0.5);
+            margin-bottom: 1rem;
+        }
+        .page-subtitle {
+            font-size: 1rem;
+            color: #a0a0c0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* ===== CONTENT SECTIONS ===== */
+        .content-section {
+            background: #1a1a2e;
+            border: 1px solid #2a2a4a;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .content-section h2 {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.85rem;
+            color: #00d4ff;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .content-section h3 {
+            font-size: 1.1rem;
+            color: #ffd700;
+            margin: 1.5rem 0 0.75rem;
+        }
+        .content-section p {
+            color: #b0b0c0;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        .content-section ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+            color: #b0b0c0;
+        }
+        .content-section li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .disclaimer-box {
+            background: rgba(255, 215, 0, 0.05);
+            border-left: 3px solid #ffd700;
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+        .disclaimer-box p {
+            margin: 0;
+            color: #a0a0c0;
+        }
+        .contact-box {
+            background: rgba(0, 212, 255, 0.05);
+            border: 1px solid #2a2a4a;
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .contact-box h3 {
+            margin-top: 0;
+            color: #00d4ff;
+        }
+        .contact-method {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            color: #b0b0c0;
+        }
+        .contact-icon {
+            font-size: 1.2rem;
+        }
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+        .feature-item {
+            background: rgba(0, 212, 255, 0.05);
+            border: 1px solid #2a2a4a;
+            border-radius: 8px;
+            padding: 1.25rem;
+            text-align: center;
+        }
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 0.5rem;
+        }
+        .feature-item h4 {
+            color: #ffd700;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .feature-item p {
+            font-size: 0.85rem;
+            margin: 0;
+            color: #8888aa;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #0a0a15;
+            border-top: 1px solid #1a1a3a;
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        .footer-links a {
+            font-size: 0.85rem;
+            color: #00d4ff;
+        }
+        .footer-links a:hover { color: #ffd700; }
+        .footer p {
+            font-size: 0.8rem;
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+        .footer a { color: #00d4ff; }
+        .footer a:hover { color: #ffd700; }
+        .footer-disclaimer {
+            font-size: 0.7rem;
+            color: #444;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #1a1a3a;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+            .page-header { padding: 2.5rem 1rem 2rem; }
+            .content-section { padding: 1.5rem; }
+            .feature-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+<body>
+    <!-- SKIP LINK (Accessibility) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- PROGRESS BAR -->
+    <div id="progressBar" class="progress-bar"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">MINA GUIDE</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="walkthrough.html">Walkthrough</a>
+                <a href="bosses.html">Bosses</a>
+                <a href="enemies.html">Enemies</a>
+                <a href="items.html">Items</a>
+                <a href="mechanics.html">Mechanics</a>
+                <a href="tips.html">Tips</a>
+                <a href="faq.html">FAQ</a>
+                <a href="glossary.html">Glossary</a>
+                <a href="about.html" class="active">About</a>
+            </div>
+            <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">☰</button>
+        </div>
+        <div class="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="walkthrough.html">Walkthrough</a>
+            <a href="bosses.html">Bosses</a>
+            <a href="enemies.html">Enemies</a>
+            <a href="items.html">Items</a>
+            <a href="mechanics.html">Mechanics</a>
+            <a href="tips.html">Tips</a>
+            <a href="faq.html">FAQ</a>
+            <a href="glossary.html">Glossary</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <h1 class="page-title">About Us</h1>
+        <p class="page-subtitle">A fan-made guide dedicated to helping players conquer Tenebrous Isle</p>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content" class="container">
+
+        <div class="content-section">
+            <h2>Our Mission</h2>
+            <p>The Mina the Hollower Walkthrough Guide was created by passionate fans of the game who wanted to help fellow players navigate the challenging depths of Tenebrous Isle. Our goal is to provide comprehensive, accurate, and helpful information to enhance your gaming experience.</p>
+            <p>Whether you're stuck on a difficult boss, searching for hidden items, or just looking for tips to improve your gameplay, we're here to help you master the art of burrowing and conquer the darkness.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>What We Offer</h2>
+            <div class="feature-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">🗺️</div>
+                    <h4>Area Guides</h4>
+                    <p>Complete walkthroughs for all 7 areas of Tenebrous Isle</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚔️</div>
+                    <h4>Boss Strategies</h4>
+                    <p>Detailed tactics for every boss encounter</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">🛡️</div>
+                    <h4>Item Database</h4>
+                    <p>Comprehensive info on weapons, trinkets, and consumables</p>
+                </div>
+                <div class="feature-item">
+                    <div class="feature-icon">⚙️</div>
+                    <h4>Mechanics Deep Dive</h4>
+                    <p>Understanding burrowing, Bones, and combat systems</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>Important Disclaimer</h2>
+            <div class="disclaimer-box">
+                <p><strong>This is a fan-made website and is not affiliated with Yacht Club Games.</strong> "Mina the Hollower" and all related trademarks, characters, artwork, and game content are the exclusive property of Yacht Club Games. We make no claim of ownership over any game-related materials.</p>
+            </div>
+            <p>This website is created by fans, for fans. We are passionate about the game and want to share our knowledge with the community. All game content displayed on this site is used under fair use for purposes of commentary, criticism, and educational instruction.</p>
+            <p>If you represent Yacht Club Games and have any concerns about the content on this website, please contact us and we will address your concerns promptly.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Sources & Credits</h2>
+            <p>We strive to provide accurate and up-to-date information. Our content is compiled from:</p>
+            <ul>
+                <li>Personal gameplay experience and extensive testing</li>
+                <li>The official <a href="https://minathehollower.wiki.gg" target="_blank" rel="noopener">Mina the Hollower Wiki</a></li>
+                <li>Official materials from <a href="https://yachtclubgames.com" target="_blank" rel="noopener">Yacht Club Games</a></li>
+                <li>Community discoveries and contributions</li>
+                <li>Gaming publications and reviews (IGN, PC Gamer, etc.)</li>
+            </ul>
+            <p>We are grateful to the Mina the Hollower community for their contributions to our collective understanding of the game.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Contact Us</h2>
+            <p>We'd love to hear from you! Whether you have a question about the game, found an error in our guides, want to suggest new content, or just want to say hello, feel free to reach out.</p>
+
+            <div class="contact-box">
+                <h3>Get in Touch</h3>
+                <div class="contact-method">
+                    <span class="contact-icon">📧</span>
+                    <span>Email: <a href="mailto:contact@minahollowerguide.com">contact@minahollowerguide.com</a></span>
+                </div>
+                <div class="contact-method">
+                    <span class="contact-icon">🌐</span>
+                    <span>Website: <a href="index.html">minahollowerguide.com</a></span>
+                </div>
+            </div>
+
+            <h3>Feedback & Corrections</h3>
+            <p>Found an error in our guides? Have a better strategy for a boss? Know about a secret we missed? We appreciate your help in keeping this resource accurate and comprehensive. Please include as much detail as possible when submitting corrections.</p>
+
+            <h3>Content Usage</h3>
+            <p>Want to use our content or collaborate? We're open to partnerships and content sharing arrangements. Please contact us to discuss.</p>
+        </div>
+
+        <div class="content-section">
+            <h2>Stay Updated</h2>
+            <p>This guide is actively maintained and updated as new information becomes available. The game was released on May 29, 2026, and we're continuously adding new content as the community discovers more secrets and strategies.</p>
+            <p>Check back regularly for updates, or bookmark our homepage to stay informed about the latest additions to the guide.</p>
+        </div>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="cookies.html">Cookie Policy</a>
+                <a href="about.html">About / Contact</a>
+            </div>
+            <p><a href="index.html">Mina the Hollower Walkthrough Guide</a> — Complete guide for all areas, bosses, items, and mechanics.</p>
+            <p>Mina the Hollower is a trademark of <a href="https://yachtclubgames.com" target="_blank" rel="noopener">Yacht Club Games</a>. This is a fan-made guide.</p>
+            <p class="footer-disclaimer">All game content and trademarks are property of their respective owners. Not affiliated with Yacht Club Games.</p>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↩</button>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Progress bar
+        const progressBar = document.getElementById('progressBar');
+        if (progressBar) {
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = scrolled + '%';
+            });
+        }
+
+        // Back to top functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        if (backToTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>
+
+<script async="async" data-cfasync="false" src="https://pl29597090.effectivecpmnetwork.com/e6936980167c8bacff62ce81ba70a6aa/invoke.js"></script>
+<div id="container-e6936980167c8bacff62ce81ba70a6aa"></div>
+
+<script src="https://pl29597091.effectivecpmnetwork.com/20/a1/ec/20a1ec694fe1859002ff6d72be604540.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,528 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Privacy Policy | Mina the Hollower Walkthrough Guide</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="Privacy Policy | Mina the Hollower Guide">
+    <meta name="description" content="Privacy policy for Mina the Hollower Walkthrough Guide. Learn about our data practices, Google AdSense cookies, and how to manage your privacy.">
+    <meta name="keywords" content="privacy policy, Mina the Hollower, cookies, Google AdSense, data protection">
+    <meta name="author" content="Mina the Hollower Guide">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="/privacy.html">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="/privacy.html">
+    <meta property="og:title" content="Privacy Policy | Mina the Hollower Guide">
+    <meta property="og:description" content="Privacy policy for Mina the Hollower Walkthrough Guide. Learn about our data practices and cookie usage.">
+    <meta property="og:image" content="/images/og-image.jpg">
+    <meta property="og:site_name" content="Mina the Hollower Guide">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="/privacy.html">
+    <meta property="twitter:title" content="Privacy Policy | Mina the Hollower Guide">
+    <meta property="twitter:description" content="Privacy policy for Mina the Hollower Walkthrough Guide. Learn about our data practices and cookie usage.">
+    <meta property="twitter:image" content="/images/og-image.jpg">
+
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2485720330662082" crossorigin="anonymous"></script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* ===== CSS RESET & BASE ===== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        html { scroll-behavior: smooth; }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #0d0d1a;
+            color: #e0e0e0;
+            line-height: 1.7;
+            min-height: 100vh;
+        }
+        a { color: #00d4ff; text-decoration: none; transition: color 0.2s; }
+        a:hover { color: #ffd700; }
+
+        /* ===== SKIP LINK (Accessibility) ===== */
+        .skip-link {
+            position: absolute;
+            top: -40px;
+            left: 0;
+            background: #00d4ff;
+            color: #0d0d1a;
+            padding: 8px 16px;
+            z-index: 10000;
+            transition: top 0.3s;
+            font-weight: 600;
+            text-decoration: none;
+        }
+        .skip-link:focus { top: 0; }
+
+        /* ===== PROGRESS BAR ===== */
+        .progress-bar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 0%;
+            height: 3px;
+            background: linear-gradient(90deg, #00d4ff, #ffd700);
+            z-index: 10001;
+            transition: width 0.1s ease;
+        }
+
+        /* ===== BACK TO TOP BUTTON ===== */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            background: linear-gradient(135deg, #00d4ff 0%, #0099cc 100%);
+            border: none;
+            border-radius: 50%;
+            color: #0d0d1a;
+            font-size: 1.5rem;
+            cursor: pointer;
+            opacity: 0;
+            visibility: hidden;
+            transition: all 0.3s ease;
+            z-index: 1000;
+            box-shadow: 0 4px 15px rgba(0, 212, 255, 0.3);
+        }
+        .back-to-top.visible {
+            opacity: 1;
+            visibility: visible;
+        }
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 212, 255, 0.5);
+        }
+
+        /* ===== NAVIGATION ===== */
+        .navbar {
+            background: linear-gradient(180deg, #12122a 0%, #0d0d1a 100%);
+            border-bottom: 2px solid #2a2a4a;
+            padding: 0 1.5rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        .nav-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            height: 64px;
+        }
+        .nav-logo {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.8rem;
+            color: #ffd700;
+            white-space: nowrap;
+        }
+        .nav-links { display: flex; gap: 0.25rem; flex-wrap: wrap; justify-content: flex-end; }
+        .nav-links a {
+            font-size: 0.875rem;
+            padding: 0.4rem 0.7rem;
+            border-radius: 4px;
+            color: #b0b0d0;
+            transition: all 0.2s;
+            white-space: nowrap;
+        }
+        .nav-links a:hover, .nav-links a.active {
+            color: #ffd700;
+            background: rgba(255, 215, 0, 0.08);
+        }
+        .hamburger {
+            display: none;
+            background: none;
+            border: none;
+            color: #ffd700;
+            font-size: 1.5rem;
+            cursor: pointer;
+        }
+        .mobile-menu {
+            display: none;
+            flex-direction: column;
+            padding: 0.75rem 1.5rem 1rem;
+            background: #12122a;
+            border-bottom: 2px solid #2a2a4a;
+        }
+        .mobile-menu.open { display: flex; }
+        .mobile-menu a {
+            padding: 0.6rem 0;
+            font-size: 0.85rem;
+            color: #b0b0d0;
+            border-bottom: 1px solid #1a1a3a;
+        }
+        .mobile-menu a:last-child { border-bottom: none; }
+        .mobile-menu a:hover { color: #ffd700; }
+
+        /* ===== PAGE HEADER ===== */
+        .page-header {
+            text-align: center;
+            padding: 4rem 1.5rem 3rem;
+            background:
+                radial-gradient(ellipse at 50% 0%, rgba(100, 50, 180, 0.15) 0%, transparent 60%),
+                radial-gradient(ellipse at 50% 100%, rgba(0, 212, 255, 0.08) 0%, transparent 50%),
+                linear-gradient(rgba(13, 13, 26, 0.9), rgba(13, 13, 26, 0.95));
+            border-bottom: 2px solid #2a2a4a;
+        }
+        .page-title {
+            font-family: 'Press Start 2P', monospace;
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: #ffd700;
+            text-shadow: 0 0 30px rgba(255, 215, 0, 0.3), 0 4px 8px rgba(0,0,0,0.5);
+            margin-bottom: 1rem;
+        }
+        .page-subtitle {
+            font-size: 1rem;
+            color: #a0a0c0;
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* ===== CONTAINER ===== */
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 2rem 1.5rem;
+        }
+
+        /* ===== POLICY CONTENT ===== */
+        .policy-section {
+            background: #1a1a2e;
+            border: 1px solid #2a2a4a;
+            border-radius: 12px;
+            padding: 2rem;
+            margin-bottom: 2rem;
+        }
+        .policy-section h2 {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.85rem;
+            color: #00d4ff;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
+        .policy-section h3 {
+            font-size: 1.1rem;
+            color: #ffd700;
+            margin: 1.5rem 0 0.75rem;
+        }
+        .policy-section p {
+            color: #b0b0c0;
+            margin-bottom: 1rem;
+            font-size: 0.95rem;
+        }
+        .policy-section ul {
+            margin-left: 1.5rem;
+            margin-bottom: 1rem;
+            color: #b0b0c0;
+        }
+        .policy-section li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+        }
+        .highlight-box {
+            background: rgba(0, 212, 255, 0.05);
+            border-left: 3px solid #00d4ff;
+            padding: 1rem 1.25rem;
+            border-radius: 0 8px 8px 0;
+            margin: 1.5rem 0;
+        }
+        .highlight-box p {
+            margin: 0;
+            color: #a0a0c0;
+        }
+        .last-updated {
+            text-align: center;
+            color: #666;
+            font-size: 0.85rem;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid #2a2a4a;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            background: #0a0a15;
+            border-top: 1px solid #1a1a3a;
+            padding: 2rem 1.5rem;
+            text-align: center;
+        }
+        .footer-inner {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            flex-wrap: wrap;
+            margin-bottom: 1rem;
+        }
+        .footer-links a {
+            font-size: 0.85rem;
+            color: #00d4ff;
+        }
+        .footer-links a:hover { color: #ffd700; }
+        .footer p {
+            font-size: 0.8rem;
+            color: #555;
+            margin-bottom: 0.5rem;
+        }
+        .footer a { color: #00d4ff; }
+        .footer a:hover { color: #ffd700; }
+        .footer-disclaimer {
+            font-size: 0.7rem;
+            color: #444;
+            margin-top: 1rem;
+            padding-top: 1rem;
+            border-top: 1px solid #1a1a3a;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .hamburger { display: block; }
+            .page-header { padding: 2.5rem 1rem 2rem; }
+            .policy-section { padding: 1.5rem; }
+        }
+    </style>
+</head>
+<body>
+    <!-- SKIP LINK (Accessibility) -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+
+    <!-- PROGRESS BAR -->
+    <div id="progressBar" class="progress-bar"></div>
+
+    <!-- NAVIGATION -->
+    <nav class="navbar">
+        <div class="nav-inner">
+            <a href="index.html" class="nav-logo">MINA GUIDE</a>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="walkthrough.html">Walkthrough</a>
+                <a href="bosses.html">Bosses</a>
+                <a href="enemies.html">Enemies</a>
+                <a href="items.html">Items</a>
+                <a href="mechanics.html">Mechanics</a>
+                <a href="tips.html">Tips</a>
+                <a href="faq.html">FAQ</a>
+                <a href="glossary.html">Glossary</a>
+                <a href="about.html">About</a>
+            </div>
+            <button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">☰</button>
+        </div>
+        <div class="mobile-menu">
+            <a href="index.html">Home</a>
+            <a href="walkthrough.html">Walkthrough</a>
+            <a href="bosses.html">Bosses</a>
+            <a href="enemies.html">Enemies</a>
+            <a href="items.html">Items</a>
+            <a href="mechanics.html">Mechanics</a>
+            <a href="tips.html">Tips</a>
+            <a href="faq.html">FAQ</a>
+            <a href="glossary.html">Glossary</a>
+            <a href="about.html">About</a>
+        </div>
+    </nav>
+
+    <!-- PAGE HEADER -->
+    <header class="page-header">
+        <h1 class="page-title">Privacy Policy</h1>
+        <p class="page-subtitle">How we handle your data and protect your privacy while you explore Tenebrous Isle</p>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="main-content" class="container">
+
+        <div class="policy-section">
+            <h2>Introduction</h2>
+            <p>Welcome to the Mina the Hollower Walkthrough Guide. This website is a fan-made resource created to help players navigate the game "Mina the Hollower" by Yacht Club Games. We are not affiliated with, endorsed by, or connected to Yacht Club Games in any way.</p>
+            <p>This Privacy Policy explains how we collect, use, and protect your personal information when you visit our website. By using this site, you agree to the terms outlined in this policy.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>Information We Collect</h2>
+            <h3>Automatically Collected Information</h3>
+            <p>When you visit our website, certain information is automatically collected through standard web server logs and analytics tools:</p>
+            <ul>
+                <li>IP address</li>
+                <li>Browser type and version</li>
+                <li>Operating system</li>
+                <li>Pages visited and time spent on each page</li>
+                <li>Referring website</li>
+                <li>Date and time of visit</li>
+            </ul>
+
+            <h3>Cookies and Similar Technologies</h3>
+            <p>We use cookies and similar tracking technologies to enhance your browsing experience and analyze website traffic. Cookies are small text files stored on your device that help us understand how you interact with our website.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>Google AdSense</h2>
+            <p>This website uses Google AdSense to display advertisements. Google AdSense is a third-party advertising service provided by Google that uses cookies to serve ads based on your prior visits to this and other websites.</p>
+
+            <div class="highlight-box">
+                <p><strong>Important:</strong> Google may use the DoubleClick cookie (or other cookies) to enable it and its partners to serve ads to you based on your visit to this site and/or other sites on the Internet.</p>
+            </div>
+
+            <h3>How Google Uses Your Data</h3>
+            <p>Google uses cookies to:</p>
+            <ul>
+                <li>Serve personalized advertisements based on your interests</li>
+                <li>Measure ad performance and effectiveness</li>
+                <li>Prevent fraud and abuse</li>
+                <li>Limit the number of times you see an ad</li>
+            </ul>
+
+            <h3>Types of Cookies Used</h3>
+            <ul>
+                <li><strong>Advertising Cookies:</strong> Used to deliver relevant advertisements and track ad campaign performance</li>
+                <li><strong>Analytics Cookies:</strong> Help us understand how visitors interact with our website</li>
+                <li><strong>Essential Cookies:</strong> Required for the basic functioning of the website</li>
+            </ul>
+        </div>
+
+        <div class="policy-section">
+            <h2>How We Use Your Information</h2>
+            <p>The information we collect is used for the following purposes:</p>
+            <ul>
+                <li>To improve website functionality and user experience</li>
+                <li>To analyze website traffic and usage patterns</li>
+                <li>To display relevant advertisements through Google AdSense</li>
+                <li>To detect and prevent technical issues and security threats</li>
+                <li>To comply with legal obligations</li>
+            </ul>
+        </div>
+
+        <div class="policy-section">
+            <h2>Your Privacy Choices</h2>
+            <h3>Opting Out of Personalized Ads</h3>
+            <p>You have several options to control how your data is used for advertising:</p>
+            <ul>
+                <li><strong>Google Ad Settings:</strong> Visit <a href="https://adssettings.google.com" target="_blank" rel="noopener">Google Ad Settings</a> to control personalized advertising from Google</li>
+                <li><strong>Network Advertising Initiative:</strong> Opt out of personalized ads from participating companies at <a href="http://optout.networkadvertising.org" target="_blank" rel="noopener">optout.networkadvertising.org</a></li>
+                <li><strong>Digital Advertising Alliance:</strong> Visit <a href="http://optout.aboutads.info" target="_blank" rel="noopener">optout.aboutads.info</a> to opt out of interest-based advertising</li>
+            </ul>
+
+            <h3>Managing Cookies</h3>
+            <p>Most web browsers allow you to control cookies through their settings. You can:</p>
+            <ul>
+                <li>Block all cookies</li>
+                <li>Delete existing cookies</li>
+                <li>Allow cookies only from specific websites</li>
+                <li>Set your browser to notify you when cookies are being sent</li>
+            </ul>
+            <p>Please note that disabling cookies may affect the functionality of this website and your browsing experience.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>Third-Party Services</h2>
+            <p>We may use third-party services that collect, monitor, and analyze information to help us improve our website. These third-party service providers have their own privacy policies addressing how they use such information.</p>
+            <p>Currently, we use:</p>
+            <ul>
+                <li><strong>Google AdSense:</strong> For displaying advertisements (see above)</li>
+                <li><strong>Google Analytics:</strong> For website traffic analysis (if implemented)</li>
+            </ul>
+        </div>
+
+        <div class="policy-section">
+            <h2>Data Security</h2>
+            <p>We take reasonable measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction. However, please be aware that no method of transmission over the Internet or electronic storage is 100% secure.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>Children's Privacy</h2>
+            <p>Our website is not intended for children under the age of 13. We do not knowingly collect personal information from children under 13. If you are a parent or guardian and believe your child has provided us with personal information, please contact us so we can remove such information.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>Changes to This Policy</h2>
+            <p>We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated "Last Updated" date. We encourage you to review this Privacy Policy periodically for any changes.</p>
+        </div>
+
+        <div class="policy-section">
+            <h2>Contact Us</h2>
+            <p>If you have any questions about this Privacy Policy or our data practices, please contact us:</p>
+            <ul>
+                <li>Email: <a href="mailto:contact@minahollowerguide.com">contact@minahollowerguide.com</a></li>
+                <li>Visit our <a href="about.html">About page</a> for more contact options</li>
+            </ul>
+        </div>
+
+        <p class="last-updated">Last Updated: May 31, 2026</p>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-inner">
+            <div class="footer-links">
+                <a href="privacy.html">Privacy Policy</a>
+                <a href="terms.html">Terms of Service</a>
+                <a href="cookies.html">Cookie Policy</a>
+                <a href="about.html">About / Contact</a>
+            </div>
+            <p><a href="index.html">Mina the Hollower Walkthrough Guide</a> — Complete guide for all areas, bosses, items, and mechanics.</p>
+            <p>Mina the Hollower is a trademark of <a href="https://yachtclubgames.com" target="_blank" rel="noopener">Yacht Club Games</a>. This is a fan-made guide.</p>
+            <p class="footer-disclaimer">All game content and trademarks are property of their respective owners. Not affiliated with Yacht Club Games.</p>
+        </div>
+    </footer>
+
+    <!-- BACK TO TOP BUTTON -->
+    <button id="backToTop" class="back-to-top" aria-label="Back to top">↩</button>
+
+    <!-- SCRIPTS -->
+    <script>
+        // Progress bar
+        const progressBar = document.getElementById('progressBar');
+        if (progressBar) {
+            window.addEventListener('scroll', () => {
+                const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+                const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+                const scrolled = (winScroll / height) * 100;
+                progressBar.style.width = scrolled + '%';
+            });
+        }
+
+        // Back to top functionality
+        const backToTopBtn = document.getElementById('backToTop');
+        if (backToTopBtn) {
+            window.addEventListener('scroll', () => {
+                if (window.pageYOffset > 300) {
+                    backToTopBtn.classList.add('visible');
+                } else {
+                    backToTopBtn.classList.remove('visible');
+                }
+            });
+            backToTopBtn.addEventListener('click', () => {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        }
+    </script>
+
+<script async="async" data-cfasync="false" src="https://pl29597090.effectivecpmnetwork.com/e6936980167c8bacff62ce81ba70a6aa/invoke.js"></script>
+<div id="container-e6936980167c8bacff62ce81ba70a6aa"></div>
+
+<script src="https://pl29597091.effectivecpmnetwork.com/20/a1/ec/20a1ec694fe1859002ff6d72be604540.js"></script>
+
+</body>
+</html>
