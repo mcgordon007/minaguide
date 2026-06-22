@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mina the Hollower 攻略站每日更新报告 - 2026年6月22日</title>
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #0d0d1a;
+            --card: #1a1a2e;
+            --border: #2a2a4a;
+            --text: #e0e0e0;
+            --muted: #8888aa;
+            --accent: #00d4ff;
+            --gold: #ffd700;
+            --green: #00c864;
+            --red: #ff6464;
+            --orange: #ffa500;
+        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.7;
+        }
+        .container { max-width: 1000px; margin: 0 auto; padding: 2rem 1.5rem; }
+        header {
+            text-align: center;
+            padding: 3rem 1rem;
+            background: radial-gradient(ellipse at 50% 0%, rgba(255,215,0,0.1) 0%, transparent 60%);
+            border-bottom: 1px solid var(--border);
+        }
+        header h1 {
+            font-family: 'Press Start 2P', monospace;
+            font-size: clamp(0.9rem, 2.5vw, 1.3rem);
+            color: var(--gold);
+            margin-bottom: 0.75rem;
+        }
+        header p { color: var(--muted); font-size: 0.9rem; }
+        .report-date {
+            display: inline-block;
+            background: linear-gradient(135deg, rgba(0,200,100,0.15), rgba(0,212,255,0.15));
+            border: 1px solid rgba(0,200,100,0.3);
+            border-radius: 6px;
+            padding: 0.4rem 1rem;
+            font-size: 0.8rem;
+            color: var(--green);
+            margin-top: 1rem;
+        }
+        .section {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 1.5rem 2rem;
+            margin-bottom: 1.5rem;
+        }
+        .section h2 {
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.7rem;
+            color: var(--gold);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+        }
+        .section h3 {
+            font-size: 1rem;
+            color: var(--accent);
+            margin: 1rem 0 0.5rem;
+        }
+        .section p, .section li {
+            color: #b0b0c0;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+        .section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .section li {
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .section li::before {
+            content: '▸';
+            position: absolute;
+            left: 0;
+            color: var(--accent);
+            font-weight: bold;
+        }
+        .source-tag {
+            display: inline-block;
+            background: rgba(0,212,255,0.1);
+            border: 1px solid rgba(0,212,255,0.2);
+            border-radius: 4px;
+            padding: 0.2rem 0.5rem;
+            font-size: 0.75rem;
+            color: var(--accent);
+            margin-left: 0.5rem;
+        }
+        .confirmed { color: var(--green); font-weight: bold; }
+        .unconfirmed { color: var(--orange); font-weight: bold; }
+        .not-added { color: var(--red); font-weight: bold; }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.85rem;
+            margin-top: 1rem;
+        }
+        th, td {
+            text-align: left;
+            padding: 0.75rem;
+            border-bottom: 1px solid var(--border);
+        }
+        th {
+            color: var(--gold);
+            font-family: 'Press Start 2P', monospace;
+            font-size: 0.55rem;
+        }
+        .badge {
+            display: inline-block;
+            padding: 0.2rem 0.5rem;
+            border-radius: 4px;
+            font-size: 0.75rem;
+            font-weight: bold;
+        }
+        .badge-added { background: rgba(0,200,100,0.15); color: var(--green); border: 1px solid rgba(0,200,100,0.3); }
+        .badge-pending { background: rgba(255,165,0,0.15); color: var(--orange); border: 1px solid rgba(255,165,0,0.3); }
+        .badge-skipped { background: rgba(255,100,100,0.15); color: var(--red); border: 1px solid rgba(255,100,100,0.3); }
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid var(--border);
+            color: #555;
+            font-size: 0.8rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Mina the Hollower 攻略站</h1>
+        <p>每日更新报告 — 2026年6月22日</p>
+        <div class="report-date">更新日期: 2026-06-22</div>
+    </header>
+
+    <div class="container">
+
+        <!-- 搜索来源 -->
+        <div class="section">
+            <h2>搜索来源</h2>
+            <p>本次每日更新任务搜索了以下来源（按优先级排序）：</p>
+            <ul>
+                <li><strong>minathehollower.wiki.gg</strong> <span class="source-tag">官方Wiki</span> — 受Cloudflare保护，无法直接抓取内容</li>
+                <li><strong>100pguides.com</strong> <span class="source-tag">游戏评测</span> — 获取了游戏发售信息、评分、游戏时长</li>
+                <li><strong>gcores.com</strong> <span class="source-tag">中文社区</span> — 16小时初通、30小时全收集的玩家评测</li>
+                <li><strong>18183.com</strong> <span class="source-tag">中文攻略</span> — 全饰品收集攻略、60个Trinket确认</li>
+                <li><strong>7xz.com</strong> <span class="source-tag">中文攻略</span> — 新手攻略、镜子系统、地图获取、乞丐系统</li>
+                <li><strong>163.com / 今日头条</strong> <span class="source-tag">中文媒体</span> — 发售新闻、隐藏Boss攻略</li>
+                <li><strong>douban.com</strong> <span class="source-tag">玩家评测</span> — 9/10分玩家深度评测</li>
+                <li><strong>IGN / Metacritic</strong> <span class="source-tag">权威媒体</span> — IGN 10/10, Metacritic 93/100</li>
+                <li><strong>reddit.com / Steam社区</strong> <span class="source-tag">社区</span> — 搜索未找到新确认内容</li>
+                <li><strong>游民星空 / 游侠网</strong> <span class="source-tag">中文媒体</span> — 搜索未找到详细攻略内容</li>
+            </ul>
+        </div>
+
+        <!-- 实际更新内容 -->
+        <div class="section">
+            <h2>实际更新的内容</h2>
+
+            <h3>1. bosses.html — Boss信息补充</h3>
+            <ul>
+                <li>添加游戏正式发售信息：<span class="confirmed">2026年5月29日</span>发售，PS5/NS/Xbox/PC</li>
+                <li>添加权威评分：<span class="confirmed">IGN 10/10</span>，<span class="confirmed">Metacritic 93/100</span>（40+家媒体）</li>
+                <li>确认游戏规模：<span class="confirmed">25+ Boss和精英敌人</span>，<span class="confirmed">60个饰品</span>，<span class="confirmed">282+收集品</span></li>
+                <li>确认Yacht Club Games <span class="confirmed">无DLC计划</span></li>
+                <li>添加中文攻略来源确认：18183.com、gcores.com、7xz.com</li>
+            </ul>
+
+            <h3>2. items.html — 饰品位置补充（新增13个确认饰品）</h3>
+            <table>
+                <tr><th>饰品名称</th><th>效果</th><th>获取位置</th><th>状态</th></tr>
+                <tr><td>Uranium Bracelet</td><td>辐射效果</td><td>击败Loner's Landing的Nether Kraken</td><td><span class="badge badge-added">已添加</span></td></tr>
+                <tr><td>Willow the Wisp</td><td>战斗/探索辅助</td><td>Eastern Heath洞穴NPC处购买</td><td><span class="badge badge-added">已添加</span></td></tr>
+                <tr><td>Lightning Grip</td><td>闪电战斗强化</td><td>完成四小动物任务</td><td><span class="badge badge-added">已添加</span></td></tr>
+                <tr><td>Accident Charm</td><td>防御护符</td><td>地图中部河边击落风筝</td><td><span class="badge badge-added">已添加</span></td></tr>
+                <tr><td>Deboning Wand</td><td>武器强化</td><td>Elizabeth隐藏花园任务</td><td><span class="badge badge-added">已添加</span></td></tr>
+                <tr><td>Guardian Beast Stone</td><td>防御石</td><td>Elizabeth花园附近墙壁后宝箱</td><td><span class="badge badge-added">已添加</span></td></tr>
+                <tr><td>Spark Catcher</td><td>Spark收集强化</td><td>Ossex的Pingji Salon商店</td><td><span class="badge badge-added">已添加</span></td></tr>
+                <tr><td>Dodge Powder</td><td>闪避强化</td><td>Ossex高屋顶（需商店梯子）</td><td><span class="badge badge-added">已添加</span></td></tr>
+                <tr><td>Chain Capacitor</td><td>连锁/电击强化</td><td>Jopp商店完成Car Breaker任务</td><td><span class="badge badge-added">已添加</span></td></tr>
+                <tr><td>Fairy Helio</td><td>受伤时召唤治疗精灵</td><td>Molten Foundry的Poppit商人</td><td><span class="badge badge-added">已添加</span></td></tr>
+                <tr><td>Valor Medal / Bravery Medal</td><td>移动回血，受击不消耗Plasma</td><td>Ossex主街完成Furr任务</td><td><span class="badge badge-added">已添加</span></td></tr>
+                <tr><td>Primordial Spark</td><td>第二条命（死亡自动满血复活）</td><td>修复Queensbury Crypt的Spark Generator</td><td><span class="badge badge-added">已添加</span></td></tr>
+            </table>
+
+            <h3>3. enemies.html — 敌人信息补充（新增6个确认敌人/事件）</h3>
+            <ul>
+                <li><strong>Rabbit Boss</strong> <span class="confirmed">已确认</span> — 故事Boss之一，来源：Kakuchopurei视频、18183.com</li>
+                <li><strong>Stone Statue（Kindlewood）</strong> <span class="confirmed">已确认</span> — 雕刻师Boss召唤的敌人</li>
+                <li><strong>Skeleton Army（Immortal Evra）</strong> <span class="confirmed">已确认</span> — 隐藏Boss召唤的骷髅军团</li>
+                <li><strong>Aquatic Critters（Nox's Bayou）</strong> <span class="confirmed">已确认</span> — 沼泽水域敌人</li>
+                <li><strong>Frog Band（Nox's Bayou/Backwaters）</strong> <span class="confirmed">已确认</span> — NPC事件，解锁音乐厅Boss</li>
+                <li><strong>Beggars（Ossex）</strong> <span class="confirmed">已确认</span> — 7个乞丐NPC，全捐赠解锁隐藏结局</li>
+            </ul>
+
+            <h3>4. walkthrough.html — 区域秘密补充</h3>
+            <ul>
+                <li><strong>镜子系统详细说明</strong> — 必须进入所有镜子激活开关才能解锁Astral Orrery</li>
+                <li><strong>世界地图获取方式</strong> — 救援Rhene后从Drillhardt处500 Bones购买</li>
+                <li><strong>乞丐系统</strong> — 7个乞丐位置，捐赠全解锁隐藏结局</li>
+                <li><strong>蜡烛破坏机制</strong> — 破坏蜡烛掉落能量和副武器充能</li>
+                <li><strong>177项辅助设置</strong> — 游戏内最全面的辅助选项系统</li>
+            </ul>
+
+            <h3>5. faq.html — FAQ问答更新（新增7个FAQ）</h3>
+            <ul>
+                <li>游戏有多少辅助选项？<span class="confirmed">177项</span></li>
+                <li>Primordial Spark饰品如何获取？<span class="confirmed">Queensbury Crypt修复Spark Generator</span></li>
+                <li>如何进入Astral Orrery？<span class="confirmed">激活所有镜子开关</span></li>
+                <li>Ossex乞丐的作用？<span class="confirmed">7个乞丐，全捐赠解锁隐藏结局</span></li>
+                <li>如何获取世界地图？<span class="confirmed">救援Rhene后500 Bones购买</span></li>
+                <li>新手推荐武器？<span class="confirmed">Battery Buster（可近战可远程）</span></li>
+                <li>游戏有多少饰品？<span class="confirmed">60个（官方确认）</span></li>
+            </ul>
+        </div>
+
+        <!-- 未添加的信息 -->
+        <div class="section">
+            <h2>因缺乏依据未添加的信息</h2>
+            <table>
+                <tr><th>信息内容</th><th>原因</th><th>状态</th></tr>
+                <tr>
+                    <td>Nox's Bayou、Septemburg、Bone Beach、Frozen Trainyard、Astral Orrery的5个缺失Boss详细数据</td>
+                    <td>官方Wiki受Cloudflare保护无法访问；中文攻略未提供这5个Boss的具体名称、血量、攻击模式等详细数据；视频攻略无法提取文字信息</td>
+                    <td><span class="badge badge-skipped">未添加</span></td>
+                </tr>
+                <tr>
+                    <td>所有60个饰品的完整列表和具体位置</td>
+                    <td>18183.com攻略只提供了分类和获取途径概述，未列出全部60个饰品的名称和位置；官方Wiki无法访问</td>
+                    <td><span class="badge badge-skipped">未添加</span></td>
+                </tr>
+                <tr>
+                    <td>282个收集品的完整清单</td>
+                    <td>100pguides.com提到了282个收集品总数，但未提供完整清单；无其他来源交叉验证</td>
+                    <td><span class="badge badge-skipped">未添加</span></td>
+                </tr>
+                <tr>
+                    <td>新确认的敌人类型（除已添加的6个外）</td>
+                    <td>gcores.com评测提到敌人种类丰富，但未提供具体新敌人类型名称；官方Wiki无法访问</td>
+                    <td><span class="badge badge-skipped">未添加</span></td>
+                </tr>
+                <tr>
+                    <td>隐藏秘密和收集品的具体坐标/位置</td>
+                    <td>中文攻略提供了部分提示，但缺乏具体的区域坐标或地图标记；无法从视频攻略提取</td>
+                    <td><span class="badge badge-skipped">未添加</span></td>
+                </tr>
+                <tr>
+                    <td>官方Wiki新添加的确认内容</td>
+                    <td>minathehollower.wiki.gg受Cloudflare安全验证保护，无法抓取页面内容</td>
+                    <td><span class="badge badge-skipped">未添加</span></td>
+                </tr>
+            </table>
+        </div>
+
+        <!-- 信息来源汇总 -->
+        <div class="section">
+            <h2>信息来源汇总</h2>
+            <table>
+                <tr><th>来源</th><th>类型</th><th>获取到的信息</th></tr>
+                <tr><td>100pguides.com</td><td>英文评测</td><td>发售日期、IGN评分、Metacritic评分、游戏时长、无DLC</td></tr>
+                <tr><td>gcores.com</td><td>中文社区</td><td>16小时初通/30小时全收集、177辅助选项、Battery Buster推荐</td></tr>
+                <tr><td>18183.com</td><td>中文攻略</td><td>60个饰品确认、全饰品获取途径、Boss列表</td></tr>
+                <tr><td>7xz.com</td><td>中文攻略</td><td>镜子系统、地图获取、乞丐系统、蜡烛机制、Primordial Spark</td></tr>
+                <tr><td>163.com/今日头条</td><td>中文媒体</td><td>发售新闻、25+Boss、隐藏Boss攻略、饰品位置</td></tr>
+                <tr><td>douban.com</td><td>玩家评测</td><td>9/10评分、游戏机制分析</td></tr>
+                <tr><td>minathehollower.wiki.gg</td><td>官方Wiki</td><td>无法访问（Cloudflare保护）</td></tr>
+            </table>
+        </div>
+
+        <!-- 更新统计 -->
+        <div class="section">
+            <h2>更新统计</h2>
+            <table>
+                <tr><th>项目</th><th>数量</th></tr>
+                <tr><td>搜索来源数量</td><td>10个</td></tr>
+                <tr><td>成功获取信息的来源</td><td>7个</td></tr>
+                <tr><td>更新文件数</td><td>5个（bosses.html, items.html, enemies.html, walkthrough.html, faq.html）</td></tr>
+                <tr><td>新增饰品条目</td><td>12个</td></tr>
+                <tr><td>新增敌人/事件条目</td><td>6个</td></tr>
+                <tr><td>新增FAQ条目</td><td>7个</td></tr>
+                <tr><td>新增 walkthrough 章节</td><td>3个（镜子系统、世界地图、辅助设置）</td></tr>
+                <tr><td>因缺乏依据未添加的信息</td><td>6项</td></tr>
+            </table>
+        </div>
+
+        <!-- 备注 -->
+        <div class="section">
+            <h2>备注</h2>
+            <ul>
+                <li>所有添加的信息均标注了来源和确认状态（CONFIRMED）</li>
+                <li>不确定的内容已明确标注为"Unconfirmed"或未添加</li>
+                <li>官方Wiki（minathehollower.wiki.gg）因Cloudflare保护无法直接访问，建议后续通过其他方式获取Wiki更新</li>
+                <li>5个缺失Boss的详细信息仍需等待官方Wiki或更详细的攻略来源</li>
+                <li>下次更新建议关注：Steam社区指南、GameFAQs、以及中文攻略站的深度内容</li>
+            </ul>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>Mina the Hollower 攻略站 — 每日更新报告</p>
+        <p>报告生成时间: 2026年6月22日</p>
+        <p>所有信息来源于公开渠道，仅供玩家参考</p>
+    </footer>
+</body>
+</html>
